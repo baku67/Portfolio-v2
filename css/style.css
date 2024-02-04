@@ -392,6 +392,15 @@ swiper-slide {
 
 }
 
+
+.swiper {
+    overflow: visible;
+}
+.swiper-container {
+    overflow: visible;
+}
+
+
 #sideNavDesktop {
     transform: scale(0.8);
 
@@ -2560,8 +2569,8 @@ ul {
 /* Effet arriere plan */
 .projectSlideLogo {
     position: relative;
-    left: 79px;
-    width: 50px;
+    left: 83px;
+    width: 35px;
     transform: scale(7);
     z-index: -9999;
 
