@@ -31,6 +31,10 @@
     }
 
 
+    .contactBtnDiv {
+        top: 95px;
+    }
+
 
 
 
@@ -1462,7 +1466,7 @@
 
     .accueilProjectsDiv {
         flex-direction: column;
-        margin: 0px auto 95px auto;
+        margin: 0px auto 5px auto;
 
         /* Pourcentage contraignant pour height bouton hover mobile */
         /* width: 70%; */
