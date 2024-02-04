@@ -1,0 +1,151 @@
+@media only screen and (min-width: 1700px) {
+
+
+    .barreGalerieSouligne {
+        bottom: 64px;
+    }
+    .carreTitreVeille {
+        top: 13px !important;
+    }
+
+    footer.footerAccueil {
+        /* position: absolute;
+        bottom: 0; */
+        /* position: fixed;
+        bottom: auto; */
+    
+            bottom: 0;
+            margin-top: 50px;
+            /* position: absolute; */
+    }
+
+    .cvSectionBgGradient {
+        background: radial-gradient(circle, rgba(12,237,200,0.06906512605042014) 0%, rgba(66,66,66,0) 40%);
+    }
+
+    .accueilProjectsRightLink:hover + .accueilProjectsTrait {
+        box-shadow: 70px 0 64px -15px #0ff;
+        height: 100px;
+        background: rgb(66,171,154);
+        background: -moz-linear-gradient(85deg, rgba(66,171,154,0) 0%, rgba(0,255,213,1) 50%, rgba(66,66,66,0) 100%);
+        background: -webkit-linear-gradient(85deg, rgba(66,171,154,0) 0%, rgba(0,255,213,1) 50%, rgba(66,66,66,0) 100%);
+        background: linear-gradient(85deg, rgba(66,171,154,0) 0%, rgba(0,255,213,1) 50%, rgba(66,66,66,0) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#42ab9a",endColorstr="#424242",GradientType=1);
+        transform: translate(210px, -50%);
+    }
+
+    @keyframes bandeauGrowShrink {
+        0% {
+            transform: translate(210px, -50%);
+            height: 100px;
+        }
+        50% {
+            transform: translate(245px, -50%);
+            height: 145px;
+        }
+        100% {
+            transform: translate(210px, -50%);
+            height: 100px;
+        }
+    }
+
+    .splide {
+        width: 514px;
+        margin: 45px auto 2px auto;
+    }
+
+    .accueilProjectsTrait {
+        width: 145%;
+      }
+
+    #pageContainer {
+        margin: 3% 21%;
+    }
+
+    #raieAccueil1 {
+        width: 350px;
+        height: 350px;
+    
+        offset-path: path("M 135 -145 C 209.106 906.334 1441.201 613.459 3191.72 801.977");
+
+        animation: raieAccueil1 23500ms 2000ms 1 linear;
+
+    }
+    @keyframes raieAccueil1 {
+        0% {
+            transform: rotateZ(9deg) rotateX(180deg);
+            offset-distance: 0%;
+            opacity: 0;
+            width: 350px;
+            height: 350px;
+
+        }
+        11% {
+            opacity: 0.25;
+            transform: rotateZ(9deg) rotateX(150deg);
+
+        }
+        22% {
+            opacity: 0.25;
+            transform: rotateZ(9deg) rotateX(145deg);
+        }
+        33% {
+            transform: rotateZ(9deg) rotateX(127deg);
+
+            opacity: 0.25;
+        }
+        44% {
+            opacity: 0.25;
+            transform: rotateZ(9deg) rotateX(117deg);
+
+        }
+        55% {
+            opacity: 0.25;
+            transform: rotateZ(9deg) rotateX(112deg);
+        }
+        66% {
+            opacity: 0.25;
+        }
+        77% {
+            opacity: 0.25;
+            transform: rotateZ(9deg) rotateX(110deg);
+
+        }
+        88% {
+    
+            opacity: 0.25;
+        }
+        100% {
+            width: 330px;
+            height: 330px;
+    
+            transform: rotateZ(9deg) rotateX(120deg);
+
+            opacity: 0.1;
+            offset-distance: 100%;
+        }
+      }
+    
+
+
+      .gridProjetHeaderContainer {
+        gap: 100px 70px;
+        
+        margin-top: 50px;
+        justify-content: center;
+      }
+
+
+
+      .skillsSvgContainer {
+        position: absolute;
+        transform: translate(-37px, -124px);
+        opacity: 0.6;
+        z-index: -99;
+    }
+
+    .hobbiesSvgContainer {
+        transform: translate(160px, -66px);
+    }
+    
+}
