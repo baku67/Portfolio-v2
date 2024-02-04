@@ -86,6 +86,43 @@ window.onload = function() {
         observerContactButton.observe(document.querySelector('#menuLigneCv'));
     }
 
+
+
+
+    // scrollToTop pop/depop on scroll
+    if(mobileDetection) {
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+        // Observer navBarre du haut:
+        const observerContactButton = new IntersectionObserver(entries => {
+            // Loop over the entries
+            entries.forEach(entry => {
+                // If the element is visible
+                if (!entry.isIntersecting) {
+                    scrollToTopBtn.style.opacity = "1";
+                    scrollToTopBtn.style.pointerEvents = "all";
+                }
+                else {
+                    scrollToTopBtn.style.opacity = "0";
+                    scrollToTopBtn.style.pointerEvents = "none";
+                }
+            })
+        })
+        observerContactButton.observe(document.querySelector('#headerCv'));
+    }
+
+    // scrollToTop click
+    function scrollToTop() {
+        document.body.scrollTo({top: 0, behavior: 'smooth'});
+    }
+    document.getElementById('scrollToTop').addEventListener('click', scrollToTop);
+
+
+
+
+
+
+
+
     // Smiley titre portfolio
     document.getElementById('titleH1').addEventListener("mouseenter", function() {
         document.getElementById('smilePath').style.stroke = "var(--secondaryColor)";
