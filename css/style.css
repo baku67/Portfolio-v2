@@ -309,6 +309,10 @@ swiper-slide {
 .projetFuncList {
     font-size: 0.8em;
     text-align: left;
+
+    width: fit-content;
+    margin: 0 auto;
+    min-width: 414px;
 }
 
 .swiper-button-prev {
@@ -377,7 +381,7 @@ swiper-slide {
 }
 .smileSvgContainer {
     position: absolute;
-    right: -12px;
+    right: -14px;
     bottom: -12px;
     height: 25px;
     width: 62px;
@@ -446,7 +450,7 @@ swiper-slide {
 }
 
 #smilePath {
-    transform : translateX(0px) rotateY(35deg);
+    transform : translateX(0px) rotateY(47deg);
     transition: all 0.4s;
 }
 .smilePathResp {
@@ -1347,7 +1351,9 @@ ul {
 
 #titleCv {
     text-align: right;
-    margin-block-end: 1.4em;
+
+    margin-block-end: 1.3em;
+    margin-block-start: 0;
 }
 
 
@@ -1610,6 +1616,40 @@ ul {
   }
 
 
+  @keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInFormation {
+    from {
+        left: -500px;
+        opacity: 0;
+
+    }
+    to {
+        left: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInHobbys {
+    from {
+        right: -500px;
+        opacity: 0;
+
+    }
+    to {
+        right: -28px;
+        opacity: 1;
+    }
+}
+
+
 
 
 
@@ -1627,6 +1667,9 @@ ul {
 .hobbys {
     position: relative;
     opacity: 0;
+
+    top: 10px;
+    right: -28px;
 
 }
 .hobbiesAnim {
@@ -1711,38 +1754,7 @@ ul {
 
 
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
 
-@keyframes fadeInFormation {
-    from {
-        left: -500px;
-        opacity: 0;
-
-    }
-    to {
-        left: 0px;
-        opacity: 1;
-    }
-}
-
-@keyframes fadeInHobbys {
-    from {
-        right: -500px;
-        opacity: 0;
-
-    }
-    to {
-        right: 0px;
-        opacity: 1;
-    }
-}
 
 
 .sousTitreUnderligned {
@@ -1978,7 +1990,7 @@ ul {
     background-repeat:no-repeat;
     /* height:400px; */
     height: fit-content;
-    margin: 1% 10%;
+    margin: 0px 10%;
 }
 
 .gitHubLink {
@@ -2287,7 +2299,7 @@ ul {
     z-index: 9999;
     filter: drop-shadow(10px 17px 8px black);
     position: relative;
-    bottom: 50px;
+    bottom: 100px;
     text-align: center;
 
     grid-area: iframe; 
@@ -2300,7 +2312,7 @@ ul {
     animation-delay: 0.5s;
     animation-fill-mode: forwards; */
 
-    transform: perspective(1220px) rotateY(83deg) translateX(35px) scale(0.8);
+    transform: perspective(1220px) rotateY(83deg) translateX(35px) scale(0.7);
 
     animation: fadeInRotateIframe 2s 0.5s ease forwards !important;
 }
@@ -2308,11 +2320,11 @@ ul {
 @keyframes fadeInRotateIframe {
     from {
         opacity: 0;
-        transform: perspective(1220px) rotateY(83deg) translateX(35px) scale(0.8);
+        transform: perspective(1220px) rotateY(83deg) translateX(35px) scale(0.7);
     }
     to {
         opacity: 1;
-        transform: perspective(1220px) rotateY(0deg) translateX(35px) scale(0.8);
+        transform: perspective(1220px) rotateY(0deg) translateX(35px) scale(0.7);
     }
 }
 
@@ -2353,16 +2365,72 @@ ul {
 
 #portfolioSousTitre {
     position: relative;
-    bottom: 5px;
+    bottom: 16px;
+
+    line-height: 1.1em;
 
     margin-block-start: 0;
-    font-size: 1.2em;
+    font-size: 1.1em;
     margin-block-end: 0.55em;
 
     margin-left: 18px;
     padding-left: 18px;
     color: #ef3b2d;
-    border-left: 2px solid #19ddbc36;
+    border-left: 1px solid #19ddbc36;
+}
+
+
+.alertSeekDesktopWrap {
+    margin: 4px 0px;
+    border-radius: 4px;
+    /* box-shadow: 0px 0px 5px var(--secondaryColorVeryMat);
+
+    animation: alertBoxShadowPulse 2.7s 0s ease-in infinite; */
+}
+@keyframes alertBoxShadowPulse {
+    0% {
+        box-shadow: 0px 0px 5px var(--secondaryColorVeryMat);
+    }
+    50% {
+        box-shadow: 0px 0px 10px var(--secondaryColorVeryMat);
+    }
+    100% {
+        box-shadow: 0px 0px 5px var(--secondaryColorVeryMat);
+    }
+}
+
+
+
+.alertSeekDesktop {
+    color: var(--secondaryColor);
+    font-size: 0.8em;
+
+    padding: 4px 9px 4px 6px;
+    border-radius: 5px;
+    /* border: 1px solid var(--secondaryColor); */
+
+    background-color: #19ddbc17;
+
+    animation: alertPulse 2.7s 0s ease-in-out infinite;
+}
+@keyframes alertPulse {
+    0% {
+        background-color: #19ddbc17;
+    }
+    50% {
+        background-color: #19ddbc46;
+    }
+    100% {
+        background-color: #19ddbc17;
+    }
+}
+
+
+.jumellesIcon {
+    position: relative;
+
+    transform: scale(1.1);
+    margin: 4px 6px;
 }
 
 
@@ -2398,6 +2466,8 @@ ul {
 
 #projectContainer {
     /* padding-bottom: 40px; */
+    position: relative;
+    bottom: 19px;
 }
 
 .demoVideo {
@@ -2527,7 +2597,7 @@ ul {
 .description {
     /* overflow: hidden; */
     position: relative;
-    top: 6px;
+    top: -11px;
     font-size: 80%;
     color: white;
     z-index: 100;
@@ -2606,7 +2676,7 @@ ul {
     position: relative;
     left: 83px;
     width: 35px;
-    transform: scale(7);
+    transform: scale(6);
     z-index: -9999;
 
     /* margin-right: 15px; */
@@ -3201,11 +3271,18 @@ ul {
 }
 
 
+.pageTitleAccueil {
+    margin-top: 8px;
+    margin-bottom: 27px;
+}
+
 
 
 #menuLigneCv {
     font-size: 1.1em;
     color:#E7E8F2;
+
+    margin-block-start: 0.6em;
 
     margin-block-end: 0em !important;
 }

@@ -392,7 +392,7 @@
     
 
     #underlineCV {
-        font-size: 1.2em;
+        font-size: 1.26em;
     }
 
     #toggleTechnique {
@@ -743,7 +743,7 @@
     }
     #portfolioSousTitre {
         /* display: none !important; */
-        font-size: 0.82em !important;
+        font-size: 0.86em !important;
         line-height: 1.11em !important;
         display: inline-flex;
         flex-direction: column;
@@ -754,8 +754,8 @@
         position: relative;
         bottom: 0em;
 
-        margin-left: 8px !important;
-        padding-left: 8px !important;
+        margin-left: 7px !important;
+        padding-left: 9px !important;
         color: #ef3b2d;
         position: relative;
         bottom: 12px;
@@ -822,12 +822,14 @@
         margin-block-start: 0;
         text-align: center;
         width: 88%;
-        margin: 0 auto 15px auto;
-        font-size: 1.1em;
+        margin: 0 auto 6px auto;
+        font-size: 1em;
     }
     .projetFuncList {
         margin-block-start: 1em;
         margin-block-end: 1em;
+
+        line-height: 1.15em;
 
         padding-inline-start: 34px;
 
@@ -835,6 +837,10 @@
         color: #ffffffed;
 
         padding-right: 10px;
+    }
+
+    .projetFuncList li {
+        margin: 4px auto;
     }
 
     .projectLinksDiv {
@@ -960,7 +966,7 @@
 
         margin-block-start: 0.5em;
         margin-block-end: 0.3em;
-        font-size: 1.65em;
+        font-size: 1.7em;
 
         text-decoration-color: rgb(239 59 45 / 92%);
     }
@@ -975,8 +981,8 @@
     .testH1 {
         filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.582)) !important;
 
-        font-size: 2.1em;
-        padding: 0px 0px 0px 10px !important;
+        font-size: 2.2em;
+        padding: 2px 0px 0px 10px !important;
 
         /* Danger */
         margin-bottom: -8px;
@@ -1872,7 +1878,7 @@
         transition: all 0.5s;
     }
     #pageContainerProjet {
-        margin-top: 17px !important;
+        margin-top: 0px !important;
 
         transition: all 0.5s;
     }
@@ -2853,8 +2859,8 @@
     #openBtn {
         filter: drop-shadow(1px 2px 3px black);
         position: absolute;
-        right: 9px;
-        top: 8px;
+        right: 10px;
+        top: 9px;
         width: 44px;
         height: 59px;
         z-index: 9999;

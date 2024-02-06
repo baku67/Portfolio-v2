@@ -199,18 +199,7 @@ window.onload = function() {
         document.getElementById('stage2content').style.display = "block";
     })
 
-    // Observer Titre CV
-    const observerTitleCv = new IntersectionObserver(entries => {
-        // Loop over the entries
-        entries.forEach(entry => {
-            // If the element is visible
-            if (entry.isIntersecting) {
-                
 
-            }
-        })
-    })
-    observerTitleCv.observe(document.querySelector('#formations'));
 
 
     // Observer diplome <Formation/> CV
