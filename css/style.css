@@ -22,10 +22,7 @@
     font-weight: bold;
 }
 
-.cvFormationsList {
-    line-height: 1.4em;
-    text-align: justify;
-}
+
 
 
 .cvGrisedText {
@@ -3254,6 +3251,32 @@ ul {
     padding: 0px;
 } */
 
+
+.cvFormationsList {
+    position: relative;
+    line-height: 1.4em;
+    text-align: justify;
+}
+
+
+.traitFormationsPuces {
+    position: absolute;
+    left: 26px;
+    top: 8px;
+
+    width: 2px;
+    height: -webkit-fill-available;
+
+    background-color: #ef3b2d59;
+
+    border-radius: 7px;
+
+}
+
+
+.cvFormationsList li::before {
+    transform: scale(1.7);
+}
 
 
 

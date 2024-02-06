@@ -36,6 +36,20 @@
     }
 
 
+    .traitFormationsPuces {
+        position: absolute;
+        left: 7px;
+        top: 9px;
+    
+        width: 1px;
+        height: -webkit-fill-available;
+    
+        background-color: #ef3b2d30;
+    
+        border-radius: 7px;
+    
+    }
+
 
 
 
