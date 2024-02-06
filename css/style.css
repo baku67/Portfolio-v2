@@ -1075,7 +1075,7 @@ textarea:focus, input:focus{
 }
 
 .fadeInForm {
-    animation: fadeInForm 0.4s 0s ease-in forwards;
+    animation: fadeInForm 0.64s 0s ease-in forwards;
 }
 @keyframes fadeInForm {
     from {

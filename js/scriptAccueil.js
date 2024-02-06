@@ -475,17 +475,30 @@ window.onload = function() {
 
 
 
-
+  let hasIntersected1 = false;
   const observerContactButton = new IntersectionObserver(entries => {
     // Loop over the entries
     entries.forEach(entry => {
       // If the element is visible
       if (entry.isIntersecting) {
+        hasIntersected1 = true;
+        document.getElementById("contactBtnFade").classList.remove("fadeOutForm")
         document.getElementById("contactBtnFade").classList.add("fadeInForm")
         setTimeout(function() {
           document.getElementById("contactBtnFade").style.opacity = "1";
           document.getElementById("contactBtnFade").classList.remove("fadeInForm")
-        }, 1005)
+        }, 650)
+      }
+      else {
+        if(hasIntersected1) {
+          hasIntersected1 = false;
+          document.getElementById("contactBtnFade").classList.add("fadeOutForm")
+          setTimeout(function() {
+            document.getElementById("contactBtnFade").style.opacity = "0";
+            document.getElementById("contactBtnFade").classList.remove("fadeOutForm")
+          }, 450)
+        }
+
       }
     })
   })
@@ -493,17 +506,30 @@ window.onload = function() {
 
   
 
-
+  let hasIntersected2 = false;
   const observerProjectsButton = new IntersectionObserver(entries => {
     // Loop over the entries
     entries.forEach(entry => {
       // If the element is visible
       if (entry.isIntersecting) {
+        hasIntersected2 = true;
+        document.getElementById("accueilProjectsDiv").classList.remove("fadeOutForm")
         document.getElementById("accueilProjectsDiv").classList.add("fadeInForm")
         setTimeout(function() {
           document.getElementById("accueilProjectsDiv").style.opacity = "1";
           document.getElementById("accueilProjectsDiv").classList.remove("fadeInForm")
-        }, 1005)
+        }, 650)
+      }
+      else {
+        if(hasIntersected2) {
+          hasIntersected2 = false;
+          document.getElementById("accueilProjectsDiv").classList.add("fadeOutForm")
+          setTimeout(function() {
+            document.getElementById("contactBtnFade").style.opacity = "0";
+            document.getElementById("contactBtnFade").classList.remove("fadeOutForm")
+          }, 450)
+        }
+        
       }
     })
   })
