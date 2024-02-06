@@ -127,7 +127,7 @@
     .swipeSymbol {
         position: absolute;
         right: 5%;
-        top: -2px;
+        top: -34px;
         font-size: 0.7em;
         color: var(--secondaryColorVif);
         display: flex;
@@ -329,7 +329,7 @@
     }
 
     #pageContainerProjet {
-        margin-top: 17px !important;
+        margin-top: 24px !important;
 
         background-size: cover;
         background-repeat: no-repeat;
@@ -821,9 +821,13 @@
     .projetDescriptionText {
         margin-block-start: 0;
         text-align: center;
-        width: 88%;
+        /* width: 88%; */
+        width: 95%;
         margin: 0 auto 6px auto;
         font-size: 1em;
+
+        position: relative;
+        bottom: 5px;
     }
     .projetFuncList {
         margin-block-start: 1em;
@@ -836,7 +840,37 @@
         font-size: 0.92em;
         color: #ffffffed;
 
-        padding-right: 10px;
+        /* padding-right: 10px; */
+
+        min-width: 0px;
+        padding-right: 0px;
+    }
+
+
+    .projectTitleTerrine  {
+        position: relative;
+        top: 4px;
+    }
+
+
+    /* Pour centrer */
+    .projetFuncListPositionMobile {
+        width: 92%;
+    }
+
+    .projetSlideTitleTerrine {
+        position: relative;
+        bottom: 7px;
+        left: 5px;
+    }
+
+    .projet3PositionMobile {
+        position: relative;
+        top: -21px;
+    }
+
+    .projetSkillsList li {
+        margin: 3px 3px;
     }
 
     .projetFuncList li {
@@ -1878,7 +1912,7 @@
         transition: all 0.5s;
     }
     #pageContainerProjet {
-        margin-top: 0px !important;
+        margin-top: 28px !important;
 
         transition: all 0.5s;
     }
