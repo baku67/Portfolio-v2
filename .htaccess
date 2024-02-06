@@ -3,3 +3,13 @@
     RewriteBase /
     RewriteRule ^$ views/index.html [L]
 </IfModule> -->
+<!-- 
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    
+    RewriteRule ^accueil$ index.html [L]
+    RewriteRule ^cv$ cv.html [L]
+    RewriteRule ^projets$ projets.html [L]
+    RewriteRule ^loisirs$ loisirs.html [L]
+</IfModule> -->

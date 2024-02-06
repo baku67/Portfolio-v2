@@ -3227,9 +3227,9 @@ ul {
     /* MAJ 01/02/2024 */
     /* background-color: #ef3b2d; */
     background: rgba(239,59,45);
-    background: -moz-linear-gradient(10deg, rgba(239,59,45,1) 0%, rgba(239,75,45,1) 21%, rgba(12,237,200,1) 100%);
-    background: -webkit-linear-gradient(10deg, rgba(239,59,45,1) 0%, rgba(239,75,45,1) 21%, rgba(12,237,200,1) 100%);
-    background: linear-gradient(10deg, rgba(239,59,45,1) 0%, rgba(239,75,45,1) 21%, rgba(12,237,200,1) 100%);
+    background: -moz-linear-gradient(10deg, rgba(239,59,45,1) 0%, rgba(239,75,45,1) 21%, rgba(12,237,200,0.9) 100%);
+    background: -webkit-linear-gradient(10deg, rgba(239,59,45,1) 0%, rgba(239,75,45,1) 21%, rgba(12,237,200,0.9) 100%);
+    background: linear-gradient(10deg, rgba(239,59,45,1) 0%, rgba(239,75,45,1) 21%, rgba(12,237,200,0.9) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ef3b2d",endColorstr="#0cedc8",GradientType=1);
 
     opacity: 0;
