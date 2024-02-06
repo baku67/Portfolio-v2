@@ -361,7 +361,10 @@
 
     #dlCv {
         background-color: var(--secondaryColor);
-        font-size: 0.5em;
+        font-size: 0.65em;
+        gap: 3px;
+        padding: 6px 11px 4px 9px;
+        margin-right: 20px;
     }
 
     .menuButton:hover {
@@ -470,11 +473,34 @@
         border: 0px solid rgba(239, 59, 45, 1);
         background-color: rgba(239, 59, 45, 0);
     }
+
     #status2 {
         color: white;
         text-align: center;
-        padding: 3px 7px;
+        padding: 6px 7px;
+
+        border: 0px solid rgba(0, 255, 213, 0);
+
+        animation: blinkeringStatus2 2s infinite forwards linear;
     }
+    @keyframes blinkeringStatus2 {
+        0% {
+            background-color: rgba(0, 255, 213, 0.1);
+        
+        }
+        33% {
+            background-color: rgba(0, 255, 213, 0.45);
+    
+        }
+        66% {
+            background-color: rgba(0, 255, 213, 0.45);
+    
+        }
+        100%{
+            background-color: rgba(0, 255, 213, 0.1);
+        
+        }
+      }
 
     .gridProjetHeaderContainer {
         width: 100%;
@@ -1303,7 +1329,7 @@
             transform: translate(163px, -66px) rotateX(0deg);
         }
         18% {
-            transform: translate(163px, -65px) rotateX(25deg);
+            transform: translate(163px, -65px) rotateX(27deg);
         }
         50% {
             transform: translate(163px, -74px) rotateX(0deg) rotate(5deg);
@@ -1827,7 +1853,7 @@
         position: relative;
         top: 8px;
 
-        border: 1px solid #19ddbc57;
+        border: 1px solid white;
 
         opacity: 0;
         width: 100px;

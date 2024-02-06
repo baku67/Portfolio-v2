@@ -516,7 +516,7 @@ swiper-slide {
         transform: translate(163px, -66px) rotateX(0deg);
     }
     18% {
-        transform: translate(163px, -65px) rotateX(28deg);
+        transform: translate(163px, -65px) rotateX(29deg);
     }
     50% {
         transform: translate(163px, -79px) rotateX(0deg) rotate(5deg);
@@ -1072,7 +1072,21 @@ textarea:focus, input:focus{
 }
 
 .fadeInForm {
-    animation: fadeInForm 0.64s 0s ease-in forwards;
+    animation: fadeInForm 0.7s 0.1s ease-in forwards;
+}
+@keyframes fadeInForm {
+    from {
+        opacity: 0;
+        /* height: 0px; */
+    }
+    to {
+        opacity: 1;
+        /* height: auto; */
+    }
+}
+
+.fadeInFormHeader {
+    animation: fadeInForm 0.35s 0s ease-in forwards;
 }
 @keyframes fadeInForm {
     from {
@@ -1086,7 +1100,7 @@ textarea:focus, input:focus{
 }
 
 .fadeOutForm {
-    animation: fadeOutForm 0.4s 0s ease-in forwards;
+    animation: fadeOutForm 0.1s 0s ease forwards;
 }
 @keyframes fadeOutForm {
     from {
@@ -3182,6 +3196,7 @@ ul {
 
 
 #headerAccueil {
+    opacity: 0;
     /* background-color: #00f6ff0f;
     box-shadow: 0 0 32px -11px #0ff; */
 }
