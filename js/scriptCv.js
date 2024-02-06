@@ -173,8 +173,8 @@ window.onload = function() {
 
         // Blur() derrière ram sur mobile:
         // document.getElementById("pageContainer").style.filter = "blur(2px)";
-        document.getElementById("pageContainer").style.opacity = "0.6";
-        document.getElementById("pageTitleDiv").style.opacity = "0.6";
+        document.getElementById("pageContainer").style.opacity = "0.5";
+        document.getElementById("pageTitleDiv").style.opacity = "0.5";
     }
 
     /* Set the width of the side navigation to 0 */

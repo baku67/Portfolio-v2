@@ -17,6 +17,20 @@
 
     }
 
+    /* Grid CV */
+.gridContainer {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 0.5fr; 
+    gap: 0px 180px; 
+    grid-template-areas: 
+    "formations hobbys"
+    "langages langages"
+    "outils langues"; 
+
+    margin-top: 30px;
+}
+
     .langsSvgContainer {
         transform: translate(171px, -82px) scale(1.1);
     }
@@ -125,7 +139,7 @@
 
     .smileSvgContainer {
         position: absolute;
-        right: -3px;
+        right: 0px;
         bottom: -10px;
         height: 25px;
         width: 62px;
@@ -230,10 +244,11 @@
         font-size: 1.25em;
         margin-block-end: 0.6em;
 
-        margin-left: 24px;
-        padding-left: 22px;
+
+        margin-left: 18px;
+        padding-left: 18px;
         color: #ef3b2d;
-        border-left: 1px solid #19ddbc6e;
+        border-left: 2px solid #19ddbc36;
     }
 
     @keyframes bandeauGrowShrink {
@@ -340,9 +355,17 @@
         width: 145%;
       }
 
+      .gitHubLink {
+        left: 22px;
+        top: 13px;
+      }
+      .githubLogo {
+        width: 57px;
+      }
+
 
     .pageTitle {
-        font-size: 2.4em;
+        font-size: 2.3em;
     }
 
     .photosGallerie {
@@ -666,7 +689,8 @@
 
     }
     #NavBarContainer {
-        top: 12px;
+        top: 10px;
+        font-size: 0.85em;
     }
     .testNavBarContainer {
         margin-bottom: 0em;
@@ -709,7 +733,8 @@
         background-size:cover;
         background-repeat:no-repeat;
         height: fit-content;
-        margin: 2% 12%;
+        /* margin: 2% 12%; */
+        margin: 5px 12%;
     }
 
 

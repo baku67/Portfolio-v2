@@ -48,8 +48,8 @@ window.onload = function() {
 
         // Blur() derrière ram sur mobile:
         // document.getElementById("pageContainer").style.filter = "blur(2px)";
-        document.getElementById("pageContainerProjet").style.opacity = "0.6";
-        document.getElementById("pageTitleDiv").style.opacity = "0.6";
+        document.getElementById("pageContainerProjet").style.opacity = "0.5";
+        document.getElementById("pageTitleDiv").style.opacity = "0.5";
     }
 
     /* Set the width of the side navigation to 0 */

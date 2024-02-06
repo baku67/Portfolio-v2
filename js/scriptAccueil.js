@@ -212,9 +212,9 @@ window.onload = function() {
         openBtn.style.display = "none";
 
         // Blur() derrière ram sur mobile:
-        // document.getElementById("pageContainer").style.filter = "blur(2px)";
-        document.getElementById("pageContainer").style.opacity = "0.6";
-        document.getElementById("pageTitleDiv").style.opacity = "0.6";
+        document.getElementById("pageContainer").style.filter = "blur(2px)";
+        document.getElementById("pageContainer").style.opacity = "0.5";
+        document.getElementById("pageTitleDiv").style.opacity = "0.5";
 
     }
 
@@ -224,7 +224,7 @@ window.onload = function() {
         openBtn.style.display = "block";
 
         // Blur() derrière ram sur mobile:
-        // document.getElementById("pageContainer").style.filter = "blur(0px)";
+        document.getElementById("pageContainer").style.filter = "blur(0px)";
         document.getElementById("pageContainer").style.opacity = "1";
         document.getElementById("pageTitleDiv").style.opacity = "1";
     }
