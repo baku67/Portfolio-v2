@@ -610,7 +610,7 @@ swiper-slide {
     overflow: visible;
 
     /* Apparemment pas besoin d'attendre la fin du drawing */
-    animation: poissonHobbies 3.5s 0s linear infinite;
+    animation: poissonHobbies 4.5s 0s linear infinite;
 }
 @keyframes poissonHobbies {
     0% {
@@ -647,7 +647,7 @@ swiper-slide {
 
     /* Scintillement lancé que aprè drawing parce que révèle le poisson */
     /* Meme delai que le cycle du premier déplacement  */
-    animation: fillScintillement 3.5s 2.9s linear infinite;
+    animation: fillScintillement 4.5s 4.5s linear infinite;
 }
 @keyframes fillScintillement {
     0% {
@@ -1135,6 +1135,14 @@ textarea:focus, input:focus{
 }
 
 
+
+.accueilGridPresentation {
+    width: 95%;
+    /* margin: 0px auto; */
+}
+
+
+
 .fadeInCitation {
     animation: fadeInCitation 1s 0s ease-in forwards;
 }
@@ -1494,6 +1502,10 @@ ul {
 
 
 .stageBandeau {
+
+    font-size: 95% !important;
+
+
     width: 100%;
     justify-content: space-between;
 
@@ -2340,6 +2352,11 @@ ul {
     margin-block-start: 0;
     font-size: 1.2em;
     margin-block-end: 0.55em;
+
+    margin-left: 24px;
+    padding-left: 22px;
+    color: #ef3b2d;
+    border-left: 1px solid #19ddbc78;
 }
 
 
@@ -3294,12 +3311,19 @@ ul {
 }
 
 
+#pageTitleDiv {
+    width: 100%;
+    display: inline-flex;
+    align-items: baseline;
+}
+
+
 
 .testPopPortraitImg {
     width: 147px;
-    height: 147px;
+    height: 141px;
     position: relative;
-    top: 9px;
+    top: 16px;
     left: 3px;
 }
 
@@ -3380,8 +3404,8 @@ ul {
 
 .fixScalePortraitPC {
     position: relative;
-    transform: scale(0.95);
-    left: 22px;
+    transform: scale(0.9);
+    left: 30px;
 }
 
 .accueilProjectsRightLink:hover .redirectProjectsIcon {
@@ -3575,7 +3599,7 @@ ul {
 
     color: #ef3b2d;
     /* line-height: 0; */
-    padding: 8px 0px 1px 3%;
+    padding: 2px 0px 1px 24px;
     margin-block-end: 0;
     margin-block-start: 0;
 }
