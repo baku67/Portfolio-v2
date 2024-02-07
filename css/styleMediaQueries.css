@@ -127,7 +127,7 @@
     .swipeSymbol {
         position: absolute;
         right: 5%;
-        top: -34px;
+        top: -25px;
         font-size: 0.7em;
         color: var(--secondaryColorVif);
         display: flex;
@@ -527,6 +527,8 @@
         width: 97%;
         margin: 5px auto 0px auto;
 
+        top: -2px;
+
         font-size: 100%;
         grid-area: description; 
         position: relative;
@@ -692,8 +694,9 @@
 
     .topLeftBgMobile {
         left: 0px;
-        top: -6px;
-        width: 349px;
+        top: -7px;
+        /* width: 349px; */
+        width: 96vw;
 
         animation: fadeInBgProject 1s 0.2s linear forwards !important;
     }
@@ -703,7 +706,7 @@
             opacity: 0;
         }
         to {
-            opacity: 0.2;
+            opacity: 0.15;
         }
     }
     
@@ -717,7 +720,7 @@
         width: 63%;
     }
     .splide__slide img {
-        border: 2px solid var(--secondaryColor);
+        border: 2px solid #1c1c1c;
         padding: 0px;
     }
 
@@ -843,6 +846,14 @@
         font-size: 70%;
         margin-block-start: 0em;
         margin-block-end: 0em;
+
+        background-color: #181c26;
+        padding: 10px 0px;
+        border-radius: 13px;
+    }
+    .projetSkillsList1 {
+        border-left: 1px solid #f97b2b80;
+        border-right: 1px solid #f97b2b80;
     }
     swiper-container {
         /* height: 19vh; */
@@ -887,6 +898,16 @@
     .projectTitleTerrine  {
         position: relative;
         top: 4px;
+    }
+
+    .splide__arrow svg {
+        /* transform: scale(2.5); */
+    }
+    .splide__arrow--prev {
+        transform: scaleX(1) scale(1.5);
+    }
+    .splide__arrow--next {
+        transform: scale(1.5);
     }
 
 
@@ -1579,7 +1600,23 @@
 
     .hobbys {
         position: relative;
-        bottom: 52px;
+        /* bottom: 52px; */
+
+        margin-right: 44px;
+        top: -66px;
+        right: -28px;
+    }
+
+    @keyframes fadeInHobbys {
+        from {
+            right: -500px;
+            opacity: 0;
+    
+        }
+        to {
+            right: -28px;
+            opacity: 1;
+        }
     }
 
     .docAdminGrid {
@@ -1908,6 +1945,23 @@
       .isMobile {
         display: inline-flex;
       }
+
+
+
+    .opentBtnFixed {
+        position: fixed !important;
+        display: none;
+
+        right: 25px;
+        top: 5px;
+        z-index: 9999;
+        background-color: #181a24;
+        padding: 5px 10px;
+        border-radius: 40px;
+
+        animation: fadeIn 0.4s 0s ease forwards;
+    }
+
 
 
     .imgDocuVignettes {
@@ -2934,7 +2988,7 @@
         top: 9px;
         width: 44px;
         height: 59px;
-        z-index: 9999;
+        z-index: 99999999;
     }
     .openBtnLoisirs {
         right: 10px !important;

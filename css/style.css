@@ -1650,7 +1650,12 @@ ul {
 }
 
 
-
+.portraitTrait1 {
+    height: 15px;
+    width: 105%;
+    margin: 0 auto;
+    position: absolute;
+}
 
 
 .formations {
@@ -2685,6 +2690,13 @@ ul {
 }
 
 
+.splide__arrow--prev {
+    transform: scaleX(1) scale(2);
+}
+.splide__arrow--next {
+    transform: scale(2);
+}
+
 
 .projetSkillsList {
     gap: 1px;
@@ -2695,6 +2707,10 @@ ul {
 
     flex-wrap: wrap;
     justify-content: center;
+
+    background-color: #181c26;
+    padding: 10px 0px;
+    border-radius: 13px;
 }
 .projetSkillsList li {
     list-style-type: none;
@@ -2710,6 +2726,11 @@ ul {
 .projetSkillsList li::before {
 
     display: none;
+}
+
+.projetSkillsList1 {
+    border-left: 1px solid #f97b2b80;
+    border-right: 1px solid #f97b2b80;
 }
 
 .projetDescriptionText {

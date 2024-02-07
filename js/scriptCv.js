@@ -91,12 +91,14 @@ window.onload = function() {
 
     // scrollToTop pop/depop on scroll
     if(mobileDetection) {
+        
         const scrollToTopBtn = document.getElementById('scrollToTop');
+
         // Observer navBarre du haut:
         const observerContactButton = new IntersectionObserver(entries => {
-            // Loop over the entries
+
             entries.forEach(entry => {
-                // If the element is visible
+
                 if (!entry.isIntersecting) {
                     scrollToTopBtn.style.opacity = "1";
                     scrollToTopBtn.style.pointerEvents = "all";
@@ -109,6 +111,7 @@ window.onload = function() {
         })
         observerContactButton.observe(document.querySelector('#headerCv'));
     }
+
 
     // scrollToTop click
     function scrollToTop() {
@@ -147,9 +150,11 @@ window.onload = function() {
     // **********  MOBILE: Click outside nav burger si actif = closeNav
     var sidenav = document.getElementById("mySidenav");
     var openBtn = document.getElementById("openBtn");
+    var openBtn2 = document.getElementById("openBtn2");
     var closeBtn = document.getElementById("closeBtn");
 
     openBtn.onclick = openNav;
+    openBtn2.onclick = openNav;
     closeBtn.onclick = closeNav;
 
 
@@ -170,6 +175,7 @@ window.onload = function() {
     function openNav() {
         sidenav.classList.add("active");
         openBtn.style.display = "none";
+        openBtn2.style.display = "none";
 
         // Blur() derrière ram sur mobile:
         // document.getElementById("pageContainer").style.filter = "blur(2px)";
@@ -181,6 +187,7 @@ window.onload = function() {
     function closeNav() {
         sidenav.classList.remove("active");
         openBtn.style.display = "block";
+        openBtn2.style.display = "block";
 
         // Blur() derrière ram sur mobile:
         // document.getElementById("pageContainer").style.filter = "blur(0px)";
@@ -298,6 +305,31 @@ window.onload = function() {
     })
     observerHobbies.observe(document.querySelector('#hobbies'));
     
+
+
+    
+
+  // Fixed menuBörgir lors scroll (mobile), equivalent à la sideNav PC
+  if(mobileDetection) {
+      
+    const observerHeaderBorger = new IntersectionObserver(entries => {
+
+      entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+            document.getElementById("openBtn2").style.display = "none";
+        }
+        else {
+            document.getElementById("openBtn2").style.display = "block";
+        }
+      })
+    })
+    observerHeaderBorger.observe(document.querySelector('#headerCv'));
+}
+
+
+
+
 
 
 

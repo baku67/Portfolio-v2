@@ -61,6 +61,16 @@
 
     <body id="bodyContainerProjets" data-theme="dark">
 
+
+        <!-- Fixed menu Burger (mobile) lors scroll -->
+        <a href="#" id="openBtn2" class="opentBtnFixed isMobile">
+            <span class="burger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </a>
+
         <!-- (Desktop) Lors scroll: sideNav -->
         <!-- <ul id="sideNavDesktop">
             <li><a href="/">Accueil -</a></li>
@@ -270,7 +280,7 @@
 
                                         <p class="projetDescriptionText">Plateforme communautaire "Gaming"</p> 
 
-                                        <ul class="projetSkillsList">
+                                        <ul class="projetSkillsList projetSkillsList1">
                                             <li>HTML/CSS</li>
                                             <li>JS</li>
                                             <li class="mainSkill">PHP / Symfony</li>
@@ -363,6 +373,10 @@
                                                     type: 'loop',
                                                     pauseOnHover: false,
                                                     // pagination: false,
+                                                    classes: {
+                                                        prev  : 'splide__arrow--prev',
+                                                        next  : 'splide__arrow--next',
+                                                    },
                                                 }).mount();
                                             } );
                                         </script>
@@ -493,6 +507,10 @@
                                                         type: 'loop',
                                                         pauseOnHover: false,
                                                         // pagination: false,
+                                                        classes: {
+                                                        prev  : 'splide__arrow--prev',
+                                                        next  : 'splide__arrow--next',
+                                                    },
                                                     }).mount();
                                                 } );
                                             </script>
@@ -636,6 +654,10 @@
                                                 type: 'loop',
                                                 pauseOnHover: false,
                                                 // pagination: false,
+                                                classes: {
+                                                    prev  : 'splide__arrow--prev',
+                                                    next  : 'splide__arrow--next',
+                                                },
                                             }).mount();
                                         } );
                                         </script>
