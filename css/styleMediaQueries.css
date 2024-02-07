@@ -2149,6 +2149,8 @@
 
         padding: 2px 2px 2px 8px;
         left: -14px;
+
+        filter: blur(3px) grayscale(1);
         animation: imgAccueilFadeIn 2s 1.8s ease forwards;
 
     }
@@ -2156,7 +2158,7 @@
         from {
             border-radius: 50px;
             opacity: 0;
-            filter: blur(10px) grayscale(1);
+            filter: blur(3px) grayscale(1);
         }
         to {
             border-radius: 55px;

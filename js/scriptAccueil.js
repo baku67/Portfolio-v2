@@ -271,7 +271,7 @@ window.onload = function() {
         document.querySelectorAll(".accueilWord").forEach((elem, i) => {
           setTimeout(() => {
             elem.classList.add("fadeInWordPresentation");
-          }, i * 50);
+          }, i * 55);
         });
       }, 350)
 
