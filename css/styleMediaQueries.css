@@ -133,7 +133,7 @@
     .swipeSymbol {
         position: absolute;
         right: 5%;
-        top: -17px;
+        top: -5px;
         font-size: 0.7em;
         color: var(--secondaryColorVif);
         display: flex;
@@ -225,10 +225,11 @@
     }
 
     .projetNbr {
+        text-shadow: 1px 1px 10px black;
         opacity: 1;
-        color: #e1e1e1;
+        color: #f2f5f5;
         font-size: 1em;
-        margin-block-start: 5px;
+        margin-block-start: 13px;
     }
 
     .projetSlideTitle {
@@ -696,12 +697,12 @@
 
         backdrop-filter: blur(3px);
 
-        border-radius: 10px;
+        border-radius: 16px;
         border-bottom-left-radius: 0px;
         border-bottom-right-radius: 0px;
 
-        border-left: 2px solid #00000052;
-        border-right: 2px solid #00000052;
+        /* border-left: 2px solid #00000052;
+        border-right: 2px solid #00000052; */
         border-top: 2px solid #00000052;
         /* border-bottom: 2px solid #00000052; */
     }
@@ -722,8 +723,14 @@
         border: 0px solid #ef3b2d;
         border-bottom: 1px solid #ef3b2d;
     
-        width: 32px;
-        height: 32px;
+        /* width: 32px;
+        height: 32px; */
+
+        
+        width: 35px;
+        height: 35px;
+        padding: 5px 10px !important;
+
     }
 
     .projectShapeBgAnim1-mobile {
@@ -745,15 +752,21 @@
         /* left: 0px;
         width: 100%;
         top: -7px; */
-        left: -45px;
+
+        /* left: -53px;
         width: 115%;
+        top: -40px; */
+
+        left: -66px;
+        /* width: 119%; */
+        width: 121%;
         top: -40px;
 
 
         
 
         /* oulah: +ram */
-        filter: saturate(1.08);
+        filter: saturate(1.12);
 
         animation: fadeInBgProject 1s 0.2s linear forwards !important;
     }
@@ -763,7 +776,7 @@
             opacity: 0;
         }
         to {
-            opacity: 0.95;
+            opacity: 1;
         }
     }
     
@@ -899,11 +912,22 @@
 
 
     .projectDescriptionHeader { 
-        background-color: #171b2500;
-        padding: 1px 0px 0px 0px;
 
-        /* Test pour rendre SquadForge lisible */
-        backdrop-filter: blur(12px);
+        border-top: 1px solid #00000091;
+
+        /* background-color: #171b2500; */
+        /* background-color: #181a24bd; */
+        background: rgb(24,26,36);
+        background: -moz-linear-gradient(180deg, rgba(24,26,36,0.6) -40%, rgba(255,255,255,0) 100%);
+        background: -webkit-linear-gradient(180deg, rgba(24,26,36,0.6) -40%, rgba(255,255,255,0) 100%);
+        background: linear-gradient(180deg, rgba(24,26,36,0.6) -40%, rgba(255,255,255,0) 100%);
+
+
+
+        width: 96%;
+        margin: 0 auto;
+
+        padding: 1px 0px 0px 0px;
 
         border: 0px;
     }
@@ -958,14 +982,18 @@
         min-width: 0px;
         padding-right: 0px;
 
-        background: rgb(14,14,14);
+        /* background: rgb(14,14,14);
         background: -moz-linear-gradient(180deg, rgba(14,14,14,0.5) 0%, rgba(255,255,255,0) 100%);
         background: -webkit-linear-gradient(180deg, rgba(14,14,14,0.5) 0%, rgba(255,255,255,0) 100%);
-        background: linear-gradient(180deg, rgba(14,14,14,0.5) 0%, rgba(255,255,255,0) 100%);
+        background: linear-gradient(180deg, rgba(14,14,14,0.5) 0%, rgba(255,255,255,0) 100%); */
         /* filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0e0e0e",endColorstr="#ffffff",GradientType=1); */
+        background: rgb(24,26,36);
+        background: -moz-linear-gradient(0deg, rgba(24,26,36,0.42) 0%, rgba(255,255,255,0) 100%);
+        background: -webkit-linear-gradient(0deg, rgba(24,26,36,0.42) 0%, rgba(255,255,255,0) 100%);
+        background: linear-gradient(0deg, rgba(24,26,36,0.42) 0%, rgba(255,255,255,0) 100%);
 
         padding-top: 10px;
-        padding-bottom: 10px;
+        padding-bottom: 14px;
         margin-block-end: 0;
 
         border-radius: 11px;
@@ -1342,7 +1370,7 @@
     /* Splide max width */
     .splide__progress {
         margin: 0 auto;
-        width: 45%;
+        width: 60%;
     }
 
     #projectContainer {
