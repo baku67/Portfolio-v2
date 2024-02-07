@@ -1775,7 +1775,7 @@
         opacity: 0;
         position: relative;
         bottom: 10px;
-        filter: blur(2px);
+        filter: blur(0px);
     }
 
     .fadeInWordPresentation {
@@ -1785,12 +1785,12 @@
         from {
             opacity: 0;
             bottom: 10px;
-            filter: blur(4px);
+            /* filter: blur(4px); */
         }
         to {
             opacity: 1;
             bottom: 0px;
-            filter: blur(0px);
+            /* filter: blur(0px); */
         }
     }
 
