@@ -351,7 +351,7 @@ window.onload = function() {
                     element.style.strokeDashoffset = lengthRec5;
                     element.getBoundingClientRect();
                     element.style.transition = element.style.WebkitTransition =
-                    'stroke-dashoffset 2.5s 0.5s ease-in-out';
+                    'stroke-dashoffset 2.5s 0.1s ease-in-out';
                     element.style.strokeDashoffset = '0';    
                 });
 

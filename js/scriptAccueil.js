@@ -271,7 +271,7 @@ window.onload = function() {
         document.querySelectorAll(".accueilWord").forEach((elem, i) => {
           setTimeout(() => {
             elem.classList.add("fadeInWordPresentation");
-          }, i * 55);
+          }, i * 45);
         });
       }, 350)
 
@@ -300,6 +300,21 @@ window.onload = function() {
     poissonAccueil1.style.display = "block";
     document.getElementById("body").append(poissonAccueil1);
     
+    // if (window.matchMedia("(min-width: 1300px)").matches) {
+    //   setInterval(function() {
+    //     if (document.getElementById('raieAccueil1') != null ) {
+    //       document.getElementById('raieAccueil1').remove();
+    //     }
+    //     document.getElementById("body").append(poissonAccueil1);
+    //   }, 35000)
+    // } else {
+    //   setInterval(function() {
+    //     if (document.getElementById('raieAccueil1') != null ) {
+    //       document.getElementById('raieAccueil1').remove();
+    //     }
+    //     document.getElementById("body").append(poissonAccueil1);
+    //   }, 22500)
+    // }
     if (window.matchMedia("(min-width: 1300px)").matches) {
       setInterval(function() {
         if (document.getElementById('raieAccueil1') != null ) {
@@ -313,9 +328,9 @@ window.onload = function() {
           document.getElementById('raieAccueil1').remove();
         }
         document.getElementById("body").append(poissonAccueil1);
-      }, 22500)
+      }, 35000)
     }
-    //
+    
 
 
     // Interval Raie Accueil:

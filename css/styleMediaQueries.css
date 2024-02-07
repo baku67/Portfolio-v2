@@ -44,13 +44,22 @@
         width: 2px;
         height: -webkit-fill-available;
     
-        background-color: #ef3b2d75;
+        /* background-color: #ef3b2d75; */
+        background-color: #01ffd569;
     
         border-radius: 7px;
     
     }
 
 
+
+    .cvSectionBgGradient ul li::before {
+        content: "•";
+        color: #01ffd5;
+        display:inline-block;
+        width:1em;
+        margin-left:-1em;
+    }
 
 
 
@@ -850,7 +859,7 @@
     }
     #portfolioSousTitre {
         /* display: none !important; */
-        font-size: 0.86em !important;
+        font-size: 0.88em !important;
         line-height: 1.11em !important;
         display: inline-flex;
         flex-direction: column;
@@ -897,7 +906,7 @@
 
     .pageSectionTitle {
         font-size: 1.2em;
-        margin-block-start: 1em;
+        margin-block-start: 0.7em;
     }
 
     .paragrapheDescriptionProjet {
@@ -967,7 +976,7 @@
         bottom: 5px;
     }
     .projetFuncList {
-        margin-block-start: 1em;
+        margin-block-start: 0.3em;
         margin-block-end: 1em;
 
         line-height: 1.15em;
@@ -1044,7 +1053,7 @@
     }
 
     .projetFuncList li {
-        margin: 4px auto;
+        margin: 7px auto;
     }
 
     .projectLinksDiv {
@@ -1357,6 +1366,12 @@
 
     .cvSectionBgGradient {
         background: radial-gradient(circle, rgba(12,237,200,0.1) 0%, rgba(66,66,66,0) 57%);
+
+        background-color: #00000000;
+        box-shadow: 0px 0 25px -6px #00ffff24;
+        /* padding: 1px 11px 2px; */
+        padding: 1px 20px 2px 11px;
+        border-radius: 12px;
     }
 
     .cvSectionBgGradientSkills {
@@ -1392,10 +1407,51 @@
         margin-block-start: 0em;
         margin-block-end: 0em;
     }
+
+
+    .langsAnim {
+        animation-name: fadeInLang;
+        animation-duration: 2s;
+        /* animation-delay: 4.5s; */
+        animation-fill-mode: forwards;
+    }
+    @keyframes fadeInLang {
+        from {
+            right: -500px;
+            opacity: 0;
+    
+        }
+        to {
+            right: 0px;
+            opacity: 1;
+        }
+    }
+
+
+
+    .outilsAnim {
+        animation-name: fadeInFormation;
+        animation-duration: 2s;
+        /* animation-delay: 3.5s; */
+        animation-fill-mode: forwards;
+    }
+    @keyframes fadeInFormation {
+        from {
+            left: -500px;
+            opacity: 0;
+    
+        }
+        to {
+            left: 0px;
+            opacity: 1;
+        }
+    }
+
+
     
     #titleCv {
-        margin-block-start: 0.6em;
-        margin-block-end: 0.1em;
+        margin-block-start: 0.7em;
+        margin-block-end: 0.25em;
     }
 
     .projetTitle {
@@ -1597,6 +1653,11 @@
         }
     }
 
+
+    .formations {
+        margin-right: 0px;
+    }
+
     
     .formationSvgPath {
         opacity: 0.9;
@@ -1714,9 +1775,13 @@
         position: relative;
         /* bottom: 52px; */
 
-        margin-right: 44px;
-        top: -66px;
-        right: -28px;
+        /* margin-right: 44px; */
+        /* top: -66px; */
+        top: -23px;
+        /* right: -28px; */
+        right: 0;
+
+
     }
 
     @keyframes fadeInHobbys {
@@ -1726,7 +1791,7 @@
     
         }
         to {
-            right: -28px;
+            right: 0px;
             opacity: 1;
         }
     }
@@ -1779,7 +1844,7 @@
     }
 
     .fadeInWordPresentation {
-        animation: fadeInWordPresentation 0.8s 0s ease forwards;
+        animation: fadeInWordPresentation 0.7s 0s linear forwards;
     }
     @keyframes fadeInWordPresentation {
         from {
@@ -1990,21 +2055,26 @@
     }
 
     .outilsSectionTitleMobile {
-        margin-block-start: 0em;
+        margin-block-start: 0.7em;
     }
 
+
     .outils {
-        bottom: 95px;
+        margin: 0 auto;
+        /* bottom: 95px; */
+        bottom: 47px;
     }
     .langues {
-        bottom: 70px;
+        /* bottom: 70px; */
+        bottom: 15px;
     }
 
     /* GRID COMPETENCES */
     .langages {
-        bottom: 102px; 
+        /* bottom: 84px;  */
+        bottom: 68px;
+
         margin-top: 0px;
-        /* margin-top: 50px; */
     }
     .gridCompetences {  
         margin: 0 auto 30px auto;
@@ -2064,7 +2134,7 @@
         position: fixed !important;
         display: none;
 
-        right: 25px;
+        right: 10px;
         top: 5px;
         z-index: 9999;
         background-color: #181a24;
@@ -2812,7 +2882,50 @@
         width: 160px;
         height: 160px;
         offset-path: path("M 135 -145 C -84.891 667.473 441.62 619.849 714.136 1069.632");
+
+        filter: blur(0px);
+        animation: raieAccueil1 20000ms 3500ms 1 linear;
     }
+
+    @keyframes raieAccueil1 {
+        0% {
+            transform: rotateZ(9deg) rotateX(180deg);
+            offset-distance: 0%;
+            opacity: 0;
+        }
+        11% {
+            opacity: 0.25;
+        }
+        22% {
+            opacity: 0.25;
+            transform: rotateZ(9deg) rotateX(180deg);
+        }
+        33% {
+            opacity: 0.25;
+        }
+        44% {
+            opacity: 0.25;
+        }
+        55% {
+            transform: rotateZ(9deg) rotateX(130deg);
+            opacity: 0.25;
+        }
+        66% {
+            opacity: 0.25;
+        }
+        77% {
+            transform: rotateZ(9deg) rotateX(118deg);
+            opacity: 0.25;
+        }
+        88% {
+            opacity: 0.25;
+        }
+        100% {
+            transform: rotateZ(9deg) rotateX(106deg);
+            opacity: 0.1;
+            offset-distance: 100%;
+        }
+      }
 
     #scubaDiverFlash {
 

@@ -748,6 +748,12 @@
         min-width: 503px;
     }
 
+
+    .projectShapesDiv-top-left {
+        left: 153px;
+    }
+
+
     #traitHeader {
         /* height: 2px;
         margin-bottom: 0px;

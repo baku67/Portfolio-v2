@@ -33,6 +33,10 @@
 
 
 .containerToggleLight {
+
+    /* Temporaire: checkbox disabled HTML  */
+    opacity: 0.2;
+
     position: absolute;
     right: 5px;
     top: 116%;
@@ -1342,7 +1346,8 @@ ul {
 
 .cvSectionBgGradient ul li::before {
     content: "•";
-    color: #ef3b2d;
+    /* color: #ef3b2d; */
+    color: #01ffd5;
     display:inline-block;
     width:1em;
     margin-left:-1em;
