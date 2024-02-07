@@ -2305,6 +2305,7 @@ ul {
     grid-area: iframe; 
     text-align: justify; 
     margin-right: 35px;
+    margin-left: 50px; 
     opacity: 0;
 
     /* animation-name: fadeIn;
@@ -2315,6 +2316,43 @@ ul {
     transform: perspective(1220px) rotateY(83deg) translateX(35px) scale(0.65);
 
     animation: fadeInRotateIframe 2s 0.5s ease forwards !important;
+}
+
+.projectShapesDiv-top-left {
+    position: absolute;
+
+    left: 0;
+    top: 0px;
+    width: 516px;
+    opacity: 0.5;
+}
+
+.projectShapesDiv-bottom-right {
+    position: absolute;
+
+    right: 0;
+    bottom: 0px;
+    width: 516px;
+    opacity: 0.5;
+}
+
+.projectShapeBgAnim1 {
+    opacity: 0;
+    animation: fadeInBgProject 0.7s 1.7s linear forwards;
+}
+
+.projectShapeBgAnim2 {
+    opacity: 0;
+    animation: fadeInBgProject 0.7s 2.5s linear forwards;
+}
+
+@keyframes fadeInBgProject {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.6;
+    }
 }
 
 @keyframes fadeInRotateIframe {
@@ -2377,6 +2415,26 @@ ul {
     padding-left: 18px;
     color: #ef3b2d;
     border-left: 1px solid #19ddbc36;
+}
+
+#iframeElem1 {
+    box-shadow: 0 0 89px -11px #f89c2f !important;
+}
+#iframeElem2 {
+    box-shadow: 0 0 89px -11px #16ddbc !important;
+}
+#iframeElem3 {
+    box-shadow: 0 0 89px -11px #1f30bf !important;
+}
+
+.iframeReflet {
+    clip-path: polygon(0 0, 34% 0, 100% 100%, 67% 100%);
+    width: 500px;
+    height: 750px;
+    background-color: rgb(236, 236, 236);
+    position: absolute;
+
+    display: none;
 }
 
 
@@ -2477,9 +2535,9 @@ ul {
 
 .carouselImgProject {
     width: -webkit-fill-available;
-    width: 60%;
+    width: 45%;
 
-    border-radius: 12px;
+    border-radius: 8px;
 }
 .splide {
     margin-top: 45px;
@@ -2511,8 +2569,8 @@ ul {
 }
 
 .splide__slide img {
-    border: 2px solid var(--secondaryColorMat);
-    padding: 2px;
+    border: 2px solid #181818;
+    padding: 1px;
 }
 
 .splide__toggle {
@@ -2520,20 +2578,26 @@ ul {
     bottom: -5px;
     right: 50%;
     transform: translateX(50%);
-    width: 32px;
-    height: 32px;
-    background-color: #06060a;
+    width: 35px;
+    height: 35px;
+    background-color: #1c222d;
     border-radius: 50px;
     fill: #ef3b2d;
-    border: 0px solid #ef3b2d94;
-    border-bottom: 2px solid #ef3b2d;
+    /* border: 0px solid #ef3b2d94; */
+    /* border-bottom: 2px solid #ef3b2d; */
+    border: 2px solid #ef3b2d;
     align-items: center;
     display: inline-flex;
     transition: all 0.2s;
 }
 .splide__toggle:hover {
     background-color: #ef3b2d;
-    fill: #06060a;
+    fill: #1c222d;
+}
+
+.splide__arrow {
+    background: #ef3b2d00;
+    width: 8em;
 }
 
 
@@ -2549,7 +2613,7 @@ ul {
 /* Splide max width */
 .splide__progress {
     margin: 0 auto;
-    width: 65%;
+    width: 40%;
 }
 
 #contactBtnFade {
@@ -2669,6 +2733,11 @@ ul {
     transform: translateX(-14px);
 }
 
+
+.projectSlideLogo3 {
+    padding-right: 7px; 
+    width: 47px !important;
+}
 
 
 /* Effet arriere plan */

@@ -679,8 +679,42 @@
         height: 32px;
     }
 
+    .projectShapeBgAnim1-mobile {
+        z-index: -1;
+        opacity: 0;
+        animation: fadeInBgProject 0.7s 1.7s linear forwards;
+
+        left: 68px;
+        top: -112px;
+        width: 349px;
+    
+    }
+
+    .topLeftBgMobile {
+        left: 0px;
+        top: -6px;
+        width: 349px;
+
+        animation: fadeInBgProject 1s 0.2s linear forwards !important;
+    }
+
+    @keyframes fadeInBgProject {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 0.2;
+        }
+    }
+    
+
+    .splide__arrow {
+        width: 1em !important;
+    }
+
     .carouselImgProject {
         border-radius: 7px;
+        width: 63%;
     }
     .splide__slide img {
         border: 2px solid var(--secondaryColor);
@@ -846,6 +880,9 @@
         padding-right: 0px;
     }
 
+    .projectSlideLogo3 {
+        width: 65px !important;
+    }
 
     .projectTitleTerrine  {
         position: relative;
@@ -1200,7 +1237,7 @@
     /* Splide max width */
     .splide__progress {
         margin: 0 auto;
-        width: 55%;
+        width: 45%;
     }
 
     #projectContainer {
