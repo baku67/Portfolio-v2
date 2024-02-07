@@ -1,0 +1,10 @@
+@media only screen and (min-width: 380px) {
+    /* styles for browsers larger than 960px; */
+
+
+    .description {
+        padding: 2px 15px 26px 15px;
+    }
+
+
+}

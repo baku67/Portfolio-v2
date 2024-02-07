@@ -859,7 +859,7 @@
     }
     #portfolioSousTitre {
         /* display: none !important; */
-        font-size: 0.88em !important;
+        font-size: 0.9em !important;
         line-height: 1.11em !important;
         display: inline-flex;
         flex-direction: column;
@@ -2137,9 +2137,16 @@
         right: 10px;
         top: 5px;
         z-index: 9999;
-        background-color: #181a24;
+
+        /* background-color: #181a24; */
+        /* background-color: #181a24cf; */
+        background-color: #181a24de;
+
         padding: 5px 10px;
-        border-radius: 40px;
+        /* border-radius: 40px; */
+        border-radius: 12px;
+
+        border: 1px solid #ffffff3a;
 
         animation: fadeIn 0.4s 0s ease forwards;
     }
@@ -2875,6 +2882,11 @@
             bottom: -50px;
 
         }
+    }
+
+
+    #openBtn2 .burger-icon span {
+        width: 32px !important;
     }
 
 
