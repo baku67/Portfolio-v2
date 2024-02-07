@@ -215,6 +215,7 @@ body:not(#flashPointCache)[data-theme="light"] {
 
 
 .swipeSymbol {
+    z-index: 999999;
     position: absolute;
     right: 3%;
     top: 0px;
@@ -2283,8 +2284,27 @@ ul {
 }
 
 
+.swipeImgDropShadow {
+    filter: drop-shadow(3px 5px 6px black);
+}
 
 
+
+.projectDescriptionHeader {
+
+    padding: 1px 0px 15px 0px;
+    border-radius: 13px;
+    z-index: 9999999;
+    overflow: hidden;
+
+
+    background-color: #171b25ba;
+    border: 1px solid #0000002e;
+    
+    margin-bottom: 7px;
+    border-radius: 13px;
+    overflow: hidden;
+}
 
 
 
@@ -2310,7 +2330,7 @@ ul {
     grid-area: iframe; 
     text-align: justify; 
     margin-right: 35px;
-    margin-left: 50px; 
+    margin-left: 62px; 
     opacity: 0;
 
     /* animation-name: fadeIn;
@@ -2708,16 +2728,16 @@ ul {
     flex-wrap: wrap;
     justify-content: center;
 
-    background-color: #181c26;
+    /* background-color: #181c26;
     padding: 10px 0px;
-    border-radius: 13px;
+    border-radius: 13px; */
 }
 .projetSkillsList li {
     list-style-type: none;
     color: #efe8e8;
     font-weight: 600;
     margin: 5px 3px;
-    padding: 3px 10px 1px 10px;
+    padding: 2px 10px 1px 10px;
     border: 1px solid #ef3b2d;
     border-radius: 100px;
     background-color: #ef3b2d;
@@ -2729,8 +2749,8 @@ ul {
 }
 
 .projetSkillsList1 {
-    border-left: 1px solid #f97b2b80;
-    border-right: 1px solid #f97b2b80;
+    /* border-left: 1px solid #f97b2b80;
+    border-right: 1px solid #f97b2b80; */
 }
 
 .projetDescriptionText {

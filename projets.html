@@ -62,6 +62,19 @@
     <body id="bodyContainerProjets" data-theme="dark">
 
 
+        <!-- <script>
+            window.onload = function() {
+
+                const swiper = new Swiper('.swiper', {
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                });
+            }
+        </script> -->
+
+
         <!-- Fixed menu Burger (mobile) lors scroll -->
         <a href="#" id="openBtn2" class="opentBtnFixed isMobile">
             <span class="burger-icon">
@@ -213,7 +226,8 @@
 
             <!-- Symbole Swipe -->
             <div class="swipeSymbol">
-                <img class="swipeImg" src="../img/projects/slideSymbol2.png"/>
+                <img class="swipeImg isDesktop" src="../img/projects/slideSymbol2.png"/>
+                <img class="swipeImg swipeImgDropShadow isMobile" src="../img/projects/slideSymbol_blue.png"/>
                 <!-- <span class="swipeTxt">Glisser</span> -->
             </div>
 
@@ -229,7 +243,7 @@
                             <img src="../img/projects/bgShapes2-min.png" class="projectShapeBgAnim1 projectShapesDiv-top-left isDesktop" />
 
                             <!-- Shape absolute (bas-droite)-->
-                            <img src="../img/projects/bgShapes1_squadforge2-min.png" class="projectShapeBgAnim2 projectShapesDiv-bottom-right" />
+                            <img src="../img/projects/bgShapes1_bjj.png" class="projectShapeBgAnim2 projectShapesDiv-bottom-right" />
 
                             <div id="projectContainer">
 
@@ -269,36 +283,47 @@
 
                                     <div class="description">
 
-                                        <!-- Shape absolute (haut gauche) Mobile -->
-                                        <img src="../img/projects/bgShapes1_squadforge2-min(rotated).png" class="projectShapeBgAnim1-mobile topLeftBgMobile projectShapesDiv-top-left isMobile" />
 
-                                        <h3 class="projetNbr">Projet 1</h3>
-                                        <div class="projectTitle">
-                                            <img src="../img/projects/squadforge.png" class="projectSlideLogo" />
-                                            <p class="projetSlideTitle" style="font-family: 'Julius Sans One', sans-serif;">SquadForge</p>
+                                        <div class="projectDescriptionWrapper">
+
+                                            <!-- Shape absolute (haut gauche) Mobile -->
+                                            <img src="../img/projects/bgShapes1_squadforge2-min(rotated).png" class="projectShapeBgAnim1-mobile topLeftBgMobile projectShapesDiv-top-left isMobile" />
+
+
+                                            <div class="projectDescriptionHeader">
+
+                                                <h3 class="projetNbr">Projet 1</h3>
+
+                                                <div class="projectTitle">
+                                                    <img src="../img/projects/squadforge.png" class="projectSlideLogo" />
+                                                    <p class="projetSlideTitle projetTitleSF-mobile" style="font-family: 'Julius Sans One', sans-serif;">SquadForge</p>
+                                                </div>
+
+                                                <p class="projetDescriptionText">Plateforme communautaire "Gaming"</p> 
+                                            
+                                            </div>
+
+                                            <ul class="projetSkillsList projetSkillsList1">
+                                                <li>HTML/CSS</li>
+                                                <li>JS</li>
+                                                <li class="mainSkill">PHP / Symfony</li>
+                                                <li>Doctrine / DQL</li>
+                                                <li>Twig</li>
+                                            </ul>
+
+                                            <ul class="projetFuncList">
+                                                <li>Autentification</li>
+                                                <li>Système de modération (validation des public, censure, signalements)</li>
+                                                <li>Signalements à la modération</li>
+                                                <li>Publication de Topics, Médias, Commentaires</li>
+                                                <li>Upvotes et likes/dislikes</li>
+                                                <li>Création et candidatures de Teams</li>
+                                                <li>Planifications de sessions de gaming (Team)</li>
+                                                <li>Jeux favoris -> page d'accueil filtrée</li>
+                                                <li>Page de jeux personalisées</li>
+                                            </ul>
+
                                         </div>
-
-                                        <p class="projetDescriptionText">Plateforme communautaire "Gaming"</p> 
-
-                                        <ul class="projetSkillsList projetSkillsList1">
-                                            <li>HTML/CSS</li>
-                                            <li>JS</li>
-                                            <li class="mainSkill">PHP / Symfony</li>
-                                            <li>Doctrine / DQL</li>
-                                            <li>Twig</li>
-                                        </ul>
-
-                                        <ul class="projetFuncList">
-                                            <li>Autentification</li>
-                                            <li>Système de modération (validation des public, censure, signalements)</li>
-                                            <li>Signalements à la modération</li>
-                                            <li>Publication de Topics, Médias, Commentaires</li>
-                                            <li>Upvotes et likes/dislikes</li>
-                                            <li>Création et candidatures de Teams</li>
-                                            <li>Planifications de sessions de gaming (Team)</li>
-                                            <li>Jeux favoris -> page d'accueil filtrée</li>
-                                            <li>Page de jeux personalisées</li>
-                                        </ul>
 
                                         <div class="projectLinksDiv">
                                             <a href="https://github.com/baku67/ELAN_Projet_SquadForge" target="_blank" class="githubProjectLink linkGithub">
@@ -388,8 +413,16 @@
 
                         </swiper-slide>
 
+                        
 
                         <swiper-slide>
+
+                            <!-- Shape absolute (haut gauche) PC -->
+                            <img src="../img/projects/bgShapes2-min.png" class="projectShapeBgAnim1 projectShapesDiv-top-left isDesktop" />
+
+                            <!-- Shape absolute (bas-droite)-->
+                            <img src="../img/projects/bgShapes1_squadforge2-min.png" class="projectShapeBgAnim2 projectShapesDiv-bottom-right" />
+
 
                             <div id="projectContainer">
 
@@ -406,39 +439,55 @@
                                         <iframe src="" id="iframeElem2" class="iframeElem"></iframe>
 
                                         <p class="lienBJJ"><a target="_blank" href="https://www.blackjackjo.com">www.blackjackjo.com<img src="../img/redirectionOrange.png" class="redirectionPng"></a></p>
+
                                     </div>
 
                                     <div>
 
                                         <div class="description">
 
-                                            <h3 class="projetNbr">Projet 2</h3>
-                                            <div class="projectTitle">
-                                                <img src="../img/projects/blackjackjo.png" class="projectSlideLogo" />
-                                                <p class="projetSlideTitle" style="font-family:'Kavoon', serif;">BlackJack Jo'</p>
+    
+                                            <div class="projectDescriptionWrapper">
+
+
+                                                <!-- Shape absolute (haut gauche) Mobile -->
+                                                <img src="../img/projects/bgShapes1_bjj-min.png" class="projectShapeBgAnim1-mobile topLeftBgMobile projectShapesDiv-top-left isMobile" />
+
+
+                                                <div class="projectDescriptionHeader">
+
+                                                    <h3 class="projetNbr">Projet 2</h3>
+
+                                                    <div class="projectTitle">
+                                                        <img src="../img/projects/blackjackjo.png" class="projectSlideLogo" />
+                                                        <p class="projetSlideTitle" style="font-family:'Kavoon', serif;">BlackJack Jo'</p>
+                                                    </div>
+
+                                                    <p class="projetDescriptionText">Application de BlackJack</p> 
+
+                                                </div>
+
+                                                <ul class="projetSkillsList">
+                                                    <li>HTML</li>
+                                                    <li>CSS</li>
+                                                    <li class="mainSkill">JS</li>
+                                                    <li class="mainSkill">PHP</li>
+                                                    <li>SQL/BDD</li>
+                                                </ul>
+
+                                                <ul class="projetFuncList projetFuncListPositionMobile">
+                                                    <li>Système de compte (+Crédits quotidiens)</li>
+                                                    <li>Système de progression (expérience/niveaux)</li>
+                                                    <li>Système de Win-streak</li>
+                                                    <li>Affichage du top 3 sur l'accueil</li>
+                                                    <li>Historique et stats personnelles</li>
+                                                    <li>Mode invité</li>
+                                                    <li>Espace Admin</li>
+                                                    <li>Mode Light/Dark</li>
+                                                    <li>Mode turbo</li>
+                                                </ul>
+
                                             </div>
-
-                                            <p class="projetDescriptionText">Application de BlackJack</p> 
-
-                                            <ul class="projetSkillsList">
-                                                <li>HTML</li>
-                                                <li>CSS</li>
-                                                <li class="mainSkill">JS</li>
-                                                <li class="mainSkill">PHP</li>
-                                                <li>SQL/BDD</li>
-                                            </ul>
-
-                                            <ul class="projetFuncList projetFuncListPositionMobile">
-                                                <li>Système de compte (+Crédits quotidiens)</li>
-                                                <li>Système de progression (expérience/niveaux)</li>
-                                                <li>Système de Win-streak</li>
-                                                <li>Affichage du top 3 sur l'accueil</li>
-                                                <li>Historique et stats personnelles</li>
-                                                <li>Mode invité</li>
-                                                <li>Espace Admin</li>
-                                                <li>Mode Light/Dark</li>
-                                                <li>Mode turbo</li>
-                                            </ul>
 
                                             <div class="projectLinksDiv">
                                                 <a href="https://github.com/baku67/BLACKJACKJO-projet" target="_blank" class="githubProjectLink linkGithub">
@@ -561,28 +610,43 @@
 
                                     <div class="description">
 
-                                        <h3 class="projetNbr">Projet 3</h3>
-                                        <div class="projectTitle projectTitleTerrine">
-                                            <img src="../img/projects/terrine.png" class="projectSlideLogo projectSlideLogo3" />
-                                            <p class="projetSlideTitle projetSlideTitleTerrine" style="font-family: 'Righteous'">Terrine</p>
+                                        <div class="projectDescriptionWrapper">
+
+                                            <!-- Shape absolute (haut gauche) Mobile -->
+                                            <img src="../img/projects/bgShapes1_bjj-min.png" class="projectShapeBgAnim1-mobile topLeftBgMobile projectShapesDiv-top-left isMobile" />
+
+
+                                            <div class="projectDescriptionHeader">
+
+                                                <h3 class="projetNbr">Projet 3</h3>
+
+                                                <div class="projectTitle projectTitleTerrine">
+
+                                                    <img src="../img/projects/terrine.png" class="projectSlideLogo projectSlideLogo3" />
+                                                    <p class="projetSlideTitle projetSlideTitleTerrine" style="font-family: 'Righteous'">Terrine</p>
+
+                                                </div>
+
+                                                <p class="projetDescriptionText">Site de gestion de plateforme cinématographique</p> 
+
+                                            </div>
+
+                                            <ul class="projetSkillsList">
+                                                <li>HTML</li>
+                                                <li>CSS</li>
+                                                <li>JS</li>
+                                                <li class="mainSkill">PHP</li>
+                                                <li>SQL</li>
+                                                <li>MVC</li>
+                                            </ul>
+
+                                            <ul class="projetFuncList">
+                                                <li>Pages de listing</li>
+                                                <li>Pages détaillées et liens/relations</li>
+                                                <li>Formulaires d'ajouts d'éléments</li>
+                                            </ul>
+
                                         </div>
-
-                                        <p class="projetDescriptionText">Site de gestion de plateforme cinématographique</p> 
-
-                                        <ul class="projetSkillsList">
-                                            <li>HTML</li>
-                                            <li>CSS</li>
-                                            <li>JS</li>
-                                            <li class="mainSkill">PHP</li>
-                                            <li>SQL</li>
-                                            <li>MVC</li>
-                                        </ul>
-
-                                        <ul class="projetFuncList">
-                                            <li>Pages de listing</li>
-                                            <li>Pages détaillées et liens/relations</li>
-                                            <li>Formulaires d'ajouts d'éléments</li>
-                                        </ul>
 
                                         <div class="projectLinksDiv">
                                             <a href="https://github.com/baku67/ELAN_MVC_cinema" target="_blank" class="githubProjectLink linkGithub">
