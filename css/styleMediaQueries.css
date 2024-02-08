@@ -941,6 +941,13 @@
         border: 0px;
     }
 
+    .desktopSlideMargin {
+        margin: 0 0px 0 0px;
+        position: relative;
+        overflow: visible;
+        border-top-left-radius: 0px;
+    }
+
     .projetSkillsList {
         gap: 1px;
         width: 95%;
@@ -962,6 +969,9 @@
     }
     swiper-slide {
         font-size: 1.1em;
+        margin-right: 0px;
+
+        overflow: visible;
         margin-right: 0px;
     }
     .projetDescriptionText {
@@ -2102,6 +2112,7 @@
         margin-top: 0px;
     }
     .gridCompetences {  
+        transform: none;
         margin: 0 auto 30px auto;
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -2114,6 +2125,7 @@
           "grid-bdd grid-sql";
       }
     .carreCompetences {
+        background-color: #ef3a2daf;
         width: 150px;
         height: 150px;
         padding: 15px;

@@ -23,6 +23,15 @@
 
     }
 
+    .projet1_topleftShape_desktop {
+        transform: rotate(180deg) translateX(211px) translateY(80px);
+        width: 50%;
+    }
+
+    .desktopSlideMargin {
+        margin: 0 90px 0 90px;
+    }
+
     /* Grid CV */
 .gridContainer {
     display: grid; 

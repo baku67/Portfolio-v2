@@ -273,6 +273,11 @@ main {
     flex:1; /* 4 */
 }
 
+.projet1_topleftShape_desktop {
+    transform: rotate(180deg) translateX(90px) translateY(83px);
+    width: 50%;
+}
+
 
 .accueilGrid2 {
     display: inline-flex;
@@ -288,6 +293,13 @@ main {
     color: #ef3b2d;
 }
 
+.desktopSlideMargin {
+    margin: 0 40px 0 40px;
+    position: relative;
+    overflow: hidden;
+    border-top-left-radius: 22px;
+}
+
 :root {
     --swiper-theme-color: #ef3b2d !important;
 }
@@ -297,11 +309,13 @@ swiper-container {
     height: 100%;
 }
 swiper-slide {
+    overflow: hidden;
+
     text-align: center;
     color: white;
     font-size: 1.5em;
 
-    margin-right: 30px;
+    margin-right: 0px;
 }
 .gridProjetHeaderContainer {
     /* position: relative;
@@ -1575,6 +1589,8 @@ ul {
 
 /* *** GRID COMPETENCES */
 .gridCompetences {  
+    transform: scale(0.82);
+
     margin: 0 auto 30px auto;
     /* margin: 0 15% 30px 15%; */
 
@@ -1605,16 +1621,22 @@ ul {
   .grid-sql { grid-area: grid-sql; }
 
   .carreCompetences {
+    /* au dessus des hapes bg : */
+    z-index: 9999;
+
       width: 220px;
       height: 220px;
       padding: 50px;
       border-radius: 3px;
-      background-color: #ef3a2daf;
+      /* background-color: #ef3a2daf; */
+      background-color: #9b3c34;
       color: #E7E8F2;
       border: 1px solid var(--secondaryColorVeryMat);
 
       text-align: center;
       margin: auto auto;
+
+      box-shadow: 0 0 13px -2px var(--secondaryColor);
   }
   .textCompetences {
       /* color: #a8a8a8; */
@@ -1635,6 +1657,146 @@ ul {
   .isMobile {
     display: none;
   }
+
+
+
+  .cvBgShape {
+    position: absolute;
+    /* display: none; */
+
+    width: 95%;
+    z-index: -9999;
+    opacity: 0.1;
+
+    /* background-image: url("../img/projects/shape-redBlue-cropped.png"), linear-gradient(180deg, rgba(28,33,44,1) 0%, rgba(255,255,255,0) 50%); */
+  }
+
+
+  .clipPathShapes {
+    /* display: none; */
+    position: absolute;
+    opacity: 0.3;
+  }
+  .clipPathShape-blue {
+    background-color: var(--secondaryColor);
+  }
+  .clipPathShape-red {
+    background-color: #ef3b2d;
+  }
+
+
+  .clipPathShape1 {
+    width: 70px;
+    height: 70px;
+
+    top: 5px;
+    left: 15px;
+
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    transform: rotate(45deg);
+  }
+  .clipPathShape2 {
+    width: 68px;
+    height: 56px;
+
+    top: 28px;
+    left: 132px;
+    /* opacity: 0.6; */
+
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    transform: rotate(35deg);
+  }
+  .clipPathShape3 {
+    width: 71px;
+    height: 71px;
+
+    top: 119px;
+    left: 56px;
+    z-index: 9;
+    /* opacity: 0.8; */
+
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    transform: rotate(17deg);
+  }
+  .clipPathShape4 {
+    width: 80px;
+    height: 80px;
+
+    top: -31px;
+    left: 98px;
+
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    transform: rotate(108deg);
+  }
+  .clipPathShape5 {
+    width: 40px;
+    height: 40px;
+
+    top: 5px;
+    left: -40px;
+
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    transform: rotate(304deg);
+  }
+  .clipPathShape6 {
+    width: 131px;
+    height: 139px;
+
+    top: 5px;
+    left: 34px;
+
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    transform: rotate(25deg);
+  }
+  .clipPathShape7 {
+    width: 60px;
+    height: 60px;
+
+    top: 26px;
+    left: 179px;
+
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    transform: rotate(15deg);
+  }
+  .clipPathShape8 {
+    width: 97px;
+    height: 96px;
+
+    top: 5px;
+    left: 269px;
+    /* opacity: 0.6; */
+
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    transform: rotate(145deg);
+  }
+  .clipPathShape9 {
+    width: 60px;
+    height: 60px;
+
+    top: 166px;
+    left: 15px;
+
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    transform: rotate(154deg);
+  }
+  .clipPathShape10 {
+    width: 80px;
+    height: 80px;
+
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    transform: rotate(45deg);
+  }
+  .clipPathShape11 {
+    width: 80px;
+    height: 80px;
+
+    top: 41px;
+    left: -9px;
+
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    transform: rotate(45deg);
+  }
+
 
 
   @keyframes fadeIn {
@@ -2432,7 +2594,10 @@ ul {
 
 .projectShapeBgAnim2 {
     opacity: 0;
-    animation: fadeInBgProject 0.7s 2s linear forwards;
+    animation: fadeInBgProject 0.7s 1s linear forwards;
+
+    border-bottom-right-radius: 38px;
+    margin-bottom: 56px;
 }
 
 @keyframes fadeInBgProject {
