@@ -23,13 +23,23 @@
 
     }
 
+
+    .projectShapesDiv-bottom-right {
+        right: -95px;
+    }
+
     .projet1_topleftShape_desktop {
-        transform: rotate(180deg) translateX(211px) translateY(80px);
+        /* transform: rotate(180deg) translateX(211px) translateY(80px); */
+        transform: rotate(180deg);
+        width: 50%;
+    }
+    .projet1_topleftShape_desktop2 {
+        /* transform: translateX(-218px) translateY(-31px); */
         width: 50%;
     }
 
     .desktopSlideMargin {
-        margin: 0 90px 0 90px;
+        margin: 10px 5% 50px 5%;
     }
 
     /* Grid CV */
@@ -766,7 +776,8 @@
 
 
     .projectShapesDiv-top-left {
-        left: 153px;
+        /* left: 153px; */
+        left: -40px;
     }
 
     

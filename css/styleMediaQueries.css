@@ -941,11 +941,16 @@
         border: 0px;
     }
 
+    .projectShapeBgAnim2 {
+        margin-bottom: 56px;
+    }
+
     .desktopSlideMargin {
         margin: 0 0px 0 0px;
         position: relative;
         overflow: visible;
         border-top-left-radius: 0px;
+        border-bottom-right-radius: 0px;
     }
 
     .projetSkillsList {

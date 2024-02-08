@@ -274,7 +274,12 @@ main {
 }
 
 .projet1_topleftShape_desktop {
-    transform: rotate(180deg) translateX(90px) translateY(83px);
+    /* transform: rotate(180deg) translateX(90px) translateY(83px); */
+    transform: rotate(180deg);
+    width: 50%;
+}
+.projet1_topleftShape_desktop2 {
+    /* transform: translateX(-28px) translateY(-54px); */
     width: 50%;
 }
 
@@ -294,10 +299,12 @@ main {
 }
 
 .desktopSlideMargin {
-    margin: 0 40px 0 40px;
+    margin: 10px 5% 40px 5%;
     position: relative;
     overflow: hidden;
     border-top-left-radius: 22px;
+
+    border-bottom-right-radius: 26px;
 }
 
 :root {
@@ -2572,7 +2579,8 @@ ul {
 .projectShapesDiv-top-left {
     position: absolute;
 
-    left: 0;
+    /* left: 0; */
+    left: -69px;
     top: 0px;
     width: 516px;
     opacity: 0.5;
@@ -2581,8 +2589,11 @@ ul {
 .projectShapesDiv-bottom-right {
     position: absolute;
 
-    right: 0;
-    bottom: 0px;
+    /* right: 0;
+    bottom: 0px; */
+    right: -82px;
+    bottom: -33px;
+
     width: 516px;
     opacity: 0.5;
 }
@@ -2597,7 +2608,7 @@ ul {
     animation: fadeInBgProject 0.7s 1s linear forwards;
 
     border-bottom-right-radius: 38px;
-    margin-bottom: 56px;
+    /* margin-bottom: 56px; */
 }
 
 @keyframes fadeInBgProject {
