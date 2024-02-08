@@ -1021,7 +1021,9 @@ footer.footerAccueil {
     margin-top: 30px;
 
 }
-
+footer.footerProjets {
+    margin-top: 0px;
+}
 .footerLoisir {
     z-index: -100;
     background-color: rgba(22, 26, 36, 0.2);
@@ -1346,11 +1348,12 @@ ul {
 
 .cvSectionBgGradient ul li::before {
     content: "•";
-    /* color: #ef3b2d; */
     color: #01ffd5;
     display:inline-block;
     width:1em;
     margin-left:-1em;
+
+
 }
 
 
@@ -1385,7 +1388,7 @@ ul {
 .gridContainer {
     display: grid; 
     grid-template-columns: 1fr 1fr; 
-    grid-template-rows: 1fr 1fr 0.5fr; 
+    grid-template-rows: 1fr 1fr 0.3fr; 
     gap: 0px 80px; 
     grid-template-areas: 
     "formations hobbys"
@@ -1402,7 +1405,7 @@ ul {
 }
 .hobbys { grid-area: hobbys; }
 .langages { grid-area: langages;
-    bottom: 175px; 
+    bottom: 120px; 
     margin-bottom: 50px;
  }
 .outils { grid-area: outils; }
@@ -1547,6 +1550,18 @@ ul {
     background: -webkit-radial-gradient(circle, rgba(12,237,200,0.1) 0%, rgba(66,66,66,0) 60%);
     background: radial-gradient(circle, rgba(12,237,200,0.1) 0%, rgba(66,66,66,0) 60%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0cedc8",endColorstr="#424242",GradientType=1);
+
+    position: relative;
+
+    background-color: #00000000;
+    /* box-shadow: 0px 0 25px -6px #00ffff24; */
+    padding: 10px 20px 2px 11px;
+    border-radius: 12px;
+
+    /* A adapter selon section ? */
+    box-shadow: 6px 6px 25px 0px #00ffff24; /* shadow bottom et right principalement */
+    border-bottom: 1px solid #19ddbc54;
+    border-right: 1px solid #19ddbc30;
 }
 .cvSectionBgGradientSkills {
     background: rgb(12,237,200);
@@ -1655,6 +1670,44 @@ ul {
     }
 }
 
+@keyframes fadeInLangs {
+    from {
+        right: -500px;
+        opacity: 0;
+
+    }
+    to {
+        right: 0px;
+        opacity: 1;
+    }
+}
+
+
+.formationsShape {
+    position: absolute;
+
+    /* width: 289px; */
+    width: 98%;
+    right: 0;
+    bottom: 0;
+    opacity: 0.1;
+
+    border-bottom-right-radius: 13px;
+}
+
+.hobbiesShape {
+    position: absolute;
+    width: 60%;
+    right: 0;
+    /* bottom: 0; */
+    opacity: 0.25;
+
+    /* rotated pour top-right corner de la card: */
+    border-bottom-right-radius: 10px;
+    transform: rotate(270deg);
+    top: 0;
+}
+
 
 .portraitTrait1 {
     height: 15px;
@@ -1679,7 +1732,8 @@ ul {
     position: relative;
     opacity: 0;
 
-    top: 10px;
+    /* top: 10px; */
+    top: 30px;
     right: -28px;
 
 }
@@ -1702,6 +1756,7 @@ ul {
 }
 .outils {
     position: relative;
+    bottom: 50px;
     opacity: 0;
 
     width: 275px;
@@ -1715,13 +1770,14 @@ ul {
 }
 .langues {
     position: relative;
+    bottom: 45px;
     opacity: 0;
     margin: 0 auto;
 
     width: 220px;
 }
 .langsAnim {
-    animation-name: fadeInHobbys;
+    animation-name: fadeInLangs;
     animation-duration: 2s;
     /* animation-delay: 4.5s; */
     animation-fill-mode: forwards;
@@ -1914,6 +1970,9 @@ ul {
 }
 
 .pageSectionTitle {
+    position: relative;
+    z-index: 9999999;
+    
     font-size: 1.38em;
     font-weight: 600;
     margin-bottom: 35px;
@@ -2373,7 +2432,7 @@ ul {
 
 .projectShapeBgAnim2 {
     opacity: 0;
-    animation: fadeInBgProject 0.7s 2.5s linear forwards;
+    animation: fadeInBgProject 0.7s 2s linear forwards;
 }
 
 @keyframes fadeInBgProject {
@@ -2381,7 +2440,7 @@ ul {
         opacity: 0;
     }
     to {
-        opacity: 0.6;
+        opacity: 0.75;
     }
 }
 

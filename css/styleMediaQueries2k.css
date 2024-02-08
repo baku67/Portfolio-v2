@@ -7,6 +7,12 @@
 
     .outils {
         margin: 0 auto;
+        position: relative;
+        bottom: 50px;
+    }
+    .langues {
+        position: relative;
+        bottom: 50px;
     }
 
     #dlCv {
@@ -21,7 +27,7 @@
 .gridContainer {
     display: grid; 
     grid-template-columns: 1fr 1fr; 
-    grid-template-rows: 1fr 1fr 0.5fr; 
+    grid-template-rows: 1fr 1fr 0.3fr; 
     gap: 0px 180px; 
     grid-template-areas: 
     "formations hobbys"
@@ -164,7 +170,8 @@
         bottom: 4px;
 
         /* Pour compenser les relative qui mess le footer */
-        padding-bottom: 67px; 
+        /* padding-bottom: 67px;  */
+        margin-bottom: 0px;
     }
 
 
@@ -752,6 +759,8 @@
     .projectShapesDiv-top-left {
         left: 153px;
     }
+
+    
 
 
     #traitHeader {

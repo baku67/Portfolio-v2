@@ -1008,6 +1008,18 @@
         border-radius: 11px;
         margin-left: 8px;
         margin-right: 8px;
+
+        width: 100%;
+        padding-right: 20px;
+        border-bottom-right-radius: 25px;
+    }
+
+    footer.footerProjets {
+        margin-top: 0px;
+    }
+
+    .fixBottom {
+        bottom: -45px;
     }
 
     .projectSlideLogo3 {
@@ -1032,8 +1044,8 @@
 
     /* Pour centrer */
     .projetFuncListPositionMobile {
-        width: 92%;
-        backdrop-filter: blur(17px);
+        /* width: 92%;
+        backdrop-filter: blur(17px); */
     }
 
     .projetSlideTitleTerrine {
@@ -1349,6 +1361,13 @@
         color: #13151c;
     }
 
+    .formationsShape {
+        opacity: 0.25;
+    }
+    .hobbiesShape {
+        opacity: 0.35;
+    }
+
     .stageBandeau {
         font-size: 90% !important;
 
@@ -1367,11 +1386,17 @@
     .cvSectionBgGradient {
         background: radial-gradient(circle, rgba(12,237,200,0.1) 0%, rgba(66,66,66,0) 57%);
 
-        background-color: #00000000;
-        box-shadow: 0px 0 25px -6px #00ffff24;
-        /* padding: 1px 11px 2px; */
+        /* background-color: #00000000; */
+        background-color: #00000024;
+        /* box-shadow: 0px 0 25px -6px #00ffff24; */
+        box-shadow: 0px 0 25px -6px #00ffff4a;
         padding: 1px 20px 2px 11px;
         border-radius: 12px;
+
+        /* A adapter selon section ? */
+        box-shadow: 5px 5px 25px -6px #00ffff33; /* shadow bottom et right principalement */
+        border-bottom: 1px solid #19ddbc54;
+        border-right: 1px solid #19ddbc30;
     }
 
     .cvSectionBgGradientSkills {
