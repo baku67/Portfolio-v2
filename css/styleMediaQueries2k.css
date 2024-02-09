@@ -35,14 +35,14 @@
     .projectShapesDiv-bottom-right {
         /* right: -95px; */
         transform: scale(1.5);
-        filter: blur(1px);
+        filter: blur(2px);
         right: -14px;
         bottom: 113px;
     }
 
     .projet1_topleftShape_desktop {
         /* transform: rotate(180deg) translateX(211px) translateY(80px); */
-        transform: rotate(180deg);
+        transform: rotate(180deg) scale(1.15);
         width: 50%;
     }
     .projet1_topleftShape_desktop2 {
@@ -199,6 +199,10 @@
         transform: translateX(0px) rotateY(45deg) !important;
     }
 
+    .carouselImgProject {
+        width: 53%;
+    }
+
     .projectContainer {
         /* padding-bottom: 40px; */
         position: relative;
@@ -278,9 +282,31 @@
     }
 
 
-    .accueilGridPresentation {
+    #accueilGridPresentation {
         width: 90%;
         /* margin: 0px auto; */
+
+        display: inline-flex;
+        flex-direction: row-reverse;
+
+        align-items: center;
+        gap: 15px;
+    }
+    #portraitAccueil {
+        float: none;
+        margin: 0px 0px 0px 0px;
+    }
+    .paragrapheAccueil {
+        opacity: 0;
+
+        background-color: #00000017;
+        padding: 12px 10px 14px 24px;
+        border-radius: 12px;
+        box-shadow: 6px 6px 25px 0px #00ffff24;
+        border-bottom: 1px solid #19ddbc54;
+        border-right: 1px solid #19ddbc30;
+
+        animation: fadeIn 0.5s 0s ease forwards;
     }
 
     .imgAccueil { 
@@ -294,7 +320,8 @@
 
         position: relative;
         bottom: -1px;
-        left: 29px;
+        /* left: 29px; */
+        left: 0px;
         transform: scale(0.94);
     }
 
@@ -796,7 +823,9 @@
 
     .projectShapesDiv-top-left {
         /* left: 153px; */
-        left: -140px;
+        /* left: -140px; */
+        left: -71px;
+        top: -25px;
 
         filter: blur(1px);
     }
@@ -1138,7 +1167,7 @@
         right: 3%;
         font-size: 1em;
 
-        top: 0px;
+        top: 30px;
 
         animation: fadePulseSwipe 3s 0s normal ease infinite;
     }
