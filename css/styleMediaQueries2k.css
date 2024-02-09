@@ -23,9 +23,21 @@
 
     }
 
+    .pageSectionTitleSkills {
+        text-align: center;
+        width: fit-content;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+
 
     .projectShapesDiv-bottom-right {
-        right: -95px;
+        /* right: -95px; */
+        transform: scale(1.5);
+        filter: blur(1px);
+        right: -14px;
+        bottom: 113px;
     }
 
     .projet1_topleftShape_desktop {
@@ -69,12 +81,16 @@
     }
 
     .skillsSvgContainer {
-        position: absolute;
-        /* transform: translate(513px, -112px); */
+        /* position: absolute;
         left: 50%;
         transform: translateX(-12%) translateY(-116px);
+        z-index: -99; */
 
-        /* opacity: 0.6; */
+        position: absolute;
+        height: 80px;
+        width: 100px;
+        top: -30px;
+        left: 118%;
         z-index: -99;
     }
 
@@ -147,7 +163,7 @@
     
         transform: perspective(1220px) rotateY(83deg) translateX(35px) scale(0.8);
 
-        animation: fadeInRotateIframe 2s 0.5s ease forwards !important;
+        animation: fadeInRotateIframe 2s 2.5s ease forwards !important;
     }
     @keyframes fadeInRotateIframe {
         from {
@@ -183,7 +199,7 @@
         transform: translateX(0px) rotateY(45deg) !important;
     }
 
-    #projectContainer {
+    .projectContainer {
         /* padding-bottom: 40px; */
         position: relative;
         bottom: 4px;
@@ -191,6 +207,9 @@
         /* Pour compenser les relative qui mess le footer */
         /* padding-bottom: 67px;  */
         margin-bottom: 0px;
+
+        background-color: #0000000f;
+        border-radius: 37px;
     }
 
 
@@ -777,7 +796,9 @@
 
     .projectShapesDiv-top-left {
         /* left: 153px; */
-        left: -40px;
+        left: -140px;
+
+        filter: blur(1px);
     }
 
     

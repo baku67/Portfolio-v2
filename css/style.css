@@ -514,6 +514,16 @@ swiper-slide {
     transition: all 0.4s;
 }
 
+.fadeInSlide {
+    animation: fadeIn 2s 0s ease forwards;
+}
+
+#projectContainer1 {
+    opacity: 0;
+}
+#projectContainer2 {
+    opacity: 0;
+}
 
 .trainingSvgContainer {
     /* Maj test gradient circular: */
@@ -586,14 +596,21 @@ swiper-slide {
 
 
 .skillsSvgContainer {
-    position: absolute;
-    /* transform: translate(414px, -114px); */
+    /* position: absolute;
     left: 50%;
     transform: translateX(-12%) translateY(-116px);
     opacity: 0.92;
+    z-index: -99; */
+    position: absolute;
+    height: 80px;
+    width: 100px;
+    top: -38px;
+    left: 115%;
     z-index: -99;
 
     overflow: visible;
+
+
 }
 
 .skillsSvgPath {
@@ -1433,7 +1450,7 @@ ul {
 }
 .hobbys { grid-area: hobbys; }
 .langages { grid-area: langages;
-    bottom: 80px; 
+    bottom: 160px; 
     margin-bottom: 50px;
  }
 .outils { grid-area: outils; }
@@ -1451,6 +1468,14 @@ ul {
         opacity: 0;
     }
 }
+
+
+.pageSectionTitleSkills {
+    text-align: center;
+    width: fit-content;
+    left: 45%;
+    transform: translateX(-45%);
+} 
 
 .fadeOut {
     animation: fadeOut 0.5s 0s ease forwards;
@@ -1829,6 +1854,17 @@ ul {
     }
 }
 
+@keyframes fadeInCompetences {
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 @keyframes fadeInFormation {
     from {
         left: -500px;
@@ -1873,7 +1909,7 @@ ul {
     width: 98%;
     right: 0;
     bottom: 0;
-    opacity: 0.1;
+    opacity: 0.15;
 
     border-bottom-right-radius: 13px;
 }
@@ -1931,9 +1967,13 @@ ul {
     position: relative;
     opacity: 0;
 
+    padding: 64px 20px 2px 11px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 25px 0px #00ffff12;
+
 }
 .competencesAnim {
-    animation-name: fadeIn;
+    animation-name: fadeInCompetences;
     animation-duration: 2s;
     animation-fill-mode: forwards;
 
@@ -2588,7 +2628,10 @@ ul {
 
     transform: perspective(1220px) rotateY(83deg) translateX(35px) scale(0.65);
 
-    animation: fadeInRotateIframe 2s 0.5s ease forwards !important;
+    animation: fadeInRotateIframe 2s 1.5s ease forwards !important;
+}
+.iframeRotate {
+    animation: fadeInRotateIframe 2s 0.7s ease forwards !important;
 }
 
 .projectShapesDiv-top-left {
@@ -2615,12 +2658,12 @@ ul {
 
 .projectShapeBgAnim1 {
     opacity: 0;
-    animation: fadeInBgProject 0.7s 1.7s linear forwards;
+    animation: fadeInBgProject 0.9s 1.9s linear forwards;
 }
 
 .projectShapeBgAnim2 {
     opacity: 0;
-    animation: fadeInBgProject 0.7s 1s linear forwards;
+    animation: fadeInBgProject 0.9s 1.2s linear forwards;
 
     border-bottom-right-radius: 38px;
     /* margin-bottom: 56px; */
@@ -2802,7 +2845,7 @@ ul {
     }
 }
 
-#projectContainer {
+.projectContainer {
     /* padding-bottom: 40px; */
     position: relative;
     bottom: 19px;

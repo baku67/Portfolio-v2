@@ -20,6 +20,74 @@ window.onload = function() {
 
 
 
+    if(!mobileDetection) {
+
+        // Observer Slide1:
+        const observerSlide1 = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+
+                    document.getElementById('projectContainer1').classList.add('fadeInSlide');
+
+                    // document.getElementById('iframe1').classList.add('iframeRotate');
+
+                    setTimeout(function() {
+                        document.getElementById("projectContainer1").style.opacity = "1";
+                        document.getElementById("projectContainer1").classList.remove("fadeInSlide");
+
+                        // document.getElementById('iframe1').style.opacity = "1";
+                        // document.getElementById('iframe1').style.transform = "perspective(1220px) rotateY(0deg) translateX(35px) scale(0.65);";
+                        // document.getElementById('iframe1').classList.remove('iframeRotate');
+                    }, 1001)
+
+                }
+                else {
+
+                    document.getElementById('iframe1').style.opacity = "0";
+                    document.getElementById('projectContainer1').style.opacity = "0";
+
+                }
+            })
+        })
+        observerSlide1.observe(document.querySelector('#projectContainer1'));
+
+
+
+                // Observer Slide2:
+                const observerSlide2 = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+        
+                            document.getElementById('projectContainer2').classList.add('fadeInSlide');
+        
+                            // document.getElementById('iframe2').classList.add('iframeRotate');
+        
+                            setTimeout(function() {
+                                document.getElementById("projectContainer2").style.opacity = "1";
+                                document.getElementById("projectContainer2").classList.remove("fadeInSlide");
+        
+                                // document.getElementById('iframe2').style.opacity = "1";
+                                // document.getElementById('iframe1').style.transform = "perspective(1220px) rotateY(0deg) translateX(35px) scale(0.65);";
+                                // document.getElementById('iframe2').classList.remove('iframeRotate');
+                            }, 1001)
+        
+                        }
+                        else {
+        
+                            document.getElementById('iframe2').style.opacity = "0";
+                            document.getElementById('projectContainer2').style.opacity = "0";
+        
+                        }
+                    })
+                })
+                observerSlide2.observe(document.querySelector('#projectContainer2'));
+
+
+    }
+
+
+
+
     // **********  MOBILE: Click outside nav burger si actif = closeNav
     var sidenav = document.getElementById("mySidenav");
     var openBtn = document.getElementById("openBtn");
@@ -169,36 +237,29 @@ window.onload = function() {
 
 
     // Observer checkbox <Compétences/> CV
-    const observerCompetences = new IntersectionObserver(entries => {
-        // Loop over the entries
-        entries.forEach(entry => {
-            // If the element is visible
-            if (entry.isIntersecting) {
+    // const observerCompetences = new IntersectionObserver(entries => {
+    //     entries.forEach(entry => {
+    //         if (entry.isIntersecting) {
+    //             var skillsPathes = document.querySelectorAll('.arrowsSvg path');
+    //             skillsPathes.forEach(element => {
+    //                 var lengthRec2 = element.getTotalLength();
+    //                 element.style.transition = element.style.WebkitTransition = 'none';
+    //                 element.style.strokeDasharray = lengthRec2 + ' ' + lengthRec2;
+    //                 element.style.strokeDashoffset = lengthRec2;
+    //                 element.getBoundingClientRect();
+    //                 element.style.transition = element.style.WebkitTransition =
+    //                 'stroke-dashoffset 1s 0s ease-in-out';
+    //                 element.style.strokeDashoffset = '0';    
+    //             });
+    //         }
+    //     })
+    // })
+    // observerCompetences.observe(document.querySelector('#description'));
 
-                // document.getElementById("competences").classList.add("competencesAnim")
 
-                // Draw du checkbox <Compétences/> CV
-                var skillsPathes = document.querySelectorAll('.arrowsSvg path');
-                skillsPathes.forEach(element => {
-                    var lengthRec2 = element.getTotalLength();
-                    element.style.transition = element.style.WebkitTransition = 'none';
-                    element.style.strokeDasharray = lengthRec2 + ' ' + lengthRec2;
-                    element.style.strokeDashoffset = lengthRec2;
-                    element.getBoundingClientRect();
-                    element.style.transition = element.style.WebkitTransition =
-                    'stroke-dashoffset 1s 0s ease-in-out';
-                    element.style.strokeDashoffset = '0';    
-                });
 
-                // setTimeout(function() {
-                //     document.getElementById("competences").style.opacity = "1";
-                //     document.getElementById("competences").classList.remove("competencesAnim")
-                // }, 2001)
-            }
-        })
-    })
-    observerCompetences.observe(document.querySelector('#description'));
 
+    // Observer de Slide que sur PC (ça ram deja assez sur mobile)
 
 
 

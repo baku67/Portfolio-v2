@@ -236,6 +236,9 @@ window.onload = function() {
                     document.getElementById("formations").classList.remove("formationsAnim")
                 }, 2001)
             }
+            else {
+                document.getElementById("formations").style.opacity = "0";
+            }
         })
     })
     observerFormations.observe(document.querySelector('#formations'));
@@ -269,6 +272,10 @@ window.onload = function() {
                     document.getElementById("competences").classList.remove("competencesAnim")
                 }, 2001)
             }
+            else {
+                // document.getElementById("competences").classList.remove("competencesAnim")
+                document.getElementById("competences").style.opacity = "0";
+            }
         })
     })
     observerCompetences.observe(document.querySelector('#competences'));
@@ -300,6 +307,9 @@ window.onload = function() {
                     document.getElementById("hobbies").style.opacity = "1";
                     document.getElementById("hobbies").classList.remove("hobbiesAnim")
                 }, 2001)
+            }
+            else {
+                document.getElementById("hobbies").style.opacity = "0";
             }
         })
     })
@@ -360,6 +370,9 @@ window.onload = function() {
                     document.getElementById("langues").classList.remove("langsAnim")
                 }, 2001)
             }
+            else {
+                document.getElementById("langues").style.opacity = "0";
+            }
         })
     })
     observerLang.observe(document.querySelector('#langues'));
@@ -393,6 +406,9 @@ window.onload = function() {
                 document.getElementById("outils").style.opacity = "1";
                 document.getElementById("outils").classList.remove("outilsAnim")
             }, 2001)
+          }
+          else {
+            document.getElementById("outils").style.opacity = "0";
           }
         })
       })

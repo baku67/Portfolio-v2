@@ -1102,6 +1102,12 @@
         box-shadow: 0 0 32px -11px #0ff0
     }
 
+    #projectContainer1 {
+        opacity: 1;
+    }
+    #projectContainer2 {
+        opacity: 1;
+    }
 
 
     .iframe {
@@ -1358,6 +1364,11 @@
         border-radius: 1px;
         height: 91px;
         clip-path: polygon(0 0, 100% 0, 100% 22%, 51% 29%, 0 21%);
+
+        border-top: 1px solid #484848;
+        border-left: 1px solid #484848;
+        border-right: 1px solid #484848;
+        border-radius: 3px;
     }
     .symfonyShapeTxt {
         font-size: 0.9em;
@@ -1385,19 +1396,21 @@
     }
 
     .formationsShape {
-        opacity: 0.25;
+        opacity: 0.35;
     }
     .hobbiesShape {
         position: absolute;
         width: 60%;
-        right: 0;
-        /* bottom: 0; */
-        opacity: 0.35;
+        opacity: 0.45;
     
         /* rotated pour top-right corner de la card: */
         border-bottom-right-radius: 10px;
         transform: rotate(270deg);
-        top: 0;
+
+        /* right: 0;
+        top: 0; */
+        right: -9px;
+        top: -13px;
     }
 
     .stageBandeau {
@@ -1445,7 +1458,7 @@
         width: 60%;
     }
 
-    #projectContainer {
+    .projectContainer {
         padding-bottom: 0px;
     }
 
@@ -1611,12 +1624,21 @@
 
     }
 
+    .pageSectionTitleSkills {
+        left: 50%;
+        transform: translateX(-50%);
+    }
 
     .skillsSvgContainer {
-        transform: translate(-12%, -111px);
+        /* transform: translate(-12%, -111px); */
+
+        top: -93px;
+        left: 56%;
+        transform: translateX(-50%);
     }
     .skillsSvgPath {
-        opacity: 0.9;
+        opacity: 1;
+        stroke-width: 3px;
     }
 
     .hobbiesSvgContainer {
@@ -2129,7 +2151,8 @@
     /* GRID COMPETENCES */
     .langages {
         /* bottom: 84px;  */
-        bottom: 68px;
+        /* bottom: 68px; */
+        bottom: 100px;
 
         margin-top: 0px;
     }
@@ -2139,7 +2162,10 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
-        gap: 19px 19px;
+        /* Les carrés sont pas responsive donc ça dépasse sur la droite et toute la page également: */
+        /* gap: 19px 19px; */
+        gap: 1px 1px;
+
         grid-auto-flow: row;
         grid-template-areas:
           "grid-html5 grid-css3"
@@ -2147,7 +2173,8 @@
           "grid-bdd grid-sql";
       }
     .carreCompetences {
-        background-color: #ef3a2daf;
+        /* background-color: #ef3a2daf; */
+        background-color: #8c322c;
         width: 150px;
         height: 150px;
         padding: 15px;
