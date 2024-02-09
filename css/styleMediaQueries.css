@@ -139,6 +139,13 @@
     }
 
 
+    .pageSectionTitleFormations {
+        margin-block-start: 2.5em !important;
+    }
+    .pageSectionTitleHobbies {
+        margin-block-start: 2.5em !important;
+    }
+
     .swipeSymbol {
         position: absolute;
         right: 5%;
@@ -148,9 +155,10 @@
         display: flex;
         flex-direction: column;
         text-align: center;
-        opacity: 0.6;
+        /* opacity: 0.6; */
+        opacity: 0;
     
-        animation: fadePulseSwipe 3s 0s normal ease infinite;
+        animation: fadePulseSwipe 3s 1s normal ease infinite;
     }
     @keyframes fadePulseSwipe {
         0% {
@@ -1380,7 +1388,16 @@
         opacity: 0.25;
     }
     .hobbiesShape {
+        position: absolute;
+        width: 60%;
+        right: 0;
+        /* bottom: 0; */
         opacity: 0.35;
+    
+        /* rotated pour top-right corner de la card: */
+        border-bottom-right-radius: 10px;
+        transform: rotate(270deg);
+        top: 0;
     }
 
     .stageBandeau {

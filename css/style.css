@@ -23,6 +23,13 @@
 }
 
 
+.pageSectionTitleFormations {
+    margin-block-start: 2em !important;
+}
+.pageSectionTitleHobbies {
+    margin-block-start: 2em !important;
+}
+
 
 
 .cvGrisedText {
@@ -516,7 +523,7 @@ swiper-slide {
 
     position: absolute;
     transform: translate(163px, -66px) rotateX(0deg);
-    opacity: 0.92;
+    opacity: 1;
     /* margin-left: 25px; */
     margin-left: 40px;
 
@@ -566,7 +573,7 @@ swiper-slide {
 
 
 .formationSvgPath {
-    opacity: 0.8;
+    opacity: 1;
     transform:scale(0.8);  
     fill: none; 
     stroke: #ef3b2d; 
@@ -590,7 +597,7 @@ swiper-slide {
 }
 
 .skillsSvgPath {
-    opacity: 0.8;
+    opacity: 1;
     transform:scale(0.8);  
     fill: none; 
     stroke: #ef3b2d; 
@@ -665,7 +672,7 @@ swiper-slide {
 
 
 .hobbiesSvgPath {
-    opacity: 0.8;
+    opacity: 1;
     transform:scale(0.8);  
     fill: rgba(255, 255, 255, 0); 
     stroke: #ef3b2d; 
@@ -1426,7 +1433,7 @@ ul {
 }
 .hobbys { grid-area: hobbys; }
 .langages { grid-area: langages;
-    bottom: 120px; 
+    bottom: 80px; 
     margin-bottom: 50px;
  }
 .outils { grid-area: outils; }
@@ -1565,7 +1572,11 @@ ul {
 #stage2content {
     display: none;
 }
+
+
 .cvSectionBgGradient {
+    
+
     background: rgb(12,237,200);
     background: -moz-radial-gradient(circle, rgba(12,237,200,0.1) 0%, rgba(66,66,66,0) 60%);
     background: -webkit-radial-gradient(circle, rgba(12,237,200,0.1) 0%, rgba(66,66,66,0) 60%);
@@ -1592,6 +1603,9 @@ ul {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0cedc8",endColorstr="#424242",GradientType=1);
 }
 
+.overflowHidden {
+    overflow: hidden;
+}
 
 
 /* *** GRID COMPETENCES */
@@ -1866,15 +1880,16 @@ ul {
 
 .hobbiesShape {
     position: absolute;
-    width: 60%;
-    right: 0;
-    /* bottom: 0; */
+    width: 70%;
     opacity: 0.25;
+
+    right: -24px;
+    top: -17px;
 
     /* rotated pour top-right corner de la card: */
     border-bottom-right-radius: 10px;
     transform: rotate(270deg);
-    top: 0;
+    
 }
 
 
