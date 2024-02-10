@@ -682,6 +682,10 @@ window.onload = function() {
 
       document.getElementById("contactBtnFade").style.display = "none";
       document.getElementById("plz-form-4e67dacf-1c2f-4b24-8594-268e8604f643").style.height = "auto";
+      if(document.getElementById("plz-form-4e67dacf-1c2f-4b24-8594-268e8604f643").style.display = "none") {
+        document.getElementById("plz-form-4e67dacf-1c2f-4b24-8594-268e8604f643").style.display = "block";
+      }
+      document.getElementById("plz-form-4e67dacf-1c2f-4b24-8594-268e8604f643").classList.remove("fadeOutForm");
       document.getElementById("plz-form-4e67dacf-1c2f-4b24-8594-268e8604f643").classList.add("fadeInForm");
 
       document.getElementById("formBackBtn").style.display = "block";
@@ -698,9 +702,15 @@ window.onload = function() {
     document.getElementById("plz-form-4e67dacf-1c2f-4b24-8594-268e8604f643").classList.remove("fadeInForm");
     document.getElementById("plz-form-4e67dacf-1c2f-4b24-8594-268e8604f643").classList.add("fadeOutForm");
 
-
     document.getElementById("contactBtnFade").classList.remove("fadeOutContact");
-    document.getElementById("contactBtnFade").classList.add("fadeInContact");
+
+    setTimeout(() => {
+      document.getElementById("contactBtnFade").classList.add("fadeInContact");
+
+      document.getElementById("contactBtnFade").style.display = "inline-flex";
+      document.getElementById("plz-form-4e67dacf-1c2f-4b24-8594-268e8604f643").style.display = "none";
+    }, 700);
+
     
   });
 

@@ -51,7 +51,8 @@
     }
 
     .desktopSlideMargin {
-        margin: 10px 5% 50px 5%;
+        /* margin: 10px 5% 50px 5%; */
+        margin: 10px 7% 50px 7%;
     }
 
     /* Grid CV */
@@ -290,7 +291,10 @@
         flex-direction: row-reverse;
 
         align-items: center;
-        gap: 15px;
+        gap: 40px;
+
+        left: 50%;
+        transform: translateX(-50%);
     }
     #portraitAccueil {
         float: none;
@@ -300,7 +304,7 @@
         opacity: 0;
 
         background-color: #00000017;
-        padding: 12px 10px 14px 24px;
+        padding: 14px 10px 14px 24px;
         border-radius: 12px;
         box-shadow: 6px 6px 25px 0px #00ffff24;
         border-bottom: 1px solid #19ddbc54;
@@ -330,7 +334,8 @@
     .fixScalePortraitPC {
         position: relative;
         transform: scale(0.85);
-        left: 22px;
+        /* left: 22px; */
+        left: 0px;
     }
 
     #portfolioSousTitre {
@@ -973,7 +978,7 @@
 
     .lightBulbWrapperDiv {
 
-        transform: rotate(357deg) scale(0.65);
+        transform: rotate(355deg) scale(0.65);
 
         bottom: 18px;
     }

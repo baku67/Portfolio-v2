@@ -232,7 +232,20 @@
         }
     }
 
+    .portraitMobile {
+        float: right;
+        /* margin: 0px 5px 8px 22px; */
+        margin: 0px 5px 7px 22px;
+
+        /* border: 1px solid #19ddbc14; */
+        /* border: 1px solid #ef3b2d70; */
+        border-radius: 12px;
+        padding: 9px 4px 0px 4px;
+    }
+
     .paragrapheAccueil { 
+
+        width: 100%;
 
         text-align: justify;
 
@@ -242,6 +255,11 @@
         margin-bottom: 0px;
 
         padding: 15px 18px 15px 19px;
+
+        background-color: #00000000;
+        box-shadow: 0px 0px 0px 0px #00ffff00;
+        border-bottom: 1px solid #19ddbc00;
+        border-right: 1px solid #19ddbc00;
         
     }
 
@@ -1217,6 +1235,13 @@
         width: 99% !important;
         padding: 6px 21px !important;
         margin-top: 20px !important;
+
+        padding-top: 25px !important;
+    }
+    #formBackBtn {
+        top: 4px;
+        right: 11px;
+        font-size: 2em;
     }
 
 
@@ -1795,6 +1820,8 @@
 
 
 
+
+
 #messageGalerie {
     font-size: 0.85em;
 }
@@ -2308,6 +2335,7 @@
     }
     .linkedinBtn {
         padding: 13px 14px;
+        border: 0px;
     }
     
     #accueilGridPresentation {
@@ -2319,6 +2347,12 @@
         
         border-bottom-left-radius: 11px;
         border-bottom-right-radius: 11px;
+
+        background-color: #00000017;
+        border-radius: 12px;
+        box-shadow: 6px 6px 25px 0px #00ffff24;
+        border-bottom: 1px solid #19ddbc54;
+        border-right: 1px solid #19ddbc30;
     }
 
     #portraitAccueil {
@@ -2328,6 +2362,7 @@
     }
 
     .fixScalePortraitPC {
+        float: right;
         left: 0px;
     }
 
@@ -2377,8 +2412,13 @@
         width: 97px;
         height: 93px;
         position: relative;
-        top: 7px;
-        left: -6px;
+        /* top: 7px;
+        left: -6px; */
+        top: -2px;
+        /* left: -4px; */
+        left: 1px;
+
+        background-color: #ef3b2d24;
     }
 
 

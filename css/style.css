@@ -372,7 +372,8 @@ swiper-slide {
     position: relative;
     /* margin: 50px; */
     width: 205px;
-    margin: 0 61px 0 0;
+    /* margin: 0 61px 0 0; */
+    margin: 0px 0px 0px 0px;
 
     transform: scale(0.8);
     
@@ -381,6 +382,7 @@ swiper-slide {
     z-index: 999;
 
     bottom: 14px;
+    left: 27px;
 }
 .lightBulbWrapperDiv[data-theme="light"] {
     filter:none;
@@ -1201,7 +1203,10 @@ textarea:focus, input:focus{
     flex-direction: row-reverse;
 
     align-items: center;
-    gap: 15px;
+    gap: 30px;
+
+    left: 50%;
+    transform: translateX(-50%);
 }
 #portraitAccueil {
     float: none;
@@ -3765,7 +3770,7 @@ ul {
     font-size: 1.2em;
 
     background-color: #00000017;
-    padding: 12px 10px 14px 24px;
+    padding: 13px 10px 14px 24px;
     border-radius: 12px;
     box-shadow: 6px 6px 25px 0px #00ffff24;
     border-bottom: 1px solid #19ddbc54;
@@ -3938,7 +3943,8 @@ ul {
 .fixScalePortraitPC {
     position: relative;
     transform: scale(0.9);
-    left: 30px;
+    /* left: 30px; */
+    left: 0px;
 }
 
 .accueilProjectsRightLink:hover .redirectProjectsIcon {
@@ -4090,7 +4096,7 @@ ul {
 
 .lightBulbWrapperDiv {
 
-    transform: rotate(358deg) scale(0.65);
+    transform: rotate(356deg) scale(0.57);
 
     animation: accueilAmpouleGradient 0.5s 0.5s ease forwards;
 }
