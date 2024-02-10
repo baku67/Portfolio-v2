@@ -95,7 +95,7 @@ window.onload = function() {
         const scrollToTopBtn = document.getElementById('scrollToTop');
 
         // Observer navBarre du haut:
-        const observerContactButton = new IntersectionObserver(entries => {
+        const observerScrollToTopButton = new IntersectionObserver(entries => {
 
             entries.forEach(entry => {
 
@@ -109,7 +109,23 @@ window.onload = function() {
                 }
             })
         })
-        observerContactButton.observe(document.querySelector('#headerCv'));
+        observerScrollToTopButton.observe(document.querySelector('#headerCv'));
+
+
+        // Observer navBarre du haut:
+        const observerScrollToTopButton2 = new IntersectionObserver(entries => {
+
+            entries.forEach(entry => {
+
+                if (!entry.isIntersecting) {
+                    scrollToTopBtn.style.bottom = "10px";
+                }
+                else {
+                    scrollToTopBtn.style.bottom = "65px";
+                }
+            })
+        })
+        observerScrollToTopButton2.observe(document.querySelector('#footer'));
     }
 
 
@@ -278,7 +294,7 @@ window.onload = function() {
             }
         })
     })
-    observerCompetences.observe(document.querySelector('#competences'));
+    observerCompetences.observe(document.querySelector('#cvSectionBgGradientSkills'));
     
 
     // Observer poisson <Hobbies/> CV

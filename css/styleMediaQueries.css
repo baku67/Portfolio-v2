@@ -776,10 +776,11 @@
     .projectShapeBgAnim1-mobile {
         z-index: -1;
         opacity: 0;
-        animation: fadeInBgProject 0.7s 1.7s linear forwards;
+        animation: fadeInBgProject-bottom-right 0.7s 1.7s linear forwards;
 
         left: 68px;
-        top: -112px;
+        /* top: -112px; */
+        top: -71px;
         width: 349px;
     
     }
@@ -817,6 +818,14 @@
         }
         to {
             opacity: 1;
+        }
+    }
+    @keyframes fadeInBgProject-bottom-right {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 0.4;
         }
     }
     
@@ -958,9 +967,9 @@
         /* background-color: #171b2500; */
         /* background-color: #181a24bd; */
         background: rgb(24,26,36);
-        background: -moz-linear-gradient(180deg, rgba(24,26,36,0.6) -40%, rgba(255,255,255,0) 100%);
-        background: -webkit-linear-gradient(180deg, rgba(24,26,36,0.6) -40%, rgba(255,255,255,0) 100%);
-        background: linear-gradient(180deg, rgba(24,26,36,0.6) -40%, rgba(255,255,255,0) 100%);
+        background: -moz-linear-gradient(180deg, rgba(24,26,36,0.7) -40%, rgba(255,255,255,0) 100%);
+        background: -webkit-linear-gradient(180deg, rgba(24,26,36,0.7) -40%, rgba(255,255,255,0) 100%);
+        background: linear-gradient(180deg, rgba(24,26,36,0.7) -40%, rgba(255,255,255,0) 100%);
 
 
 
@@ -1351,6 +1360,15 @@
         background: -webkit-linear-gradient(180deg, rgba(25,221,188,0.13) 0%, rgba(255,255,255,0) 100%);
         background: linear-gradient(180deg, rgba(25,221,188,0.13) 0%, rgba(255,255,255,0) 100%);
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#19ddbc",endColorstr="#ffffff",GradientType=1);
+    }
+
+    .poissonAcueil1AnimFront {
+        width: 73px;
+        height: 73px;
+    }
+    .poissonAcueil1AnimBack {
+        width: 60px;
+        height: 60px;
     }
 
 
@@ -1838,9 +1856,10 @@
     text-align: left;
     font-size:1.1em; 
 
-    width: 80%;
+    width: 90%;
 
-    left: 15px;
+    /* left: 15px; */
+    left: 0px;
 }
 
 #inspirationTitle {
@@ -1852,7 +1871,7 @@
 
 
 .quote1, .quote2 {
-    opacity: 0.3;
+    opacity: 0.15;
     width: 70px;
 }
 .quote2 {
@@ -1894,15 +1913,10 @@
 
     .hobbys {
         position: relative;
-        /* bottom: 52px; */
 
-        /* margin-right: 44px; */
-        /* top: -66px; */
-        top: -23px;
-        /* right: -28px; */
+        top: -7px;
+
         right: 0;
-
-
     }
 
     @keyframes fadeInHobbys {
@@ -1983,18 +1997,31 @@
 
     #scrollToTop {
         opacity: 0;
+        z-index: 999999999;
+
+        font-size: 1.3em;
 
         position: fixed;
-        bottom: 5px;
-        right: 5px;
+        /* bottom: 5px;
+        right: 5px; */
+        bottom: 10px;
+        right: 10px;
+
         color: #ef3b2d;
         /* border: 1px solid grey; */
-        padding: 9px 12px;
+        /* padding: 9px 12px; */
+        padding: 11px 14px;
         border-radius: 25px;
-        background-color: #2e2f33;
-        z-index: 999;
+        /* background-color: #2e2f33; */
+        background-color: #1d1e1f;
+        border: 1px solid #8080805c;
 
         transition: 0.4s;
+    }
+    .scrollToTopIcon {
+        position: relative;
+        top: 1px;
+        left: 1px;
     }
 
 
@@ -2182,21 +2209,25 @@
 
     .outils {
         margin: 0 auto;
-        /* bottom: 95px; */
-        bottom: 47px;
+        bottom: -1px;
     }
     .langues {
-        /* bottom: 70px; */
-        bottom: 15px;
+        bottom: -46px;
+    }
+
+    .clipPathShapes {
+        opacity: 0.1;
     }
 
     /* GRID COMPETENCES */
     .langages {
-        /* bottom: 84px;  */
-        /* bottom: 68px; */
-        bottom: 100px;
+        overflow: visible;
+        /* bottom: 100px; */
+        bottom: 70px;
 
         margin-top: 0px;
+
+        padding: 64px 11px 2px 11px;
     }
     .gridCompetences {  
         transform: none;
@@ -2206,7 +2237,8 @@
         grid-template-rows: 1fr 1fr 1fr;
         /* Les carrés sont pas responsive donc ça dépasse sur la droite et toute la page également: */
         /* gap: 19px 19px; */
-        gap: 1px 1px;
+        /* gap: 1px 1px; */
+        gap: 9px 9px;
 
         grid-auto-flow: row;
         grid-template-areas:
@@ -2215,11 +2247,13 @@
           "grid-bdd grid-sql";
       }
     .carreCompetences {
-        /* background-color: #ef3a2daf; */
         background-color: #8c322c;
-        width: 150px;
+        /* width: 150px;
         height: 150px;
-        padding: 15px;
+        padding: 15px; */
+        width: 125px;
+        height: 125px;
+        padding: 0px;
     }
     .imgCompetences {
         width: 60px;
@@ -2264,14 +2298,11 @@
 
         right: 10px;
         top: 5px;
-        z-index: 9999;
+        z-index: 999999999;
 
-        /* background-color: #181a24; */
-        /* background-color: #181a24cf; */
         background-color: #181a24de;
 
-        padding: 5px 10px;
-        /* border-radius: 40px; */
+        padding: 3px 7px;
         border-radius: 12px;
 
         border: 1px solid #ffffff3a;

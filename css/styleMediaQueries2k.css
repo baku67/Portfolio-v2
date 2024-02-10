@@ -159,7 +159,8 @@
     .iframe {
         margin-right: 55px;
 
-        bottom: 50px;
+        /* bottom: 50px; */
+        bottom: 20px;
         /* Marche: (sans le rotate 3D) */
     
         transform: perspective(1220px) rotateY(83deg) translateX(35px) scale(0.8);
@@ -273,7 +274,10 @@
     }
 
     .symfonyShapeDiv {
-        height: 98px;
+        height: 115px;
+    }
+    .symfonyShapeTxt {
+        font-size: 1.2em;
     }
 
     #portfolioTitle {
@@ -946,6 +950,16 @@
             position: absolute; */
             margin-top: 40px;
     }
+    footer.footerCv {
+        /* position: absolute;
+        bottom: 0; */
+        /* position: fixed;
+        bottom: auto; */
+    
+            /* bottom: 0;
+            position: absolute; */
+            margin-top: 40px;
+    }
 
     /* .accueilVideoPcDiv {
         width: 24%;
@@ -965,7 +979,8 @@
         border-radius: 6px;
     
         /* background-color: rgb(239 59 45 / 7%); */
-        background-color: #00ffd40d;
+        /* background-color: #00ffd40d; */
+        background-color: #00ffd408;
     
         padding-bottom: 49px;
         border-bottom-right-radius: 10px;
@@ -973,7 +988,7 @@
     
         transition: all 0.3s;
     
-        border: 1px solid #00ffd64f;
+        /* border: 1px solid #00ffd64f; */
     }
 
     .lightBulbWrapperDiv {
@@ -981,6 +996,11 @@
         transform: rotate(355deg) scale(0.65);
 
         bottom: 18px;
+    }
+
+
+    .linkedinBtn {
+        padding: 17px 14px 17px 14px;
     }
 
 

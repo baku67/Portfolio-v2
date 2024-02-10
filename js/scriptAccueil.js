@@ -642,8 +642,8 @@ window.onload = function() {
           hasIntersected2 = false;
           document.getElementById("accueilProjectsDiv").classList.add("fadeOutForm")
           setTimeout(function() {
-            document.getElementById("contactBtnFade").style.opacity = "0";
-            document.getElementById("contactBtnFade").classList.remove("fadeOutForm")
+            document.getElementById("accueilProjectsDiv").style.opacity = "0";
+            document.getElementById("accueilProjectsDiv").classList.remove("fadeOutForm")
           }, 120)
         }
         

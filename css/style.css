@@ -447,7 +447,8 @@ swiper-slide {
     position: fixed;
     top: -20px;
 
-    border-left: 1px solid rgba(128, 128, 128, 0.3);
+    /* border-left: 1px solid rgba(128, 128, 128, 0.3); */
+    border-left: 1px solid rgba(128, 128, 128, 0.15);
     transition: all 0.25s;
 
     right: -65px;
@@ -1046,7 +1047,13 @@ swiper-slide {
 }
 
 
-footer {
+footer {  
+    z-index: 99;
+    align-items: center;
+    display: inline-flex;
+    text-align: center;
+    justify-content: center;
+
     padding: 15px 0;
     background-color: #161a24;
     color: #565973;
@@ -1068,7 +1075,19 @@ footer.footerAccueil {
     margin-top: 30px;
 
 }
+footer.footerCv {
+    opacity: 0;
+    /* Juste pour eviter le pop puis decalage lors du chargement du form(qui est un api) */
+    animation: fadeIn 0.2s 0.5s forwards;
+    /* position: absolute !important; */
+    /* position: relative; */
+    /* bottom: auto; */
+    /* margin-top: 30px; */
+    margin-top: 50px;
+
+}
 footer.footerProjets {
+    flex-direction: column;
     margin-top: 0px;
 }
 .footerLoisir {
@@ -1980,6 +1999,7 @@ ul {
 
 }
 .langages {
+    overflow: hidden;
     position: relative;
     opacity: 0;
 
@@ -2988,9 +3008,9 @@ ul {
     background-color: #00000000; 
 
     background: rgb(25,221,188); 
-    background: -moz-linear-gradient(180deg, rgba(25,221,188,0.7) 0%, rgba(255,255,255,0) 60%);
-    background: -webkit-linear-gradient(180deg, rgba(25,221,188,0.7) 0%, rgba(255,255,255,0) 60%); 
-    background: linear-gradient(180deg, rgba(25,221,188,0.07) 0%, rgba(255,255,255,0) 60%);
+    background: -moz-linear-gradient(180deg, rgba(25,221,188,0.1) 0%, rgba(255,255,255,0) 90%);
+    background: -webkit-linear-gradient(180deg, rgba(25,221,188,0.1) 0%, rgba(255,255,255,0) 90%); 
+    background: linear-gradient(180deg, rgba(25,221,188,0.1) 0%, rgba(255,255,255,0) 90%);
 }
 
 .splide__toggle__pause, .splide__toggle__play {
@@ -4082,6 +4102,9 @@ ul {
 }
 
 
+
+
+
 .pageContainerAccueil {
     animation: accueilGradient 1s 0.2s ease forwards;
 }
@@ -4980,8 +5003,8 @@ li.veilleLigneAjout::before {
         position: absolute;
     
         animation: poissonAcueil1AnimFront 6000ms 1 linear;
-        width: 53px;
-        height: 53px;
+        width: 63px;
+        height: 63px;
         z-index: 999;
     
         content:url("../img/poisson_mix.png");
@@ -4996,8 +5019,8 @@ li.veilleLigneAjout::before {
         position: absolute;
 
         animation: poissonAcueil1AnimBack 6000ms 1 linear;
-        width: 45px;
-        height: 45px;
+        width: 55px;
+        height: 55px;
         z-index: -999;
 
         content:url("../img/poisson_mix.png");
@@ -6927,7 +6950,8 @@ li.veilleLigneAjout::before {
     border-radius: 6px;
 
     /* background-color: rgb(239 59 45 / 7%); */
-    background-color: #00ffd40d;
+    /* background-color: #00ffd40d; */
+    background-color: #00ffd408;
 
     padding-bottom: 26px;
     border-bottom-right-radius: 10px;
@@ -6935,7 +6959,7 @@ li.veilleLigneAjout::before {
 
     transition: all 0.3s;
 
-    border: 1px solid #00ffd64f;
+    /* border: 1px solid #00ffd64f; */
 }
 #inspirationContainer[data-theme="light"] {
     /* background-color: #97ffed; */
