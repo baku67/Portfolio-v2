@@ -39,7 +39,8 @@
     .traitFormationsPuces {
         position: absolute;
         left: 7px;
-        top: 9px;
+        /* top: 9px; */
+        top: 13px;
     
         width: 2px;
         height: -webkit-fill-available;
@@ -58,7 +59,8 @@
         color: #01ffd5;
         display:inline-block;
         width:1em;
-        margin-left:-1em;
+        /* margin-left:-1em; */
+        margin-left: -1.6em;
     }
 
 
@@ -1371,6 +1373,12 @@
         height: 60px;
     }
 
+    .cvDarkedLi {
+        background-color: #00000021;
+        padding: 5px 10px;
+        border-radius: 11px;
+    }
+
 
     .selected {
         /* test */
@@ -1472,7 +1480,7 @@
     }
 
     .stageBandeau {
-        font-size: 90% !important;
+        font-size: 85% !important;
 
         text-align: left;
         /* background: linear-gradient(85deg, rgba(66,66,66,0) 5%, rgba(239,59,45,0.34441526610644255) 50%, rgba(66,66,66,0) 95%); */
@@ -2225,7 +2233,8 @@
         /* bottom: 100px; */
         bottom: 70px;
 
-        margin-top: 0px;
+        /* margin-top: 0px; */
+        margin-top: 30px;
 
         padding: 64px 11px 2px 11px;
     }
