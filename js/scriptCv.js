@@ -112,7 +112,7 @@ window.onload = function() {
         observerScrollToTopButton.observe(document.querySelector('#headerCv'));
 
 
-        // Observer navBarre du haut:
+        // Observer footer pour fix position:
         const observerScrollToTopButton2 = new IntersectionObserver(entries => {
 
             entries.forEach(entry => {

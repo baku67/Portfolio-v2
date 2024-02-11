@@ -140,24 +140,44 @@ window.onload = function() {
 
     // scrollToTop pop/depop on scroll
     if(mobileDetection) {
-      const scrollToTopBtn = document.getElementById('scrollToTop');
-      // Observer navBarre du haut:
-      const observerContactButton = new IntersectionObserver(entries => {
-          // Loop over the entries
+
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+        // Observer navBarre du haut:
+        const observerContactButton = new IntersectionObserver(entries => {
+            // Loop over the entries
+            entries.forEach(entry => {
+                // If the element is visible
+                if (!entry.isIntersecting) {
+                    scrollToTopBtn.style.opacity = "1";
+                    scrollToTopBtn.style.pointerEvents = "all";
+                }
+                else {
+                    scrollToTopBtn.style.opacity = "0";
+                    scrollToTopBtn.style.pointerEvents = "none";
+                }
+            })
+        })
+        observerContactButton.observe(document.querySelector('#headerLoisirs'));
+
+        
+        // Observer footer pour fix position:
+        const observerScrollToTopButton2 = new IntersectionObserver(entries => {
+
           entries.forEach(entry => {
-              // If the element is visible
+
               if (!entry.isIntersecting) {
-                  scrollToTopBtn.style.opacity = "1";
-                  scrollToTopBtn.style.pointerEvents = "all";
+                  scrollToTopBtn.style.bottom = "10px";
               }
               else {
-                  scrollToTopBtn.style.opacity = "0";
-                  scrollToTopBtn.style.pointerEvents = "none";
+                  scrollToTopBtn.style.bottom = "65px";
               }
           })
-      })
-      observerContactButton.observe(document.querySelector('#headerLoisirs'));
+        })
+        observerScrollToTopButton2.observe(document.querySelector('#footer'));
+
     }
+
+
 
     // scrollToTop click
     function scrollToTop() {
@@ -309,41 +329,41 @@ window.onload = function() {
 
     
 
-  // Mettre des fadeIn et fadeOut
-  document.getElementById("photographieTitle").addEventListener("click", function() {
-    document.querySelectorAll(".photosGallerie").forEach(function(elem) {
-      if (elem.style.display == "block") {
-        elem.classList.remove("fadeIn");
-        elem.classList.add("fadeOut");
-        setTimeout(function() {
-          elem.style.display = "none";
-          elem.classList.remove("fadeOut");
-        }, 500)
-      }
-      else {
-        elem.classList.remove("fadeOut");
+  // Click titre "photographie" = photos fadeOut (Désactivé)
+  // document.getElementById("photographieTitle").addEventListener("click", function() {
+  //   document.querySelectorAll(".photosGallerie").forEach(function(elem) {
+  //     if (elem.style.display == "block") {
+  //       elem.classList.remove("fadeIn");
+  //       elem.classList.add("fadeOut");
+  //       setTimeout(function() {
+  //         elem.style.display = "none";
+  //         elem.classList.remove("fadeOut");
+  //       }, 500)
+  //     }
+  //     else {
+  //       elem.classList.remove("fadeOut");
 
-          elem.style.display = "block";
-          elem.classList.add("fadeIn");
-          setTimeout(function() {
-            elem.classList.remove("fadeIn");
-          })
-      }
-    });
-    msgHd = document.getElementById("messageGalerie");
-    if (msgHd.style.display == "block") {
-      msgHd.classList.remove("fadeInHd");
-      msgHd.classList.add("fadeOut");
-      setTimeout(function() {
-        msgHd.style.display = "none";
-      }, 500)
-    }
-    else if (msgHd.style.display == "none") {
-      msgHd.classList.remove("fadeOut");
-      msgHd.classList.add("fadeInHd");
-      msgHd.style.display = "block";
-    }
-  })
+  //         elem.style.display = "block";
+  //         elem.classList.add("fadeIn");
+  //         setTimeout(function() {
+  //           elem.classList.remove("fadeIn");
+  //         })
+  //     }
+  //   });
+  //   msgHd = document.getElementById("messageGalerie");
+  //   if (msgHd.style.display == "block") {
+  //     msgHd.classList.remove("fadeInHd");
+  //     msgHd.classList.add("fadeOut");
+  //     setTimeout(function() {
+  //       msgHd.style.display = "none";
+  //     }, 500)
+  //   }
+  //   else if (msgHd.style.display == "none") {
+  //     msgHd.classList.remove("fadeOut");
+  //     msgHd.classList.add("fadeInHd");
+  //     msgHd.style.display = "block";
+  //   }
+  // })
 
 
     //**  Apparition FadeIn successif des photos
@@ -351,12 +371,14 @@ window.onload = function() {
     let articlesImg = document.querySelectorAll("img");
     var nbr = 0;
   
-    articles.forEach((element, i) => {
+    setTimeout(function() {
+      articles.forEach((element, i) => {
         setTimeout(function() {
             element.classList.add("galeriePhotoFadeIn");
         }, i * 70)
+      })
+    }, 1500)
 
-    })
     // Fin apparition
 
     //** Test Apparition sans fadeIn successif (ça ram sur mobile pour ça?)
@@ -476,7 +498,7 @@ window.onload = function() {
 
         let modalImageGallerie = document.getElementById('myModal');
         let modalImg = document.getElementById("modalImage");
-        let captionText = document.getElementById("caption");
+        // let captionText = document.getElementById("caption");
 
         let arrowNext = document.getElementById("arrowNext");
         let arrowPrevious = document.getElementById("arrowPrevious");
@@ -503,7 +525,7 @@ window.onload = function() {
           arrowNext.style.display = "block";
           arrowPrevious.style.display = "block";
 
-          captionText.innerHTML = this.getAttribute('def');
+          // captionText.innerHTML = this.getAttribute('def');
 
           if (intTemp == 1) {
             arrowPrevious.style.opacity = 0.1;
@@ -539,7 +561,7 @@ window.onload = function() {
         
 
 
-        var span = document.getElementsByClassName("close")[0];
+        var span = document.getElementsByClassName("closeModal")[0];
 
         span.onclick = function() {
           modalImageGallerie.style.display = "none";
