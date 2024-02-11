@@ -93,6 +93,7 @@ window.onload = function() {
     var openBtn = document.getElementById("openBtn");
     var openBtn2 = document.getElementById("openBtn2");
     var closeBtn = document.getElementById("closeBtn");
+    var menuBtns = document.querySelectorAll('.menuButton');
 
     openBtn.onclick = openNav;
     openBtn2.onclick = openNav;
@@ -117,10 +118,21 @@ window.onload = function() {
         openBtn.style.display = "none";
         openBtn2.style.display = "none";
 
-        // Blur() derrière ram sur mobile:
-        // document.getElementById("pageContainerProjet").style.filter = "blur(2px)";
         document.getElementById("pageContainerProjet").style.opacity = "0.5";
         document.getElementById("pageTitleDiv").style.opacity = "0.5";
+
+        // On ajoute crescendo les fadeIn des onglets
+        setTimeout(function() {
+            menuBtns.forEach((elem, i) => {
+                setTimeout(function() {
+                elem.classList.add("fadeInNavBurgerLi");
+                }, i * 140)
+            })
+        }, 300);
+        setTimeout(() => {
+            document.getElementById('socialBurgerContainer').classList.add('fadeInNavBurgerLi');
+            document.getElementById('lablelsBurgerContainer').classList.add('fadeInNavBurgerLi');
+        }, 950);
     }
 
     /* Set the width of the side navigation to 0 */
@@ -129,10 +141,17 @@ window.onload = function() {
         openBtn.style.display = "block";
         openBtn2.style.display = "block";
 
-        // Blur() derrière ram sur mobile:
-        // document.getElementById("pageContainerProjet").style.filter = "blur(0px)";
         document.getElementById("pageContainerProjet").style.opacity = "1";
         document.getElementById("pageTitleDiv").style.opacity = "1";
+
+        // On enleve les fadeIn des onglets
+        setTimeout(function() {
+            menuBtns.forEach((elem, i) => {
+                elem.classList.remove("fadeInNavBurgerLi");
+            })
+            document.getElementById('socialBurgerContainer').classList.remove('fadeInNavBurgerLi');
+            document.getElementById('lablelsBurgerContainer').classList.remove('fadeInNavBurgerLi');  
+        }, 150);
     }
     
 

@@ -2309,13 +2309,13 @@ ul {
 }
 
 .menuButton:hover {
-    color: var(--secondaryColor);
+    /* color: var(--secondaryColor);
     animation-name: hoverMenuButton;
     animation-duration: 1.3s;
 
     background: linear-gradient(180deg, rgba(2,0,36,0) 40%, rgba(12,237,200,0.15) 100%);
     border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
+    border-bottom-right-radius: 6px; */
 }
 @keyframes hoverMenuButton {
     from {
@@ -3455,7 +3455,7 @@ ul {
 
 #messageGalerie {
     display: block;
-    color: rgb(226 232 240 / 40%);
+    color: rgb(226 232 240 / 55%);
     text-align: center;
     font-style: oblique;
 
@@ -4356,11 +4356,11 @@ ul {
     opacity: 0;
     transition: opacity .4s;
 
-    position:absolute; 
-    font-size:2.5em; 
-    font-weight:bold; 
-    top:0; 
-    left:0; 
+    position: absolute; 
+    font-size: 3.5em; 
+    font-weight: bold; 
+    top: 0; 
+    left: 0; 
     height: 100%; 
     width: 100%; 
     margin-block-start:0em; 
