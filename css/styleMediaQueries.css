@@ -2686,13 +2686,49 @@
     }
 
 
-    .menuButton {
-        opacity: 0;
+    #mySidenav {
+        overflow: hidden;
     }
-    .fadeInNavBurgerLi {
-        animation: fadeIn 0.6s 0s ease forwards;
+    .menuBurgerShape {
+        position: absolute;
+        opacity: 0.15;
+        bottom: 0;
+        right: 0;
     }
 
+
+    .menuButton {
+        width: 100%;
+        opacity: 0;
+    }
+
+    .fadeInNavBurgerLi {
+        animation: fadeInNavBurgerLi 0.6s 0s ease forwards;
+    }
+    @keyframes fadeInNavBurgerLi {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+
+    .fadeInNavSocials {
+        animation: fadeInNavSocials 0.6s 0s ease forwards;
+    }
+    @keyframes fadeInNavSocials {
+        from {
+            opacity: 0;
+            /* transform: translateX(50px); */
+        }
+        to {
+            opacity: 1;
+            /* transform: translateX(0px); */
+        }
+    }
 
 
     .lds-ring {

@@ -221,12 +221,12 @@ window.onload = function() {
           menuBtns.forEach((elem, i) => {
             setTimeout(function() {
               elem.classList.add("fadeInNavBurgerLi");
-            }, i * 140)
+            }, i * 150)
           })
         }, 300);
         setTimeout(() => {
-          document.getElementById('socialBurgerContainer').classList.add('fadeInNavBurgerLi');
-          document.getElementById('lablelsBurgerContainer').classList.add('fadeInNavBurgerLi');
+          document.getElementById('socialBurgerContainer').classList.add('fadeInNavSocials');
+          document.getElementById('lablelsBurgerContainer').classList.add('fadeInNavSocials');
         }, 950);
 
     }
@@ -245,8 +245,8 @@ window.onload = function() {
           menuBtns.forEach((elem, i) => {
               elem.classList.remove("fadeInNavBurgerLi");
           })
-          document.getElementById('socialBurgerContainer').classList.remove('fadeInNavBurgerLi');
-          document.getElementById('lablelsBurgerContainer').classList.remove('fadeInNavBurgerLi');
+          document.getElementById('socialBurgerContainer').classList.remove('fadeInNavSocials');
+          document.getElementById('lablelsBurgerContainer').classList.remove('fadeInNavSocials');
         }, 150);
     }
     //******  */ FIN
