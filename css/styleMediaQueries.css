@@ -600,6 +600,11 @@
         animation: none;
         border: 0px solid rgba(239, 59, 45, 1);
         background-color: rgba(239, 59, 45, 0);
+
+        text-decoration: underline;
+        text-decoration-color: #ef3b2dde;
+        text-decoration-thickness: 3px;
+        text-underline-offset: 4px;
     }
 
     #status2 {
@@ -1559,11 +1564,10 @@
     .cvSectionBgGradient {
         background: radial-gradient(circle, rgba(12,237,200,0.1) 0%, rgba(66,66,66,0) 57%);
 
-        /* background-color: #00000000; */
         background-color: #00000024;
-        /* box-shadow: 0px 0 25px -6px #00ffff24; */
         box-shadow: 0px 0 25px -6px #00ffff4a;
-        padding: 1px 20px 2px 11px;
+        /* padding: 1px 20px 2px 11px; */
+        padding: 1px 11px 2px 11px;
         border-radius: 12px;
 
         /* A adapter selon section ? */
@@ -1977,7 +1981,8 @@
         "outils"
         "langues"; 
 
-        margin-top: 30px;
+        /* margin-top: 30px; */
+        margin-top: 17px;
     }
 
 
@@ -2074,19 +2079,14 @@
         font-size: 1.3em;
 
         position: fixed;
-        /* bottom: 5px;
-        right: 5px; */
         bottom: 10px;
         right: 10px;
 
-        color: #ef3b2d;
-        /* border: 1px solid grey; */
-        /* padding: 9px 12px; */
+        color: var(--secondaryColor);
         padding: 11px 14px;
         border-radius: 25px;
-        /* background-color: #2e2f33; */
         background-color: #1d1e1f;
-        border: 1px solid #8080805c;
+        /* border: 1px solid #8080805c; */
 
         transition: 0.4s;
     }
@@ -2286,10 +2286,12 @@
 
     .outils {
         margin: 0 auto;
-        bottom: -1px;
+        /* bottom: -1px; */
+        bottom: 44px;
     }
     .langues {
-        bottom: -46px;
+        /* bottom: -46px; */
+        bottom: -14px;
     }
 
     .clipPathShapes {
@@ -3462,7 +3464,7 @@
 
     /* menu Burger :  */
     .sidenav {
-        z-index: 9999;
+        z-index: 999999999;
 
         border-top-left-radius: 12px;
 

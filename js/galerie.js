@@ -179,12 +179,28 @@ window.onload = function() {
 
 
 
-    // scrollToTop click
+    // scrollToTop click (+anim btn)
     function scrollToTop() {
+
         document.body.scrollTo({top: 0, behavior: 'smooth'});
+
+        // anim scrollToTop Btn
+        document.getElementById('scrollToTopIcon').style.transform = "translateY(-35px)";
+        setTimeout(() => {
+            document.getElementById('scrollToTop').classList.add('fadeOut');
+            setTimeout(() => {
+                document.getElementById('scrollToTop').classList.remove('fadeOut');
+                document.getElementById('scrollToTopIcon').style.transform = "translateY(0px)";
+            }, 300)
+        }, 305)
+
     }
     document.getElementById('scrollToTop').addEventListener('click', scrollToTop);
   
+
+
+
+
 
 
     // Smiley titre portfolio

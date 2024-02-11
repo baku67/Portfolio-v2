@@ -904,14 +904,14 @@
     
         }
         to {
-            right: -12px;
+            right: 0px;
             opacity: 1;
         }
     }
 
     .hobbys {
         top: 11px;
-        right: -12px;
+        /* right: -12px; */
     }
 
     #titleCv { 

@@ -1481,7 +1481,7 @@ ul {
     grid-area: formations;
     /* bottom: 50px;  */
     text-align: justify;
-    margin-right: 20px;
+    /* margin-right: 20px; */
 }
 .hobbys { grid-area: hobbys; }
 .langages { grid-area: langages;
@@ -1919,7 +1919,7 @@ ul {
 
     }
     to {
-        right: -28px;
+        right: 0px;
         opacity: 1;
     }
 }
@@ -1964,7 +1964,7 @@ ul {
 
 .outilsShape {
     position: absolute;
-    width: 60%;
+    width: 70%;
     opacity: 0.25;
     bottom: 0;
     right: 0;
@@ -2006,7 +2006,7 @@ ul {
 
     /* top: 10px; */
     top: 30px;
-    right: -28px;
+    /* right: -28px; */
 
 }
 .hobbiesAnim {
