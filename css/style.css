@@ -2309,13 +2309,13 @@ ul {
 }
 
 .menuButton:hover {
-    /* color: var(--secondaryColor);
+    color: var(--secondaryColor);
     animation-name: hoverMenuButton;
     animation-duration: 1.3s;
 
     background: linear-gradient(180deg, rgba(2,0,36,0) 40%, rgba(12,237,200,0.15) 100%);
     border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px; */
+    border-bottom-right-radius: 6px;
 }
 @keyframes hoverMenuButton {
     from {

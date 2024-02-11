@@ -496,9 +496,10 @@
     }
 
     .menuButton:hover {
-        /* animation-name: none;
+        color: #cbcbcb !important;
+        /* animation-name: none; */
         animation-duration: 0s;
-        background: transparent; */
+        background: transparent !important;
     }
     @keyframes hoverMenuButton {
         from {
@@ -2696,6 +2697,8 @@
         opacity: 0.15;
         bottom: 0;
         right: 0;
+
+        filter: blur(2px);
     }
 
 
