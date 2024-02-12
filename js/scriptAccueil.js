@@ -214,11 +214,11 @@ window.onload = function() {
     var openBtn = document.getElementById("openBtn");
     var openBtn2 = document.getElementById("openBtn2");
     var closeBtn = document.getElementById("closeBtn");
+    var menuBtns = document.querySelectorAll('.menuButton');
 
     openBtn.onclick = openNav;
     openBtn2.onclick = openNav;
     closeBtn.onclick = closeNav;
-
 
     document.getElementById("pageContainer").addEventListener('click', function(e){   
 
@@ -232,20 +232,27 @@ window.onload = function() {
         }
     });
 
-
-
-    
-
     /* Set the width of the side navigation to 250px */
     function openNav() {
         sidenav.classList.add("active");
         openBtn.style.display = "none";
         openBtn2.style.display = "none";
 
-        // Blur() derrière ram sur mobile:
-        // document.getElementById("pageContainer").style.filter = "blur(2px)";
         document.getElementById("pageContainer").style.opacity = "0.5";
         document.getElementById("pageTitleDiv").style.opacity = "0.5";
+
+        // On ajoute crescendo les fadeIn des onglets
+        setTimeout(function() {
+          menuBtns.forEach((elem, i) => {
+            setTimeout(function() {
+              elem.classList.add("fadeInNavBurgerLi");
+            }, i * 150)
+          })
+        }, 300);
+        setTimeout(() => {
+          document.getElementById('socialBurgerContainer').classList.add('fadeInNavSocials');
+          document.getElementById('lablelsBurgerContainer').classList.add('fadeInNavSocials');
+        }, 950);
 
     }
 
@@ -255,10 +262,17 @@ window.onload = function() {
         openBtn.style.display = "block";
         openBtn2.style.display = "block";
 
-        // Blur() derrière ram sur mobile:
-        // document.getElementById("pageContainer").style.filter = "blur(0px)";
         document.getElementById("pageContainer").style.opacity = "1";
         document.getElementById("pageTitleDiv").style.opacity = "1";
+
+        // On enleve les fadeIn des onglets
+        setTimeout(function() {
+          menuBtns.forEach((elem, i) => {
+              elem.classList.remove("fadeInNavBurgerLi");
+          })
+          document.getElementById('socialBurgerContainer').classList.remove('fadeInNavSocials');
+          document.getElementById('lablelsBurgerContainer').classList.remove('fadeInNavSocials');
+        }, 150);
     }
     //******  */ FIN
 
@@ -667,8 +681,8 @@ window.onload = function() {
           hasIntersected2 = false;
           document.getElementById("accueilProjectsDiv").classList.add("fadeOutForm")
           setTimeout(function() {
-            document.getElementById("contactBtnFade").style.opacity = "0";
-            document.getElementById("contactBtnFade").classList.remove("fadeOutForm")
+            document.getElementById("accueilProjectsDiv").style.opacity = "0";
+            document.getElementById("accueilProjectsDiv").classList.remove("fadeOutForm")
           }, 120)
         }
         
@@ -707,6 +721,10 @@ window.onload = function() {
 
       document.getElementById("contactBtnFade").style.display = "none";
       document.getElementById("plz-form-4e67dacf-1c2f-4b24-8594-268e8604f643").style.height = "auto";
+      if(document.getElementById("plz-form-4e67dacf-1c2f-4b24-8594-268e8604f643").style.display = "none") {
+        document.getElementById("plz-form-4e67dacf-1c2f-4b24-8594-268e8604f643").style.display = "block";
+      }
+      document.getElementById("plz-form-4e67dacf-1c2f-4b24-8594-268e8604f643").classList.remove("fadeOutForm");
       document.getElementById("plz-form-4e67dacf-1c2f-4b24-8594-268e8604f643").classList.add("fadeInForm");
 
       document.getElementById("formBackBtn").style.display = "block";
@@ -723,9 +741,15 @@ window.onload = function() {
     document.getElementById("plz-form-4e67dacf-1c2f-4b24-8594-268e8604f643").classList.remove("fadeInForm");
     document.getElementById("plz-form-4e67dacf-1c2f-4b24-8594-268e8604f643").classList.add("fadeOutForm");
 
-
     document.getElementById("contactBtnFade").classList.remove("fadeOutContact");
-    document.getElementById("contactBtnFade").classList.add("fadeInContact");
+
+    setTimeout(() => {
+      document.getElementById("contactBtnFade").classList.add("fadeInContact");
+
+      document.getElementById("contactBtnFade").style.display = "inline-flex";
+      document.getElementById("plz-form-4e67dacf-1c2f-4b24-8594-268e8604f643").style.display = "none";
+    }, 700);
+
     
   });
 

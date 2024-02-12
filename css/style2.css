@@ -2314,7 +2314,7 @@ ul {
 
     transform: perspective(1220px) rotateY(83deg) translateX(35px) scale(0.7);
 
-    animation: fadeInRotateIframe 2s 0.5s ease forwards !important;
+    animation: fadeInRotateIframe 2s 1.5s ease forwards !important;
 }
 
 @keyframes fadeInRotateIframe {
@@ -2464,7 +2464,7 @@ ul {
     }
 }
 
-#projectContainer {
+.projectContainer {
     /* padding-bottom: 40px; */
     position: relative;
     bottom: 19px;

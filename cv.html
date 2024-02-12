@@ -61,7 +61,7 @@
 
         <!-- ScrollToTop -->
         <div id="scrollToTop" class="isMobile">
-            <i class="fa-solid fa-arrow-up"></i>
+            <i class="fa-solid fa-arrow-up scrollToTopIcon"></i>
         </div>
 
         <!-- (Desktop) Lors scroll: sideNav -->
@@ -98,6 +98,8 @@
         <!-- WIP menu-burger mobile -->
         <div id="mySidenav" class="sidenav isMobile">
 
+            <img src="../img/projects/bgShapes1_bjj.png" class="menuBurgerShape" />
+
             <a id="closeBtn" href="#" class="close">×</a>
 
             <ul style="position:relative;">
@@ -126,11 +128,11 @@
                         <span>Loisirs</span>
                     </a>
                 </li>
-                <li class="lablelsBurgerContainer">
+                <li id="lablelsBurgerContainer" class="lablelsBurgerContainer">
                     <span id="status"> #OpenToWork</span>
                     <span id="status2"><i class="fa-solid fa-magnifying-glass"></i> Alternance CDA</span>
                 </li>
-                <li class="socialBurgerContainer">
+                <li id="socialBurgerContainer" class="socialBurgerContainer">
                     <a href="https://github.com/baku67" target="_blank" style="padding:2px">
                         <i class="fa-brands fa-github burgerSocialBtn"></i>
                     </a>
@@ -261,11 +263,11 @@
 
                 <div id="formations" class="formations">
 
-                    <div class="cvSectionBgGradient">
+                    <div class="cvSectionBgGradient overflowHidden">
 
                         <img src="../img/projects/bgShapes1_bjj.png" class="formationsShape" >
 
-                        <p class="pageSectionTitle">
+                        <p class="pageSectionTitle pageSectionTitleFormations">
                             <span class="highlightSpan">&#x3c;</span> Formations <span class="highlightSpan">/&#x3e;</span>
                             <svg class="trainingSvgContainer" style="position:absolute;">
                                 <g class="formationSvg">
@@ -289,7 +291,7 @@
 
                             <div class="traitFormationsPuces"></div>
 
-                            <li>
+                            <li class="cvDarkedLi">
                                 2023: Formation <span class="highlightSpan">"Développeur web et web mobile"</span> à Élan Formation Strasbourg
                                 <br>
                                 <div id="stageBandeau1" class="stageBandeau">
@@ -309,7 +311,7 @@
 
                             <div class="separateurListe light"></div>
 
-                            <li>
+                            <li class="cvDarkedLi">
                                 2020-2022: <span class="highlightSpan">BTS SIO</span> - Option <span class="highlightSpan">SLAM</span> (Solutions Logicielles et Applications Métiers) <br>CCI campus Illkirch
                                 </br>
 
@@ -330,11 +332,15 @@
 
                             <div class="separateurListe light"></div>
 
-                            <li>2019: <span class="highlightSpan">Service Civique</span> (Inclusion numérique)</li>
+                            <li class="cvDarkedLi"> 
+                                2019: <span class="highlightSpan">Service Civique</span> (Inclusion numérique)
+                            </li>
 
                             <div class="separateurListe light"></div>
 
-                            <li>2015: Baccalauréat Scientifique</li>
+                            <li class="cvDarkedLi"> 
+                                2015: Baccalauréat Scientifique
+                            </li>
 
                         </ul>
 
@@ -346,11 +352,11 @@
 
                 <div id="hobbies" class="hobbys">
 
-                    <div class="cvSectionBgGradient">
+                    <div class="cvSectionBgGradient overflowHidden">
 
                         <img src="../img/projects/bgShapes1_bjj.png" class="hobbiesShape" >
 
-                        <p class="pageSectionTitle">
+                        <p class="pageSectionTitle pageSectionTitleHobbies">
 
                             <span class="highlightSpan">&#x3c;</span> Hobbies <span class="highlightSpan">/&#x3e;</span>
 
@@ -390,9 +396,9 @@
                             <div class="separateurListe2"></div>
                             <li class="cvLineHeightMobile">Photographie sous-marine <span class="cvGrisedText">("Coup de coeur de la rédaction", Divosea Août 2014)</span></li>
                             <div class="separateurListe2"></div>
-                            <li>Scoutisme, Camping, Randonnée</li>
+                            <li>Camping, Randonnée</li>
                             <div class="separateurListe2"></div>
-                            <li>Dessin crayon, retouches numériques</li>
+                            <li>Dessin, SVG, retouches numériques</li>
                             <div class="separateurListe2"></div>
                             <li>Découverte de jeux vidéos</li>
                         </ul>
@@ -421,10 +427,10 @@
                     <div class="clipPathShapes clipPathShape10 clipPathShape-blue"></div>
 
 
-                    <div class="cvSectionBgGradientSkills ">
+                    <div id="cvSectionBgGradientSkills" class="cvSectionBgGradientSkills ">
 
                         <!-- Titre compétences et svg checkbox -->
-                        <p class="pageSectionTitle pageSectionTitleMobile" style="text-align: center;">
+                        <p class="pageSectionTitle pageSectionTitleMobile pageSectionTitleSkills" style="text-align: center;">
                             <span class="highlightSpan">&#x3c;</span> Compétences <span class="highlightSpan">/&#x3e;</span>
 
                             <svg class="skillsSvgContainer" style="position:absolute;">
@@ -492,6 +498,8 @@
 
                     <div class="cvSectionBgGradient">
 
+                        <img src="../img/projects/bgShapes1_bjj.png" class="outilsShape" >
+
                         <p class="pageSectionTitle outilsSectionTitleMobile">
                             <span class="highlightSpan">&#x3c;</span> Outils <span class="highlightSpan">/&#x3e;</span>
 
@@ -517,6 +525,7 @@
                             <li>Photoshop / pixlr.com</li>
                             <li>Figma</li>
                             <li>Postman/Insomnia</li>
+                            <li>SvgPathEditor</li>
                             <li>Design Pattern MVC</li>
                         </ul>
 
@@ -529,6 +538,8 @@
                 <div id="langues" class="langues">
 
                     <div class="cvSectionBgGradient">
+
+                        <img src="../img/projects/shapeAccueil-min.png" class="langsShape" >
 
                         <p class="pageSectionTitle">
                             <span class="highlightSpan">&#x3c;</span> Langues <span class="highlightSpan">/&#x3e;</span>
@@ -567,7 +578,7 @@
 
 
 
-        <footer class="footerAccueil">
+        <footer id="footer" class="footerCv">
             <span><a href="mentionslegales.html">Mentions légales</a> - www.bk-dev.fr - </span>
             <a href="https://www.linkedin.com/in/basile-kuntz-719278267/" class="socialFooter"><i class="fa-brands fa-linkedin"></i></a>
             <a href="https://github.com/baku67" class="socialFooter"><i class="fa-brands fa-github"></i></a>

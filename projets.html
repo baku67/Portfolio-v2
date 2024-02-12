@@ -96,6 +96,8 @@
         <!-- WIP menu-burger mobile -->
         <div id="mySidenav" class="sidenav isMobile">
 
+            <img src="../img/projects/bgShapes1_bjj.png" class="menuBurgerShape" />
+
             <a id="closeBtn" href="#" class="close">×</a>
 
             <ul style="position:relative;">
@@ -124,11 +126,11 @@
                         <span>Loisirs</span>
                     </a>
                 </li>
-                <li class="lablelsBurgerContainer">
+                <li id="lablelsBurgerContainer" class="lablelsBurgerContainer">
                     <span id="status"> #OpenToWork</span>
                     <span id="status2"><i class="fa-solid fa-magnifying-glass"></i> Alternance CDA</span>
                 </li>
-                <li class="socialBurgerContainer">
+                <li id="socialBurgerContainer" class="socialBurgerContainer">
                     <a href="https://github.com/baku67" target="_blank" style="padding:2px">
                         <i class="fa-brands fa-github burgerSocialBtn"></i>
                     </a>
@@ -254,12 +256,12 @@
                                 <img src="../img/projects/bgShapes1_squadforge2-min.png" class="projectShapeBgAnim2 projectShapesDiv-bottom-right isDesktop" />
 
 
-                                <div id="projectContainer">
+                                <div id="projectContainer1" class="projectContainer">
 
                                     <div class="gridProjetHeaderContainer description1boxShadow">
 
 
-                                        <div class="iframe">
+                                        <div id="iframe1" class="iframe">
 
                                             <!-- Shape absolute (haut gauche) Mobile -->
                                             <img src="../img/projects/bgShapes2-min.png" class="projectShapeBgAnim1-mobile projectShapesDiv-top-left isMobile" />
@@ -321,14 +323,14 @@
                                                 </ul>
 
                                                 <ul class="projetFuncList">
-                                                    <li>Autentification</li>
-                                                    <li>Système de modération (validation des public, censure, signalements)</li>
+                                                    <li>Autentification et rôles</li>
+                                                    <li>Système de modération (validation des publications, censure, signalements, sanctions)</li>
                                                     <li>Signalements à la modération</li>
                                                     <li>Publication de Topics, Médias, Commentaires</li>
                                                     <li>Upvotes et likes/dislikes</li>
                                                     <li>Création et candidatures de Teams</li>
-                                                    <li>Planifications de sessions de gaming (Team)</li>
-                                                    <li>Jeux favoris -> page d'accueil filtrée</li>
+                                                    <li>Planifications de sessions de jeu</li>
+                                                    <li>Page d'accueil filtrée selon favoris</li>
                                                     <li>Page de jeux personalisées</li>
                                                 </ul>
 
@@ -443,11 +445,11 @@
                                 <img src="../img/projects/bgShapes1_bjj.png" class="projectShapeBgAnim2 projectShapesDiv-bottom-right isDesktop" />
 
 
-                                <div id="projectContainer">
+                                <div id="projectContainer2" class="projectContainer">
 
                                     <div class="gridProjetHeaderContainer description2boxShadow">
 
-                                        <div class="iframe">
+                                        <div id="iframe2" class="iframe">
                                             <div class="boutonMockup"></div>
                                             <div class="boutonMockup2"></div>
                                             <div class="bouton3Container"><div class="boutonMockup3"></div></div>
@@ -495,8 +497,9 @@
                                                     </ul>
 
                                                     <ul class="projetFuncList projetFuncListPositionMobile">
-                                                        <li>Système de compte (+Crédits quotidiens)</li>
-                                                        <li>Système de progression (expérience/niveaux)</li>
+                                                        <li>Autentification</li>
+                                                        <li>Crédits quotidiens à la connexion</li>
+                                                        <li>Système de progression (expérience & niveaux)</li>
                                                         <li>Système de Win-streak</li>
                                                         <li>Affichage du top 3 sur l'accueil</li>
                                                         <li>Historique et stats personnelles</li>
@@ -613,11 +616,11 @@
 
                         <swiper-slide>
 
-                            <div id="projectContainer2" class="projet3PositionMobile">
+                            <div id="projectContainer3" class="projectContainer projet3PositionMobile">
 
                                 <div class="gridProjetHeaderContainer description3boxShadow">
 
-                                    <div class="iframe">
+                                    <div id="iframe3" class="iframe">
                                         <div class="boutonMockup"></div>
                                         <div class="boutonMockup2"></div>
                                         <div class="bouton3Container"><div class="boutonMockup3"></div></div>
@@ -834,11 +837,13 @@
 
         </div>
 
-        <footer class="footerProkets">
-            <span><a href="mentionslegales.html">Mentions légales</a> - www.bk-dev.fr - </span>
-            <a href="https://www.linkedin.com/in/basile-kuntz-719278267/" class="socialFooter"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://github.com/baku67" class="socialFooter"><i class="fa-brands fa-github"></i></a>
-            <br>
+        <footer class="footerProjets">
+            <div>
+                <span><a href="mentionslegales.html">Mentions légales</a> - www.bk-dev.fr - </span>
+                <a href="https://www.linkedin.com/in/basile-kuntz-719278267/" class="socialFooter"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/baku67" class="socialFooter"><i class="fa-brands fa-github"></i></a>
+                <br/>
+            </div>
             <span style="font-size:80%;"><a href='https://pngtree.com/freepng/blue-geometric-honeycomb_2498368.html'>background png image from pngtree.com</a></span>
         </footer>
 

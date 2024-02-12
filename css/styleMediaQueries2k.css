@@ -23,14 +23,26 @@
 
     }
 
+    .pageSectionTitleSkills {
+        text-align: center;
+        width: fit-content;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+
 
     .projectShapesDiv-bottom-right {
-        right: -95px;
+        /* right: -95px; */
+        transform: scale(1.5);
+        filter: blur(2px);
+        right: -14px;
+        bottom: 113px;
     }
 
     .projet1_topleftShape_desktop {
         /* transform: rotate(180deg) translateX(211px) translateY(80px); */
-        transform: rotate(180deg);
+        transform: rotate(180deg) scale(1.15);
         width: 50%;
     }
     .projet1_topleftShape_desktop2 {
@@ -39,7 +51,8 @@
     }
 
     .desktopSlideMargin {
-        margin: 10px 5% 50px 5%;
+        /* margin: 10px 5% 50px 5%; */
+        margin: 10px 7% 50px 7%;
     }
 
     /* Grid CV */
@@ -69,12 +82,16 @@
     }
 
     .skillsSvgContainer {
-        position: absolute;
-        /* transform: translate(513px, -112px); */
+        /* position: absolute;
         left: 50%;
         transform: translateX(-12%) translateY(-116px);
+        z-index: -99; */
 
-        /* opacity: 0.6; */
+        position: absolute;
+        height: 80px;
+        width: 100px;
+        top: -30px;
+        left: 118%;
         z-index: -99;
     }
 
@@ -124,7 +141,11 @@
         height:auto; 
         margin:auto; 
         vertical-align:middle; 
-        border-radius:10px;
+        /* border-radius:10px; */
+    }
+
+    .loupesGalerie {
+        font-size: 4em;
     }
 
     .galerieDiv {
@@ -142,12 +163,13 @@
     .iframe {
         margin-right: 55px;
 
-        bottom: 50px;
+        /* bottom: 50px; */
+        bottom: 20px;
         /* Marche: (sans le rotate 3D) */
     
         transform: perspective(1220px) rotateY(83deg) translateX(35px) scale(0.8);
 
-        animation: fadeInRotateIframe 2s 0.5s ease forwards !important;
+        animation: fadeInRotateIframe 2s 2.5s ease forwards !important;
     }
     @keyframes fadeInRotateIframe {
         from {
@@ -183,7 +205,11 @@
         transform: translateX(0px) rotateY(45deg) !important;
     }
 
-    #projectContainer {
+    .carouselImgProject {
+        width: 53%;
+    }
+
+    .projectContainer {
         /* padding-bottom: 40px; */
         position: relative;
         bottom: 4px;
@@ -191,6 +217,9 @@
         /* Pour compenser les relative qui mess le footer */
         /* padding-bottom: 67px;  */
         margin-bottom: 0px;
+
+        background-color: #0000000f;
+        border-radius: 37px;
     }
 
 
@@ -249,7 +278,10 @@
     }
 
     .symfonyShapeDiv {
-        height: 98px;
+        height: 115px;
+    }
+    .symfonyShapeTxt {
+        font-size: 1.2em;
     }
 
     #portfolioTitle {
@@ -259,9 +291,34 @@
     }
 
 
-    .accueilGridPresentation {
+    #accueilGridPresentation {
         width: 90%;
         /* margin: 0px auto; */
+
+        display: inline-flex;
+        flex-direction: row-reverse;
+
+        align-items: center;
+        gap: 40px;
+
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #portraitAccueil {
+        float: none;
+        margin: 0px 0px 0px 0px;
+    }
+    .paragrapheAccueil {
+        opacity: 0;
+
+        background-color: #00000017;
+        padding: 14px 10px 14px 24px;
+        border-radius: 12px;
+        box-shadow: 6px 6px 25px 0px #00ffff24;
+        border-bottom: 1px solid #19ddbc54;
+        border-right: 1px solid #19ddbc30;
+
+        animation: fadeIn 0.5s 0s ease forwards;
     }
 
     .imgAccueil { 
@@ -275,7 +332,8 @@
 
         position: relative;
         bottom: -1px;
-        left: 29px;
+        /* left: 29px; */
+        left: 0px;
         transform: scale(0.94);
     }
 
@@ -284,7 +342,8 @@
     .fixScalePortraitPC {
         position: relative;
         transform: scale(0.85);
-        left: 22px;
+        /* left: 22px; */
+        left: 0px;
     }
 
     #portfolioSousTitre {
@@ -777,7 +836,11 @@
 
     .projectShapesDiv-top-left {
         /* left: 153px; */
-        left: -40px;
+        /* left: -140px; */
+        left: -71px;
+        top: -25px;
+
+        filter: blur(1px);
     }
 
     
@@ -841,14 +904,14 @@
     
         }
         to {
-            right: -12px;
+            right: 0px;
             opacity: 1;
         }
     }
 
     .hobbys {
         top: 11px;
-        right: -12px;
+        /* right: -12px; */
     }
 
     #titleCv { 
@@ -891,6 +954,16 @@
             position: absolute; */
             margin-top: 40px;
     }
+    footer.footerCv {
+        /* position: absolute;
+        bottom: 0; */
+        /* position: fixed;
+        bottom: auto; */
+    
+            /* bottom: 0;
+            position: absolute; */
+            margin-top: 40px;
+    }
 
     /* .accueilVideoPcDiv {
         width: 24%;
@@ -910,7 +983,8 @@
         border-radius: 6px;
     
         /* background-color: rgb(239 59 45 / 7%); */
-        background-color: #00ffd40d;
+        /* background-color: #00ffd40d; */
+        background-color: #00ffd408;
     
         padding-bottom: 49px;
         border-bottom-right-radius: 10px;
@@ -918,14 +992,19 @@
     
         transition: all 0.3s;
     
-        border: 1px solid #00ffd64f;
+        /* border: 1px solid #00ffd64f; */
     }
 
     .lightBulbWrapperDiv {
 
-        transform: rotate(357deg) scale(0.65);
+        transform: rotate(355deg) scale(0.65);
 
         bottom: 18px;
+    }
+
+
+    .linkedinBtn {
+        padding: 17px 14px 17px 14px;
     }
 
 
@@ -1117,7 +1196,7 @@
         right: 3%;
         font-size: 1em;
 
-        top: 0px;
+        top: 30px;
 
         animation: fadePulseSwipe 3s 0s normal ease infinite;
     }

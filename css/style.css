@@ -23,6 +23,13 @@
 }
 
 
+.pageSectionTitleFormations {
+    margin-block-start: 2em !important;
+}
+.pageSectionTitleHobbies {
+    margin-block-start: 2em !important;
+}
+
 
 
 .cvGrisedText {
@@ -365,7 +372,8 @@ swiper-slide {
     position: relative;
     /* margin: 50px; */
     width: 205px;
-    margin: 0 61px 0 0;
+    /* margin: 0 61px 0 0; */
+    margin: 0px 0px 0px 0px;
 
     transform: scale(0.8);
     
@@ -374,6 +382,7 @@ swiper-slide {
     z-index: 999;
 
     bottom: 14px;
+    left: 27px;
 }
 .lightBulbWrapperDiv[data-theme="light"] {
     filter:none;
@@ -438,7 +447,8 @@ swiper-slide {
     position: fixed;
     top: -20px;
 
-    border-left: 1px solid rgba(128, 128, 128, 0.3);
+    /* border-left: 1px solid rgba(128, 128, 128, 0.3); */
+    border-left: 1px solid rgba(128, 128, 128, 0.15);
     transition: all 0.25s;
 
     right: -65px;
@@ -507,6 +517,16 @@ swiper-slide {
     transition: all 0.4s;
 }
 
+.fadeInSlide {
+    animation: fadeIn 2s 0s ease forwards;
+}
+
+#projectContainer1 {
+    opacity: 0;
+}
+#projectContainer2 {
+    opacity: 0;
+}
 
 .trainingSvgContainer {
     /* Maj test gradient circular: */
@@ -516,7 +536,7 @@ swiper-slide {
 
     position: absolute;
     transform: translate(163px, -66px) rotateX(0deg);
-    opacity: 0.92;
+    opacity: 1;
     /* margin-left: 25px; */
     margin-left: 40px;
 
@@ -566,7 +586,7 @@ swiper-slide {
 
 
 .formationSvgPath {
-    opacity: 0.8;
+    opacity: 1;
     transform:scale(0.8);  
     fill: none; 
     stroke: #ef3b2d; 
@@ -579,18 +599,25 @@ swiper-slide {
 
 
 .skillsSvgContainer {
-    position: absolute;
-    /* transform: translate(414px, -114px); */
+    /* position: absolute;
     left: 50%;
     transform: translateX(-12%) translateY(-116px);
     opacity: 0.92;
+    z-index: -99; */
+    position: absolute;
+    height: 80px;
+    width: 100px;
+    top: -38px;
+    left: 115%;
     z-index: -99;
 
     overflow: visible;
+
+
 }
 
 .skillsSvgPath {
-    opacity: 0.8;
+    opacity: 1;
     transform:scale(0.8);  
     fill: none; 
     stroke: #ef3b2d; 
@@ -665,7 +692,7 @@ swiper-slide {
 
 
 .hobbiesSvgPath {
-    opacity: 0.8;
+    opacity: 1;
     transform:scale(0.8);  
     fill: rgba(255, 255, 255, 0); 
     stroke: #ef3b2d; 
@@ -761,7 +788,7 @@ swiper-slide {
     transform:scale(0.3); 
     fill: none; 
     stroke: #ef3b2d; 
-    stroke-width: 15; 
+    stroke-width: 13; 
     stroke-linecap: round; 
     stroke-linejoin:  miter; 
     stroke-miterlimit: 4;
@@ -1020,7 +1047,13 @@ swiper-slide {
 }
 
 
-footer {
+footer {  
+    z-index: 99;
+    align-items: center;
+    display: inline-flex;
+    text-align: center;
+    justify-content: center;
+
     padding: 15px 0;
     background-color: #161a24;
     color: #565973;
@@ -1042,7 +1075,19 @@ footer.footerAccueil {
     margin-top: 30px;
 
 }
+footer.footerCv {
+    opacity: 0;
+    /* Juste pour eviter le pop puis decalage lors du chargement du form(qui est un api) */
+    animation: fadeIn 0.2s 0.5s forwards;
+    /* position: absolute !important; */
+    /* position: relative; */
+    /* bottom: auto; */
+    /* margin-top: 30px; */
+    margin-top: 50px;
+
+}
 footer.footerProjets {
+    flex-direction: column;
     margin-top: 0px;
 }
 .footerLoisir {
@@ -1168,9 +1213,23 @@ textarea:focus, input:focus{
 
 
 
-.accueilGridPresentation {
+#accueilGridPresentation {
+    position: relative;
     width: 95%;
     /* margin: 0px auto; */
+
+    display: inline-flex;
+    flex-direction: row-reverse;
+
+    align-items: center;
+    gap: 30px;
+
+    left: 50%;
+    transform: translateX(-50%);
+}
+#portraitAccueil {
+    float: none;
+    margin: 0px 0px 0px 0px;
 }
 
 
@@ -1422,11 +1481,11 @@ ul {
     grid-area: formations;
     /* bottom: 50px;  */
     text-align: justify;
-    margin-right: 20px;
+    /* margin-right: 20px; */
 }
 .hobbys { grid-area: hobbys; }
 .langages { grid-area: langages;
-    bottom: 120px; 
+    bottom: 160px; 
     margin-bottom: 50px;
  }
 .outils { grid-area: outils; }
@@ -1444,6 +1503,14 @@ ul {
         opacity: 0;
     }
 }
+
+
+.pageSectionTitleSkills {
+    text-align: center;
+    width: fit-content;
+    left: 45%;
+    transform: translateX(-45%);
+} 
 
 .fadeOut {
     animation: fadeOut 0.5s 0s ease forwards;
@@ -1565,7 +1632,11 @@ ul {
 #stage2content {
     display: none;
 }
+
+
 .cvSectionBgGradient {
+    
+
     background: rgb(12,237,200);
     background: -moz-radial-gradient(circle, rgba(12,237,200,0.1) 0%, rgba(66,66,66,0) 60%);
     background: -webkit-radial-gradient(circle, rgba(12,237,200,0.1) 0%, rgba(66,66,66,0) 60%);
@@ -1592,6 +1663,9 @@ ul {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0cedc8",endColorstr="#424242",GradientType=1);
 }
 
+.overflowHidden {
+    overflow: hidden;
+}
 
 
 /* *** GRID COMPETENCES */
@@ -1815,6 +1889,17 @@ ul {
     }
 }
 
+@keyframes fadeInCompetences {
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 @keyframes fadeInFormation {
     from {
         left: -500px;
@@ -1834,7 +1919,7 @@ ul {
 
     }
     to {
-        right: -28px;
+        right: 0px;
         opacity: 1;
     }
 }
@@ -1859,22 +1944,40 @@ ul {
     width: 98%;
     right: 0;
     bottom: 0;
-    opacity: 0.1;
+    opacity: 0.15;
 
     border-bottom-right-radius: 13px;
 }
 
 .hobbiesShape {
     position: absolute;
-    width: 60%;
-    right: 0;
-    /* bottom: 0; */
+    width: 70%;
     opacity: 0.25;
+
+    right: -24px;
+    top: -17px;
 
     /* rotated pour top-right corner de la card: */
     border-bottom-right-radius: 10px;
     transform: rotate(270deg);
-    top: 0;
+}
+
+.outilsShape {
+    position: absolute;
+    width: 70%;
+    opacity: 0.25;
+    bottom: 0;
+    right: 0;
+    border-bottom-right-radius: 10px;
+}
+
+.langsShape {
+    position: absolute;
+    width: 50%;
+    opacity: 0.18;
+    bottom: 0;
+    left: 0;
+    border-bottom-right-radius: 10px;
 }
 
 
@@ -1903,7 +2006,7 @@ ul {
 
     /* top: 10px; */
     top: 30px;
-    right: -28px;
+    /* right: -28px; */
 
 }
 .hobbiesAnim {
@@ -1913,12 +2016,17 @@ ul {
 
 }
 .langages {
+    overflow: hidden;
     position: relative;
     opacity: 0;
 
+    padding: 64px 20px 2px 11px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 25px 0px #00ffff12;
+
 }
 .competencesAnim {
-    animation-name: fadeIn;
+    animation-name: fadeInCompetences;
     animation-duration: 2s;
     animation-fill-mode: forwards;
 
@@ -2573,7 +2681,10 @@ ul {
 
     transform: perspective(1220px) rotateY(83deg) translateX(35px) scale(0.65);
 
-    animation: fadeInRotateIframe 2s 0.5s ease forwards !important;
+    animation: fadeInRotateIframe 2s 1.5s ease forwards !important;
+}
+.iframeRotate {
+    animation: fadeInRotateIframe 2s 0.7s ease forwards !important;
 }
 
 .projectShapesDiv-top-left {
@@ -2600,12 +2711,12 @@ ul {
 
 .projectShapeBgAnim1 {
     opacity: 0;
-    animation: fadeInBgProject 0.7s 1.7s linear forwards;
+    animation: fadeInBgProject 0.9s 1.9s linear forwards;
 }
 
 .projectShapeBgAnim2 {
     opacity: 0;
-    animation: fadeInBgProject 0.7s 1s linear forwards;
+    animation: fadeInBgProject 0.9s 1.2s linear forwards;
 
     border-bottom-right-radius: 38px;
     /* margin-bottom: 56px; */
@@ -2787,7 +2898,7 @@ ul {
     }
 }
 
-#projectContainer {
+.projectContainer {
     /* padding-bottom: 40px; */
     position: relative;
     bottom: 19px;
@@ -2800,7 +2911,7 @@ ul {
 
 .carouselImgProject {
     width: -webkit-fill-available;
-    width: 45%;
+    width: 48%;
 
     border-radius: 10px;
 }
@@ -2914,9 +3025,9 @@ ul {
     background-color: #00000000; 
 
     background: rgb(25,221,188); 
-    background: -moz-linear-gradient(180deg, rgba(25,221,188,0.7) 0%, rgba(255,255,255,0) 60%);
-    background: -webkit-linear-gradient(180deg, rgba(25,221,188,0.7) 0%, rgba(255,255,255,0) 60%); 
-    background: linear-gradient(180deg, rgba(25,221,188,0.07) 0%, rgba(255,255,255,0) 60%);
+    background: -moz-linear-gradient(180deg, rgba(25,221,188,0.1) 0%, rgba(255,255,255,0) 90%);
+    background: -webkit-linear-gradient(180deg, rgba(25,221,188,0.1) 0%, rgba(255,255,255,0) 90%); 
+    background: linear-gradient(180deg, rgba(25,221,188,0.1) 0%, rgba(255,255,255,0) 90%);
 }
 
 .splide__toggle__pause, .splide__toggle__play {
@@ -3344,7 +3455,7 @@ ul {
 
 #messageGalerie {
     display: block;
-    color: rgb(226 232 240 / 40%);
+    color: rgb(226 232 240 / 55%);
     text-align: center;
     font-style: oblique;
 
@@ -3378,6 +3489,8 @@ ul {
 
 
 .images {
+    overflow: hidden;
+    border-radius: 10px;
     opacity: 0;
 }
 
@@ -3663,6 +3776,19 @@ ul {
     opacity: 0;
 }
 
+.shapePresentation {
+    position: absolute;
+    opacity: 0.27;
+
+    /* width: 100%; */
+    transform: scale(1.5);
+    height: -webkit-fill-available;
+
+    bottom: 28px;
+    left: 10px;
+}
+
+
 
 #portfolioTitle {
     font-size: 2em;
@@ -3672,12 +3798,24 @@ ul {
 
 
 .paragrapheAccueil { 
+    position: relative;
+    overflow: hidden;
+
     /* text-align: justify; */
     text-align: left;
     color: #E7E8F2;
     margin: 0px 20px 12px 20px;
     
     font-size: 1.2em;
+
+    background-color: #00000017;
+    padding: 13px 10px 14px 24px;
+    border-radius: 12px;
+    box-shadow: 6px 6px 25px 0px #00ffff24;
+    border-bottom: 1px solid #19ddbc54;
+    border-right: 1px solid #19ddbc30;
+
+    animation: fadeIn 0.5s 0s ease forwards;
 }
 #paragrapheAccueil[data-theme="light"] {
     color: var(--black);
@@ -3844,7 +3982,8 @@ ul {
 .fixScalePortraitPC {
     position: relative;
     transform: scale(0.9);
-    left: 30px;
+    /* left: 30px; */
+    left: 0px;
 }
 
 .accueilProjectsRightLink:hover .redirectProjectsIcon {
@@ -3982,6 +4121,9 @@ ul {
 }
 
 
+
+
+
 .pageContainerAccueil {
     animation: accueilGradient 1s 0.2s ease forwards;
 }
@@ -3996,7 +4138,7 @@ ul {
 
 .lightBulbWrapperDiv {
 
-    transform: rotate(358deg) scale(0.65);
+    transform: rotate(356deg) scale(0.57);
 
     animation: accueilAmpouleGradient 0.5s 0.5s ease forwards;
 }
@@ -4187,7 +4329,7 @@ ul {
 .photosGallerie {
     /* opacity: 1; */
     display: block;
-    width: 250px;
+    width: 240px;
     margin: auto;
     border-radius: 2px;
     filter: blur(0px);
@@ -4214,18 +4356,18 @@ ul {
     opacity: 0;
     transition: opacity .4s;
 
-    position:absolute; 
-    font-size:2.5em; 
-    font-weight:bold; 
-    top:0; 
-    left:0; 
+    position: absolute; 
+    font-size: 3.5em; 
+    font-weight: bold; 
+    top: 0; 
+    left: 0; 
     height: 100%; 
     width: 100%; 
     margin-block-start:0em; 
     margin-block-end:0em; 
 
     color:rgba(242, 228, 227, 0.9);
-    background: rgba(14, 20, 140, 0.4);
+    background: rgb(0 0 0 / 60%);
 
     z-index: 1;
 
@@ -4238,11 +4380,12 @@ ul {
 }
 
 .location-image img {
-    filter: blur(0px);
-    transition: filter 0.3s ease-in;
+    /* filter: blur(0px); */
+    transition: all 0.4s ease;
   }
   .location-listing:hover .location-image img {
-    filter: blur(2px);
+    /* filter: blur(2px); */
+    transform: scale(1.2);
   }
 
 .modal {
@@ -4262,11 +4405,12 @@ ul {
 
 .modal-image {
     margin: auto;
+    margin-bottom: 25px !important;
     display: block;
     width: 90%;
     max-width: 800px;
 
-    border-radius: 4px;
+    border-radius: 10px;
     /* border: 2px solid rgba(239, 59, 45, 0.3); */
 }
 .modal-image:hover {
@@ -4294,17 +4438,20 @@ ul {
     to {transform:scale(1)}
 }
 
-.close {
+.closeModal {
     position: absolute;
+    z-index: 99999999;
     top: 37px;
-    right: 35px;
+    right: 130px;
     color: #f1f1f1;
     font-size: 5em;
     font-weight: bold;
+
+    animation: fadeIn 0.7s 0s ease forwards;
     transition: 0.3s;
 }
 
-.close:hover, .close:focus {
+.closeModal:hover, .closeModal:focus {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
@@ -4450,11 +4597,12 @@ ul {
 
 
 .imgGalleries {
-    width:90%; 
+    /* width:90%;  */
+    width: 100%;
     height:auto; 
     margin:auto; 
     vertical-align:middle; 
-    border-radius:10px;
+    /* border-radius:10px; */
 }
 
 
@@ -4462,7 +4610,7 @@ ul {
 
 #photographieTitle {
     /* Clickable pour opacity 0/1 des images (voir l'aquarium) temporaire: deplacer dans un vrai bouton */
-    cursor: pointer;
+    /* cursor: pointer; */
 
     color: #ef3b2d;
     text-align: center;
@@ -4880,8 +5028,8 @@ li.veilleLigneAjout::before {
         position: absolute;
     
         animation: poissonAcueil1AnimFront 6000ms 1 linear;
-        width: 53px;
-        height: 53px;
+        width: 63px;
+        height: 63px;
         z-index: 999;
     
         content:url("../img/poisson_mix.png");
@@ -4896,8 +5044,8 @@ li.veilleLigneAjout::before {
         position: absolute;
 
         animation: poissonAcueil1AnimBack 6000ms 1 linear;
-        width: 45px;
-        height: 45px;
+        width: 55px;
+        height: 55px;
         z-index: -999;
 
         content:url("../img/poisson_mix.png");
@@ -6827,7 +6975,8 @@ li.veilleLigneAjout::before {
     border-radius: 6px;
 
     /* background-color: rgb(239 59 45 / 7%); */
-    background-color: #00ffd40d;
+    /* background-color: #00ffd40d; */
+    background-color: #00ffd408;
 
     padding-bottom: 26px;
     border-bottom-right-radius: 10px;
@@ -6835,7 +6984,7 @@ li.veilleLigneAjout::before {
 
     transition: all 0.3s;
 
-    border: 1px solid #00ffd64f;
+    /* border: 1px solid #00ffd64f; */
 }
 #inspirationContainer[data-theme="light"] {
     /* background-color: #97ffed; */
@@ -7056,25 +7205,36 @@ li.veilleLigneAjout::before {
     z-index: 5;
 }
 
-.bodyLoisir {
+#bodyLoisir:before {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
     animation: contrastEffect 0.4s 2.9s ease-in-out forwards;
+}
+.bodyLoisir {
+    /* animation: contrastEffect 0.4s 2.9s ease-in-out forwards; */
 }
 @keyframes contrastEffect {
     0% {
-        filter: grayscale(0.);
+        backdrop-filter: grayscale(0) brightness(1);
     }
     50% {
         /* filter: grayscale(0.9) brightness(1); */
-        filter: grayscale(1);
+        backdrop-filter: grayscale(1) brightness(1.3);
     }
     57% {
         /* filter: grayscale(0.9) brightness(1); */
-        filter: grayscale(1);
+        backdrop-filter: grayscale(1) brightness(1.3);
     }
     100% {
-        filter: drop-shadow(2px 4px 6px black);
+        backdrop-filter: drop-shadow(2px 4px 6px black);
     }
 }
+
+
 
 #flashRectangle {
     position: absolute;

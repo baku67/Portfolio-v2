@@ -20,11 +20,80 @@ window.onload = function() {
 
 
 
+    if(!mobileDetection) {
+
+        // Observer Slide1:
+        const observerSlide1 = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+
+                    document.getElementById('projectContainer1').classList.add('fadeInSlide');
+
+                    // document.getElementById('iframe1').classList.add('iframeRotate');
+
+                    setTimeout(function() {
+                        document.getElementById("projectContainer1").style.opacity = "1";
+                        document.getElementById("projectContainer1").classList.remove("fadeInSlide");
+
+                        // document.getElementById('iframe1').style.opacity = "1";
+                        // document.getElementById('iframe1').style.transform = "perspective(1220px) rotateY(0deg) translateX(35px) scale(0.65);";
+                        // document.getElementById('iframe1').classList.remove('iframeRotate');
+                    }, 1001)
+
+                }
+                else {
+
+                    document.getElementById('iframe1').style.opacity = "0";
+                    document.getElementById('projectContainer1').style.opacity = "0";
+
+                }
+            })
+        })
+        observerSlide1.observe(document.querySelector('#projectContainer1'));
+
+
+
+        // Observer Slide2:
+        const observerSlide2 = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+
+                    document.getElementById('projectContainer2').classList.add('fadeInSlide');
+
+                    // document.getElementById('iframe2').classList.add('iframeRotate');
+
+                    setTimeout(function() {
+                        document.getElementById("projectContainer2").style.opacity = "1";
+                        document.getElementById("projectContainer2").classList.remove("fadeInSlide");
+
+                        // document.getElementById('iframe2').style.opacity = "1";
+                        // document.getElementById('iframe1').style.transform = "perspective(1220px) rotateY(0deg) translateX(35px) scale(0.65);";
+                        // document.getElementById('iframe2').classList.remove('iframeRotate');
+                    }, 1001)
+
+                }
+                else {
+
+                    document.getElementById('iframe2').style.opacity = "0";
+                    document.getElementById('projectContainer2').style.opacity = "0";
+
+                }
+            })
+        })
+        observerSlide2.observe(document.querySelector('#projectContainer2'));
+
+
+    }
+
+
+
+
     // **********  MOBILE: Click outside nav burger si actif = closeNav
     var sidenav = document.getElementById("mySidenav");
     var openBtn = document.getElementById("openBtn");
     var openBtn2 = document.getElementById("openBtn2");
     var closeBtn = document.getElementById("closeBtn");
+    var menuBtns = document.querySelectorAll('.menuButton');
 
     openBtn.onclick = openNav;
     openBtn2.onclick = openNav;
@@ -49,10 +118,21 @@ window.onload = function() {
         openBtn.style.display = "none";
         openBtn2.style.display = "none";
 
-        // Blur() derrière ram sur mobile:
-        // document.getElementById("pageContainerProjet").style.filter = "blur(2px)";
         document.getElementById("pageContainerProjet").style.opacity = "0.5";
         document.getElementById("pageTitleDiv").style.opacity = "0.5";
+
+        // On ajoute crescendo les fadeIn des onglets
+        setTimeout(function() {
+            menuBtns.forEach((elem, i) => {
+                setTimeout(function() {
+                elem.classList.add("fadeInNavBurgerLi");
+                }, i * 150)
+            })
+        }, 300);
+        setTimeout(() => {
+            document.getElementById('socialBurgerContainer').classList.add('fadeInNavSocials');
+            document.getElementById('lablelsBurgerContainer').classList.add('fadeInNavSocials');
+        }, 950);
     }
 
     /* Set the width of the side navigation to 0 */
@@ -61,10 +141,17 @@ window.onload = function() {
         openBtn.style.display = "block";
         openBtn2.style.display = "block";
 
-        // Blur() derrière ram sur mobile:
-        // document.getElementById("pageContainerProjet").style.filter = "blur(0px)";
         document.getElementById("pageContainerProjet").style.opacity = "1";
         document.getElementById("pageTitleDiv").style.opacity = "1";
+
+        // On enleve les fadeIn des onglets
+        setTimeout(function() {
+            menuBtns.forEach((elem, i) => {
+                elem.classList.remove("fadeInNavBurgerLi");
+            })
+            document.getElementById('socialBurgerContainer').classList.remove('fadeInNavSocials');
+            document.getElementById('lablelsBurgerContainer').classList.remove('fadeInNavSocials');  
+        }, 150);
     }
     
 
@@ -144,7 +231,6 @@ window.onload = function() {
 
 
 
-
     // Fixed menuBörgir lors scroll (mobile), equivalent à la sideNav PC
     if(mobileDetection) {
         
@@ -162,44 +248,6 @@ window.onload = function() {
         })
         observerHeaderBorger.observe(document.querySelector('#headerProjets'));
     }
-
-
-
-
-
-
-    // Observer checkbox <Compétences/> CV
-    const observerCompetences = new IntersectionObserver(entries => {
-        // Loop over the entries
-        entries.forEach(entry => {
-            // If the element is visible
-            if (entry.isIntersecting) {
-
-                // document.getElementById("competences").classList.add("competencesAnim")
-
-                // Draw du checkbox <Compétences/> CV
-                var skillsPathes = document.querySelectorAll('.arrowsSvg path');
-                skillsPathes.forEach(element => {
-                    var lengthRec2 = element.getTotalLength();
-                    element.style.transition = element.style.WebkitTransition = 'none';
-                    element.style.strokeDasharray = lengthRec2 + ' ' + lengthRec2;
-                    element.style.strokeDashoffset = lengthRec2;
-                    element.getBoundingClientRect();
-                    element.style.transition = element.style.WebkitTransition =
-                    'stroke-dashoffset 1s 0s ease-in-out';
-                    element.style.strokeDashoffset = '0';    
-                });
-
-                // setTimeout(function() {
-                //     document.getElementById("competences").style.opacity = "1";
-                //     document.getElementById("competences").classList.remove("competencesAnim")
-                // }, 2001)
-            }
-        })
-    })
-    observerCompetences.observe(document.querySelector('#description'));
-
-
 
 
     
