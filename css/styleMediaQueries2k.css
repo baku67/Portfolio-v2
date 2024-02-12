@@ -418,7 +418,7 @@
     #raieAccueil1 {
         offset-path: path("M 135 -145 C 96.677 474.67 642.748 898.15 2381.245 708.698");
 
-        animation: raieAccueil1 30000ms 2000ms 1 linear;
+        animation: raieAccueil1 30000ms 0500ms 1 linear;
     }
 
     @keyframes raieAccueil1 {

@@ -1214,6 +1214,7 @@ textarea:focus, input:focus{
 
 
 #accueilGridPresentation {
+    opacity: 0;
     position: relative;
     width: 95%;
     /* margin: 0px auto; */
@@ -3815,7 +3816,7 @@ ul {
     border-bottom: 1px solid #19ddbc54;
     border-right: 1px solid #19ddbc30;
 
-    animation: fadeIn 0.5s 0s ease forwards;
+    /* animation: fadeIn 0.5s 0s ease forwards; */
 }
 #paragrapheAccueil[data-theme="light"] {
     color: var(--black);
@@ -5139,7 +5140,8 @@ li.veilleLigneAjout::before {
     top: -5%;
     z-index: -5;
 
-    animation: raieAccueil1 20000ms 2000ms 1 linear;
+    /* Delai = delai initial avant les setInterval: ? */
+    animation: raieAccueil1 20000ms 1000ms 1 linear;
     width: 200px;
     height: 200px;
 
@@ -7339,13 +7341,23 @@ li.veilleLigneAjout::before {
 }
 
 
+/* REWORK JS -> CSS : */
+
 .accueilWord {
     opacity: 0;
     position: relative;
     bottom: 15px;
     filter: blur(7px);
+
+    animation-name: fadeInWordPresentation;
+    animation-duration: 0.8s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    /* Délai selon class .wordX */
+
 }
 
+/* Ancienne classe ajoutée en setIntervalJS: */
 .fadeInWordPresentation {
     animation: fadeInWordPresentation 0.8s 0s ease forwards;
 }
@@ -7360,4 +7372,261 @@ li.veilleLigneAjout::before {
         bottom: 0px;
         filter: blur(0px);
     }
+}
+
+/* +300ms (0.3s) delai initial, +0.05 par iteration */
+.word1 {
+    animation-delay: 0.35s;
+}
+.word2 {
+    animation-delay: 0.40s;
+}
+.word3 {
+    animation-delay: 0.45s;
+}
+.word4 {
+    animation-delay: 0.50s;
+}
+.word5 {
+    animation-delay: 0.55s;
+}
+.word6 {
+    animation-delay: 0.60s;
+}
+.word7 {
+    animation-delay: 0.65s;
+}
+.word8 {
+    animation-delay: 0.70s;
+}
+.word9 {
+    animation-delay: 0.75s;
+}
+.word10 {
+    animation-delay: 0.80s;
+}
+.word11 {
+    animation-delay: 0.85s;
+}
+.word12 {
+    animation-delay: 0.90s;
+}
+.word13 {
+    animation-delay: 0.95s;
+}
+.word14 {
+    animation-delay: 1.00s;
+}
+.word15 {
+    animation-delay: 1.05s;
+}
+.word16 {
+    animation-delay: 1.10s;
+}
+.word17 {
+    animation-delay: 1.15s;
+}
+.word18 {
+    animation-delay: 1.20s;
+}
+.word19 {
+    animation-delay: 1.25s;
+}
+.word20 {
+    animation-delay: 1.30s;
+}
+.word21 {
+    animation-delay: 1.35s;
+}
+.word22 {
+    animation-delay: 1.40s;
+}
+.word23 {
+    animation-delay: 1.45s;
+}
+.word24 {
+    animation-delay: 1.50s;
+}
+.word25 {
+    animation-delay: 1.55s;
+}
+.word26 {
+    animation-delay: 1.60s;
+}
+.word27 {
+    animation-delay: 1.65s;
+}
+.word28 {
+    animation-delay: 1.70s;
+}
+.word29 {
+    animation-delay: 1.75s;
+}
+.word30 {
+    animation-delay: 1.80s;
+}
+.word31 {
+    animation-delay: 1.85s;
+}
+.word32 {
+    animation-delay: 1.90s;
+}
+.word33 {
+    animation-delay: 1.95s;
+}
+.word34 {
+    animation-delay: 2.00s;
+}
+.word35 {
+    animation-delay: 2.05s;
+}
+.word36 {
+    animation-delay: 2.10s;
+}
+.word37 {
+    animation-delay: 2.15s;
+}
+.word38 {
+    animation-delay: 2.20s;
+}
+.word39 {
+    animation-delay: 2.25s;
+}
+.word40 {
+    animation-delay: 2.30s;
+}
+.word41 {
+    animation-delay: 2.35s;
+}
+.word42 {
+    animation-delay: 2.40s;
+}
+.word43 {
+    animation-delay: 2.45s;
+}
+.word44 {
+    animation-delay: 2.50s;
+}
+.word45 {
+    animation-delay: 2.55s;
+}
+.word46 {
+    animation-delay: 2.60s;
+}
+.word47 {
+    animation-delay: 2.65s;
+}
+.word48 {
+    animation-delay: 2.70s;
+}
+.word49 {
+    animation-delay: 2.75s;
+}
+.word50 {
+    animation-delay: 2.80s;
+}
+.word51 {
+    animation-delay: 2.85s;
+}
+.word52 {
+    animation-delay: 2.90s;
+}
+.word53 {
+    animation-delay: 2.95s;
+}
+.word54 {
+    animation-delay: 3.00s;
+}
+.word55 {
+    animation-delay: 3.05s;
+}
+.word56 {
+    animation-delay: 3.10s;
+}
+.word57 {
+    animation-delay: 3.15s;
+}
+.word58 {
+    animation-delay: 3.20s;
+}
+.word59 {
+    animation-delay: 3.25s;
+}
+.word60 {
+    animation-delay: 3.30s;
+}
+.word61 {
+    animation-delay: 3.35s;
+}
+.word62 {
+    animation-delay: 3.40s;
+}
+.word63 {
+    animation-delay: 3.45s;
+}
+.word64 {
+    animation-delay: 3.50s;
+}
+.word65 {
+    animation-delay: 3.55s;
+}
+.word66 {
+    animation-delay: 3.60s;
+}
+.word67{
+    animation-delay: 3.65s;
+}
+.word68 {
+    animation-delay: 3.70s;
+}
+.word69 {
+    animation-delay: 3.75s;
+}
+.word70 {
+    animation-delay: 3.80s;
+}
+.word71 {
+    animation-delay: 3.85s;
+}
+.word72 {
+    animation-delay: 3.90s;
+}
+.word73 {
+    animation-delay: 3.95s;
+}
+.word74 {
+    animation-delay: 4.00s;
+}
+.word75 {
+    animation-delay: 4.05s;
+}
+.word76 {
+    animation-delay: 4.10s;
+}
+.word77 {
+    animation-delay: 4.15s;
+}
+.word78 {
+    animation-delay: 4.20s;
+}
+.word79 {
+    animation-delay: 4.25s;
+}
+.word80 {
+    animation-delay: 4.30s;
+}
+.word81 {
+    animation-delay: 4.35s;
+}
+.word82 {
+    animation-delay: 4.40s;
+}
+.word83 {
+    animation-delay: 4.45s;
+}
+.word84 {
+    animation-delay: 4.50s;
+}
+.word85 {
+    animation-delay: 4.55s;
 }

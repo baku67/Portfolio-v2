@@ -303,29 +303,25 @@ window.onload = function() {
 
 
     
-    // FadeIn du text Présentation:
-    if(mobileDetection) {
-
-      setTimeout(function() {
-        document.querySelectorAll(".accueilWord").forEach((elem, i) => {
-          setTimeout(() => {
-            elem.classList.add("fadeInWordPresentation");
-          }, i * 45);
-        });
-      }, 350)
-
-    } else {
-
-      setTimeout(function() {
-        document.querySelectorAll(".accueilWord").forEach((elem, i) => {
-          setTimeout(() => {
-            elem.classList.add("fadeInWordPresentation");
-          }, i * 20);
-        });
-      }, 350)
-
-    }
-
+    // *** FadeIn du text Présentation:
+    // *** (Logique déplacée dans le CSS avec animation-delai croissant)
+      // if(mobileDetection) {
+      //   setTimeout(function() {
+      //     document.querySelectorAll(".accueilWord").forEach((elem, i) => {
+      //       setTimeout(() => {
+      //         elem.classList.add("fadeInWordPresentation");
+      //       }, i * 45);
+      //     });
+      //   }, 350)
+      // } else {
+      //   setTimeout(function() {
+      //     document.querySelectorAll(".accueilWord").forEach((elem, i) => {
+      //       setTimeout(() => {
+      //         elem.classList.add("fadeInWordPresentation");
+      //       }, i * 20);
+      //     });
+      //   }, 350)
+      // }
     // Fin
 
 

@@ -2051,7 +2051,12 @@
         opacity: 0;
         position: relative;
         bottom: 10px;
-        filter: blur(0px);
+        filter: blur(4px);
+
+        animation-name: fadeInWordPresentation;
+        animation-duration: 0.8s;
+        animation-timing-function: ease;
+        animation-fill-mode: forwards;
     }
 
     .fadeInWordPresentation {
@@ -2061,12 +2066,12 @@
         from {
             opacity: 0;
             bottom: 10px;
-            /* filter: blur(4px); */
+            filter: blur(4px);
         }
         to {
             opacity: 1;
             bottom: 0px;
-            /* filter: blur(0px); */
+            filter: blur(0px);
         }
     }
 
@@ -3221,7 +3226,8 @@
         offset-path: path("M 135 -145 C -84.891 667.473 441.62 619.849 714.136 1069.632");
 
         filter: blur(0px);
-        animation: raieAccueil1 20000ms 3500ms 1 linear;
+        /* animation: raieAccueil1 20000ms 3500ms 1 linear; */
+        animation: raieAccueil1 20000ms 4550ms 1 linear;
     }
 
     @keyframes raieAccueil1 {
