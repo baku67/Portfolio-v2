@@ -32,6 +32,8 @@
 
 
 
+
+
 .cvGrisedText {
     font-size: 85%;
     opacity: 0.8;
@@ -1999,8 +2001,8 @@ ul {
     animation-name: fadeInFormation;
     animation-duration: 2s;
     animation-fill-mode: forwards;
-
 }
+
 .hobbys {
     position: relative;
     opacity: 0;
@@ -2014,7 +2016,6 @@ ul {
     animation-name: fadeInHobbys;
     animation-duration: 2s;
     animation-fill-mode: forwards;
-
 }
 .langages {
     overflow: hidden;
@@ -2023,7 +2024,7 @@ ul {
 
     padding: 64px 20px 2px 11px;
     border-radius: 12px;
-    box-shadow: 0px 0px 25px 0px #00ffff12;
+    /* box-shadow: 0px 0px 25px 0px #00ffff12; */
 
 }
 .competencesAnim {
