@@ -5141,7 +5141,7 @@ li.veilleLigneAjout::before {
     top: -5%;
     z-index: -5;
 
-    /* Delai = delai initial avant les setInterval: ? */
+    /* Delai = delai initial avant les setInterval: (reponsiv) */
     animation: raieAccueil1 20000ms 1000ms 1 linear;
     width: 200px;
     height: 200px;

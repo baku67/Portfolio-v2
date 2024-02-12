@@ -1,9 +1,6 @@
-console.log("BEFORE ONLOAD");
 
 
 window.onload = function() {
-
-      console.log("WINDOW.LOADED");
 
 
       // Détection mobile
@@ -191,23 +188,8 @@ window.onload = function() {
       observerContactButton.observe(document.querySelector('#menuLigneCv'));
     }
 
-    // Create the observer
-    //   const observerDocumentations = new IntersectionObserver(entries => {
-    //     // Loop over the entries
-    //     entries.forEach(entry => {
 
-    //     const elem = entry.target.querySelector('#docuLoadContainer');
 
-    //       // If the element is visible
-    //       if (entry.isIntersecting) {
-    //         // Add the animation class
-    //         elem.classList.add('docuLoadContainer');
-    //         // return;
-    //       }
-    //     });
-    //   });
-    // // Tell the observer which elements to track
-    // observerDocumentations.observe(document.querySelector('#docuLoadContainer-wrapper'));
 
     // **********  MOBILE: Click outside nav burger si actif = closeNav
     var sidenav = document.getElementById("mySidenav");
@@ -335,51 +317,23 @@ window.onload = function() {
     poissonAccueil1.style.display = "block";
     document.getElementById("body").append(poissonAccueil1);
     
-    // if (window.matchMedia("(min-width: 1300px)").matches) {
-    //   setInterval(function() {
-    //     if (document.getElementById('raieAccueil1') != null ) {
-    //       document.getElementById('raieAccueil1').remove();
-    //     }
-    //     document.getElementById("body").append(poissonAccueil1);
-    //   }, 35000)
-    // } else {
-    //   setInterval(function() {
-    //     if (document.getElementById('raieAccueil1') != null ) {
-    //       document.getElementById('raieAccueil1').remove();
-    //     }
-    //     document.getElementById("body").append(poissonAccueil1);
-    //   }, 22500)
-    // }
-    if (window.matchMedia("(min-width: 1300px)").matches) {
+    // /!\ le delai initial avant interval est défini dans le CSS anim #raieAccueim (respnsiv)
+    if(mobileDetection) {
       setInterval(function() {
         if (document.getElementById('raieAccueil1') != null ) {
           document.getElementById('raieAccueil1').remove();
         }
         document.getElementById("body").append(poissonAccueil1);
-      }, 35000)
+      }, 22000)
     } else {
       setInterval(function() {
         if (document.getElementById('raieAccueil1') != null ) {
           document.getElementById('raieAccueil1').remove();
         }
         document.getElementById("body").append(poissonAccueil1);
-      }, 35000)
+      }, 25000)
     }
-    
-
-
-    // Interval Raie Accueil:
-    // poissonAccueil1 = document.createElement("div");
-    // poissonAccueil1.id = "raieAccueil1";
-    // poissonAccueil1.style.display = "block";
-
-    // setInterval(function() {
-    //   if (document.getElementById('raieAccueil1') != null ) {
-    //     document.getElementById('raieAccueil1').remove();
-    //   }
-    //   document.getElementById("body").append(poissonAccueil1);
-    // }, 25000)
-    // Fin interval
+    // Fin interval Raie
 
 
 
@@ -424,25 +378,6 @@ window.onload = function() {
     }, 12150)
 
 
-    // Rectangle photo SVG drawing
-    // setTimeout(function() {
-    //   var pathRec = document.querySelector('.rectangleSvg path');
-    //   var lengthRec = pathRec.getTotalLength();
-    //   // Clear any previous transition
-    //   pathRec.style.transition = pathRec.style.WebkitTransition = 'none';
-    //   // Set up the starting positions
-    //   pathRec.style.strokeDasharray = lengthRec + ' ' + lengthRec;
-    //   pathRec.style.strokeDashoffset = lengthRec;
-    //   // Trigger a layout so styles are calculated & the browser
-    //   // picks up the starting position before animating
-    //   pathRec.getBoundingClientRect();
-    //   // Define our transition
-    //   pathRec.style.transition = pathRec.style.WebkitTransition =
-    //     'stroke-dashoffset 3.4s ease';
-    //   // Go!
-    //   document.getElementById("rectangleSvg").style.opacity = "1";
-    //   pathRec.style.strokeDashoffset = '0';
-    // }, 750)
 
           
     // Rotate changeQuotation onClick
