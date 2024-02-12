@@ -1,4 +1,9 @@
+console.log("BEFORE ONLOAD");
+
+
 window.onload = function() {
+
+      console.log("WINDOW.LOADED");
 
 
       // Détection mobile
@@ -16,6 +21,26 @@ window.onload = function() {
       }
       // Fin
       console.log("Mobile detection JS: " + mobileDetection);
+
+
+
+      // Attributs src des videos pour chargement page opti:
+      if(mobileDetection) {
+          // document.getElementById("accueilVideoMobile").setAttribute("src", "..\img\demos\projectsPreview_trimmedMobile4-mobileRedimed.mp4");
+        // document.getElementById("accueilVideoMobile").load();
+        var videoSourceMobile = document.getElementById('accueilVideoMobile').getElementsByTagName('source')[0];
+        videoSourceMobile.src = '../img/demos/projectsPreview_trimmedMobile4-mobileRedimed.mp4'; 
+        videoSourceMobile.parentElement.load();
+
+      }
+      else {
+        // document.getElementById("accueilVideoDesktop").setAttribute("src", "..\img\demos\projectsPreview_trimmedPc2.mp4");
+        // document.getElementById("accueilVideoDesktop").load();
+        var videoSourceDesktop = document.getElementById('accueilVideoDesktop').getElementsByTagName('source')[0];
+        videoSourceDesktop.src = '../img/demos/projectsPreview_trimmedPc2.mp4'; 
+        videoSourceDesktop.parentElement.load();
+
+      }
 
 
 
