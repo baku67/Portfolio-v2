@@ -2912,6 +2912,7 @@ ul {
 }
 
 .carouselImgProject {
+    margin: 0 auto;
     width: -webkit-fill-available;
     width: 48%;
 
@@ -2975,7 +2976,7 @@ ul {
 
 .splide__arrow {
     background: #ef3b2d00;
-    width: 8em;
+    width: 5em;
 }
 
 
@@ -3061,6 +3062,7 @@ ul {
     box-shadow: 0 0 30px -4px #0ff;
     border: 2px solid var(--secondaryColor) !important;
 }
+
 
 
 .splide__arrow--prev {
