@@ -8,11 +8,13 @@
     .outils {
         margin: 0 auto;
         position: relative;
-        bottom: 50px;
+        /* bottom: 50px; */
+        bottom: 124px;
     }
     .langues {
         position: relative;
-        bottom: 50px;
+        /* bottom: 50px; */
+        bottom: 100px;
     }
 
     #dlCv {
@@ -60,7 +62,7 @@
     display: grid; 
     grid-template-columns: 1fr 1fr; 
     grid-template-rows: 1fr 1fr 0.3fr; 
-    gap: 0px 180px; 
+    gap: 0px 130px; 
     grid-template-areas: 
     "formations hobbys"
     "langages langages"
