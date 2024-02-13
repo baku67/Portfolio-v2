@@ -19,6 +19,15 @@
             /* position: absolute; */
     }
 
+    .desktopSlideMargin {
+        margin: 40px 11% 11%;
+        border-top-left-radius: 100px;
+        border-bottom-right-radius: 100px;
+        border-top-right-radius: 100px;
+        border-bottom-left-radius: 100px;
+    }
+
+
     .galerieAccueil {
         gap: 35px 0px;
     }

@@ -55,6 +55,8 @@
     .desktopSlideMargin {
         /* margin: 10px 5% 50px 5%; */
         margin: 10px 7% 50px 7%;
+        border-top-left-radius: 57px;
+        border-bottom-right-radius: 57px;
     }
 
     /* Grid CV */
@@ -225,9 +227,15 @@
     }
 
 
+    .projectDescriptionHeader {
+        padding: 2px 0px 0px 0px;
+    }
+
+
     .description {
         position: relative;
-        top: -10px;
+        /* top: -10px; */
+        top: 30px;
 
         border: 0px solid var(--secondaryColor);
         font-size: 90%;
@@ -510,14 +518,18 @@
 
     #photographieTitle {
         font-size: 3.7em;
-        margin-block-start: 0;
+        /* margin-block-start: 0; */
+        margin-block-start: 0.5em;
+        margin-block-end: 1.3em;
 
         -webkit-box-reflect: below 7px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.5, transparent), to(white));
     }
 
     #messageGalerie {
         font-size: 1.4em;
-        margin-block-start: 140px;
+        /* margin-block-start: 140px; */
+        margin-block-start: 90px;
+        margin-block-end: 0.3em;
     }
     #messageLoadingLong {
         font-size: 1.4em;
@@ -839,12 +851,26 @@
     .projectShapesDiv-top-left {
         /* left: 153px; */
         /* left: -140px; */
-        left: -71px;
-        top: -25px;
+
+        /* left: -71px;
+        top: -25px; */
+
+        left: -121px;
+        top: -77px;
 
         filter: blur(1px);
     }
 
+
+    
+@keyframes fadeInBgProject {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.42;
+    }
+}
     
 
 

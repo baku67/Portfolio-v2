@@ -311,9 +311,9 @@ main {
     margin: 10px 5% 40px 5%;
     position: relative;
     overflow: hidden;
-    border-top-left-radius: 22px;
 
-    border-bottom-right-radius: 26px;
+    border-top-left-radius: 34px;
+    border-bottom-right-radius: 34px;
 }
 
 :root {
@@ -524,10 +524,12 @@ swiper-slide {
 }
 
 #projectContainer1 {
-    opacity: 0;
+    /* opacity: 0; */
+    opacity: 1;
 }
 #projectContainer2 {
-    opacity: 0;
+    /* opacity: 0; */
+    opacity: 1;
 }
 
 .trainingSvgContainer {
@@ -1653,10 +1655,13 @@ ul {
     padding: 10px 20px 2px 11px;
     border-radius: 12px;
 
-    /* A adapter selon section ? */
-    box-shadow: 6px 6px 25px 0px #00ffff24; /* shadow bottom et right principalement */
+    /* box-shadow: 6px 6px 25px 0px #00ffff24;
     border-bottom: 1px solid #19ddbc54;
-    border-right: 1px solid #19ddbc30;
+    border-right: 1px solid #19ddbc30; */
+    
+    box-shadow: 6px 6px 25px 0px #00ffff0d;
+    border-bottom: 1px solid #19ddbc12;
+    border-right: 1px solid #19ddbc0d;
 }
 .cvSectionBgGradientSkills {
     background: rgb(12,237,200);
@@ -2637,7 +2642,7 @@ ul {
 
 .projectDescriptionHeader {
 
-    padding: 1px 0px 15px 0px;
+    padding: 1px 0px 0px 0px;
     border-radius: 13px;
     z-index: 9999999;
     overflow: hidden;
@@ -2921,7 +2926,7 @@ ul {
     border-radius: 10px;
 }
 .splide {
-    margin-top: 45px;
+    margin-top: 40px;
 }
 
 .splide__arrow {
@@ -3042,7 +3047,8 @@ ul {
 .description {
     /* overflow: hidden; */
     position: relative;
-    top: -11px;
+    /* top: -11px; */
+    top: 23px;
     font-size: 80%;
     color: white;
     z-index: 100;
@@ -4240,9 +4246,10 @@ ul {
 .galerieAccueil {
     justify-content: center;
     display: grid; 
-    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
-    gap: 15px 25px; 
+    /* gap: 15px 25px;  */
+    gap: 20px 0px;
     grid-template-areas: 
       "photo1 photo2 photo3"
       "photo4 photo5 photo6"
@@ -4335,7 +4342,7 @@ ul {
 .photosGallerie {
     /* opacity: 1; */
     display: block;
-    width: 240px;
+    width: 150x;
     margin: auto;
     border-radius: 2px;
     filter: blur(0px);
@@ -6546,7 +6553,7 @@ li.veilleLigneAjout::before {
         height: 350px;
     
         content:url("../img/coral1_blue.png");
-        opacity: 0.5;
+        opacity: 0.25;
         transform: rotateZ(0deg) rotateX(0deg);
 
         animation: moveCoral1 5s infinite ease;
@@ -6582,7 +6589,7 @@ li.veilleLigneAjout::before {
         height: 200px;
     
         content:url("../img/coral2_red.png");
-        opacity: 0.8;
+        opacity: 0.3;
         transform: rotateZ(0deg) rotateX(0deg);
 
         animation: moveCoral2 5s infinite ease;
@@ -6622,7 +6629,7 @@ li.veilleLigneAjout::before {
         height: 400px;
     
         content:url("../img/coral2_red.png");
-        opacity: 0.2;
+        opacity: 0.1;
         transform: rotateY(180deg) rotateZ(0deg) rotateX(0deg);
 
         animation: moveCoral3 8s infinite ease-in-out;
@@ -7092,7 +7099,7 @@ li.veilleLigneAjout::before {
     gap: 15px;
     /* Maj caroussel */
     /* float: right; */
-    right: 0px;
+    right: 13px;
     position: relative;
 
     transition: 0.4s ease;

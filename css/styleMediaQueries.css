@@ -1624,24 +1624,6 @@
     }
 
 
-    .langsAnim {
-        animation-name: fadeInLang;
-        animation-duration: 2s;
-        /* animation-delay: 4.5s; */
-        animation-fill-mode: forwards;
-    }
-    @keyframes fadeInLang {
-        from {
-            right: -500px;
-            opacity: 0;
-    
-        }
-        to {
-            right: 0px;
-            opacity: 1;
-        }
-    }
-
 
 
 
