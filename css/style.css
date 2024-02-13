@@ -532,6 +532,23 @@ swiper-slide {
     opacity: 1;
 }
 
+
+
+.bonjourSvgContainer {
+
+}
+.bonjourSvgPath {
+    opacity: 1;
+    fill: none; 
+    stroke: #2da8ef; 
+    stroke-width: 5; 
+    stroke-linecap: round; 
+    stroke-linejoin:  miter; 
+    stroke-miterlimit: 4;
+    transition: stroke 0.8s ease;
+}
+
+
 .trainingSvgContainer {
     /* Maj test gradient circular: */
     width: 100px;

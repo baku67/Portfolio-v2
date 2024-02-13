@@ -27,6 +27,49 @@
         border-bottom-left-radius: 100px;
     }
 
+    .projectContainer {
+        padding-bottom: 132px;
+    }
+
+    #menuLigneCv {
+        font-size: 2.35em;
+        margin-block-start: 1.2em;
+    }
+
+    #portfolioSousTitre {
+        font-size: 1.75em;
+        bottom: 29px;
+    }
+
+
+    .testH1 {
+        font-size: 4.2em;
+        padding: 5px 0px 1px 33px;
+    }
+
+
+    .iframe {
+        margin-right: 55px;
+
+        /* bottom: 50px; */
+        bottom: -40px;
+        /* Marche: (sans le rotate 3D) */
+    
+        transform: perspective(1220px) rotateY(83deg) translateX(35px) scale(0.8);
+
+        animation: fadeInRotateIframe 2s 1.5s ease forwards !important;
+    }
+    @keyframes fadeInRotateIframe {
+        from {
+            opacity: 0;
+            transform: perspective(1220px) rotateY(83deg) translateX(35px) scale(0.8);
+        }
+        to {
+            opacity: 1;
+            transform: perspective(1220px) rotateY(0deg) translateX(35px) scale(1);
+        }
+    }
+
 
     .galerieAccueil {
         gap: 35px 0px;

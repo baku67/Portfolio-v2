@@ -1,0 +1,192 @@
+:root {
+    --primaryColor: #2da8ef;
+    --white: rgb(251, 253, 253);
+}
+
+
+
+
+
+
+/* ****************** DESKTOP default */
+
+.isMobile {
+    display: none;
+}
+.isDesktop {
+    display: block;
+}
+
+
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+
+    background-color: var(--white);
+    animation: bodyBgColorFadeIn 1.5s 1.7s ease forwards;
+}
+@keyframes bodyBgColorFadeIn {
+    from {
+        background-color: var(--white);
+    }
+    to {
+        background-color: var(--primaryColor);
+    }
+}
+
+
+
+.wrapper {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -65%);
+
+    padding: 100px 100px;
+
+
+    display: inline-flex;
+    align-items: baseline;
+}
+
+.bonjourSvgContainer {
+    width: 250px;
+    height: 250px; 
+}
+.bonjourSvgPath {
+    opacity: 1;
+    /* transform: scale(10); */
+
+    fill: none; 
+    stroke: var(--primaryColor); 
+    stroke-width: 20; 
+    stroke-linecap: square; 
+    stroke-linejoin:  miter; 
+    stroke-miterlimit: 4;
+    transition: stroke 0.8s ease;
+
+    animation: logoColorSwitch 1.5s 1.7s ease forwards;
+}
+@keyframes logoColorSwitch {
+    from {
+        stroke: var(--primaryColor); 
+    }
+    to {
+        stroke: var(--white); 
+    }
+}
+
+
+
+
+.bonjourTxt {
+    position: relative;
+    right: 70px;
+    bottom: 13px;
+    
+    filter: blur(7px);
+    opacity: 0;
+
+    font-size: 7.5em;
+    letter-spacing: 1px;
+    color: var(--primaryColor);
+    font-family: Open Sans,sans-serif;
+
+    width: 0px;
+    display: block;
+    overflow: hidden;
+
+    animation: fadeInText 1.5s 1.7s ease forwards;
+}
+
+
+@keyframes fadeInText {
+    from {
+        filter: blur(7px);
+        opacity: 0;
+        right: 70px;
+        width: 0px;
+
+        color: var(--primaryColor);
+    }
+    to {
+        filter: blur(0px);
+        opacity: 1;
+        right: -10px;
+        width: 390px;
+
+        color: var(--white);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* *********************** MEDIA QUERIES PHONE */
+
+@media only screen and (max-width: 600px) {
+
+    .isMobile {
+        display: block;
+    }
+    .isDesktop {
+        display: none;
+    }
+
+
+
+    .bonjourSvgContainer {
+        width: 130px;
+        height: 130px; 
+    }
+
+
+    .bonjourSvgPath {
+        stroke-width: 11;
+    }
+
+
+    .bonjourTxt {
+        font-size: 3.5em;
+    }
+
+
+
+    @keyframes fadeInText {
+        from {
+            filter: blur(7px);
+            opacity: 0;
+            right: 70px;
+            width: 0px;
+    
+            color: var(--primaryColor);
+        }
+        to {
+            filter: blur(0px);
+            opacity: 1;
+            right: -3px;
+            width: 180px;
+    
+            color: var(--white);
+        }
+    }
+}

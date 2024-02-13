@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../css/styleCandidature.css" />
+        <link rel="icon" type="image/x-icon" href="/img/bonjourFavicon.png">
+        <title>Bonjour :)</title>
+    </head>
+
+    <body>
+
+        <div class="wrapper">
+
+            <svg class="bonjourSvgContainer isDesktop">
+                <g class="bonjourSvg">
+                    <path 
+                        class="bonjourSvgPath"
+                        d="M 85 145 C 175 145 175 15 85 15 C 45 15 15 45 15 75 L 15 235 L 157 235 C 205 235 235 205 235 165 C 235 125 205 95 182 95"
+                    />
+                </g>
+            </svg>
+
+            <svg class="bonjourSvgContainer isMobile">
+                <g class="bonjourSvg">
+                    <path 
+                        class="bonjourSvgPath"
+                        d="M 42.5 72.5 C 87.5 72.5 87.5 7.5 42.5 7.5 C 22.5 7.5 7.5 22.5 7.5 37.5 L 7.5 117.5 L 78.5 117.5 C 102.5 117.5 117.5 102.5 117.5 82.5 C 117.5 62.5 102.5 47.5 91 47.5"
+                    />
+                </g>
+            </svg>
+
+            <span class="bonjourTxt">onjour</span>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+
+            var bonjourPathes = document.querySelectorAll('.bonjourSvg path');
+
+            bonjourPathes.forEach(element => {
+
+                var lengthRec = element.getTotalLength();
+                element.style.transition = element.style.WebkitTransition = 'none';
+                element.style.strokeDasharray = lengthRec + ' ' + lengthRec;
+                element.style.strokeDashoffset = lengthRec;
+                element.getBoundingClientRect();
+                element.style.transition = element.style.WebkitTransition =
+                'stroke-dashoffset 2.2s 0.5s ease';
+                element.style.strokeDashoffset = '0';   
+
+            });
+
+        </script>
+
+
+
+    </body>
+
+</html>
