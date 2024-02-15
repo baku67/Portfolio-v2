@@ -775,7 +775,28 @@ strong {
 
 
 
+.youWantMeTxtDesktop {
+    font-family: GothamCondensed;
+    font-size: 6.5em;
+    color: var(--secondaryColor);
 
+    left: -240px;
+    text-shadow: 10px 10px black;
+
+    position: absolute;
+    bottom: 0;
+
+    opacity: 0;
+    animation: fadeInYouWantMeTxt 0.7s 3s ease forwards;
+}
+@keyframes fadeInYouWantMeTxt {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
 
 
@@ -855,6 +876,7 @@ strong {
     }
     .presentationParagraph {
         animation: none;
+        padding-top: 0;
     }
     .youWantMePng {
         top: 45px;
@@ -868,6 +890,13 @@ strong {
     .testYeu2 {
         display: none;
         animation: none;
+    }
+
+    .trait1::after {
+        animation-delay: 0.5s;
+    }
+    .trait2::after {
+        animation-delay: 0.8s;
     }
 
 
@@ -971,13 +1000,14 @@ strong {
     .presentationParagraph {
         font-family: Open Sans,sans-serif;
         color: var(--white);
-        width: 80%;
+        width: 85%;
         margin: 0 auto;
         text-align: justify;
+        box-shadow: 4px 4px #c8ae66;
 
         background-color: #00000026;
         padding: 13px 15px;
-        border-radius: 3px;
+        border-radius: 13px;
     }
 
 
