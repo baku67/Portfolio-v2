@@ -42,7 +42,7 @@ time, mark, audio, video {
     object-fit: contain;
 
     opacity: 0;
-    animation: fadeInYouWantMe 0.5s 0s ease forwards;
+    animation: fadeInYouWantMe 0.5s 0s ease forwards, pngSlide 1.5s 2.3s ease forwards;;
 }
 @keyframes fadeInYouWantMe {
     from {
@@ -50,6 +50,16 @@ time, mark, audio, video {
     }
     to {
         opacity: 0.1;
+    }
+}
+@keyframes pngSlide {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 42%;
+        left: 40px;
+        opacity: 1;
     }
 }
 
@@ -75,7 +85,7 @@ time, mark, audio, video {
 
 
 body {
-    height: 100vh;
+    height: 120vh;
     margin: 0;
     padding: 0;
 
@@ -110,6 +120,37 @@ a {
     text-decoration: none;
 }
 
+.content {
+    width: 100%;
+    position: absolute;
+    right: 0;
+
+    animation: contentSlide 1.5s 2.3s ease forwards;
+}
+@keyframes contentSlide {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 58%;
+        right: 40px;
+    }
+}
+
+.presentationParagraph {
+    animation: paddingShrink 1.5s 2.3s ease forwards;
+}
+@keyframes paddingShrink {
+    from {
+        width: 65%;
+    }
+    to {
+        width: 85%;
+    }
+}
+
+
+
 
 
 .wrapper {
@@ -127,10 +168,25 @@ a {
     left: 50%;
     transform: translateX(-50%);
     height: 15%;
-    /* padding: 100px 0px; */
-    margin: 40px 0px 41px 0px;
+    /* margin: 40px 0px 41px 0px; */
+    margin: 90px 0px 30px 0px;
     display: inline-flex;
     align-items: baseline;
+
+
+    filter: saturate(1.2);
+    animation: filterLogo 3s 2s ease infinite;
+}
+@keyframes filterLogo {
+    0% {
+        filter: saturate(1.2);
+    }
+    50% {
+        filter: saturate(0.8);
+    }
+    100% {
+        filter: saturate(1.2);
+    }
 }
 
 .socialsWrapper {
@@ -168,7 +224,8 @@ a {
     margin: 4px 0;
 }
 
-.trait1 {
+.trait1 {    
+    position: relative;
     height: 21px;
     width: 135px;
     box-shadow: 4px 4px var(--primaryColor);
@@ -177,6 +234,7 @@ a {
     animation: fadeInTrait1 0.5 1.5s ease forwards;
 }
 .trait2 {
+    position: relative;
     height: 21px;
     width: 90px;
     box-shadow: 4px 4px var(--primaryColor);
@@ -199,7 +257,7 @@ a {
         width: 0px;    
     }
     90% {
-        height: 24px;
+        height: 25px;
         width: 153px;
     }
     100% {
@@ -214,7 +272,7 @@ a {
         width: 0px;
     }
     90% {
-        height: 22px;
+        height: 24px;
         width: 108px;
     }
     100% {
@@ -228,8 +286,8 @@ a {
         width: 0px;
     }
     50% {
-        height: 21px;
-        width: 168px;
+        height: 22px;
+        width: 158px;
     }
     100% {
         height: 21px;
@@ -237,13 +295,26 @@ a {
     }
 }
 
+.portfolioLink::after {
+    content: "";
+    position: absolute;
+    right: -5px;
+    top: -9px;
+    height: 20px;
+    width: 20px;
+    background-color: var(--secondaryColor);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    opacity: 0;
+    animation: star1 5s 2.5s infinite ease;
+}
+
 
 .trait1::before {
     content: "";
-    height: 34px;
-    width: 18px;
+    height: 36px;
+    width: 20px;
     position: absolute;
-    left: -17px;
+    left: -19px;
     /* background-color: #c89e38; */
     clip-path: polygon(0 100%, 100% 57%, 100% 0);
 
@@ -253,10 +324,10 @@ a {
 }
 .trait2::before {
     content: "";
-    height: 19px;
-    width: 17px;
+    height: 21px;
+    width: 19px;
     position: absolute;
-    left: -16px;
+    left: -18px;
     /* background-color: #c89e38; */
     clip-path: polygon(0 50%, 100% 100%, 100% 0);
 
@@ -266,10 +337,10 @@ a {
 }
 .trait3::before {
     content: "";
-    height: 34px;
-    width: 18px;
+    height: 36px;
+    width: 20px;
     position: absolute;
-    left: -17px;
+    left: -19px;
     bottom: 4px;
     /* background-color: #c89e38; */
     clip-path: polygon(100% 100%, 100% 43%, 0 0);
@@ -289,6 +360,143 @@ a {
         background-color: #c89e38;
     }
 }
+
+
+.trait1::after {
+    content: "";
+    position: absolute;
+    right: -7px;
+    top: -6px;
+
+    height: 15px;
+    width: 15px;
+    background-color: var(--secondaryColor);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+
+    opacity: 0;
+    animation: star1 5s 2.2s infinite ease;
+}
+@keyframes star1 {
+    0% {
+        transform: rotate(0deg);
+        opacity: 0;
+    }
+    40% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 0;
+    }
+    100% {
+        transform: rotate(180deg);
+        opacity: 0;
+    }
+}
+
+.trait2::after {
+    content: "";
+    position: absolute;
+    right: -8px;
+    bottom: -8px;
+    height: 15px;
+    width: 15px;
+    background-color: #ffffff;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    opacity: 0;
+    animation: star2 5s 2.6s infinite ease;
+}
+@keyframes star2 {
+    0% {
+        transform: rotate(0deg);
+        opacity: 0;
+    }
+    40% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 0;
+    }
+    100% {
+        transform: rotate(180deg);
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+
+/* .youWantMePng::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 120px;
+    background-color: var(--secondaryColor);
+} */
+
+.testYeu2 {
+    content: "";
+    position: absolute;
+    top: 231px;
+    left: 217px;
+    z-index: 9999;
+    height: 4px;
+    width: 233px;
+    /* background-color: var(--secondaryColor); */
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,0) 5%, rgba(200,174,102,1) 35%, rgba(222,210,177,1) 50%, rgba(200,174,102,1) 65%, rgba(255,255,255,0) 95%);
+
+    opacity: 0;
+    animation: slideInEye2 0.7s 2.5s ease forwards;
+}
+@keyframes slideInEye2{
+    from {
+        opacity: 0;
+        left: -300px;
+    }
+    to {
+        opacity: 1;
+        left: 217px;
+
+    }
+}
+
+.testYeu1 {
+    content: "";
+    position: absolute;
+    top: 241px;
+    left: 217px;
+    z-index: 9999;
+    height: 3px;
+    width: 172px;
+    /* background-color: var(--secondaryColor); */
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,0) 5%, rgba(200,174,102,1) 35%, rgba(222,210,177,1) 50%, rgba(200,174,102,1) 65%, rgba(255,255,255,0) 95%);
+
+
+    opacity: 0;
+    animation: slideInEye1 0.7s 2.8s ease forwards;
+}
+@keyframes slideInEye1{
+    from {
+        opacity: 0;
+        left: -300px;
+    }
+    to {
+        opacity: 1;
+        left: 145px;
+
+    }
+}
+
 
 .sectionPresentation {
     font-family: Open Sans,sans-serif;
@@ -450,7 +658,7 @@ a {
 
     background-color: #0b1b32;
     padding: 0 20px 20px 20px;
-    border-radius: 3px;
+    border-radius: 7px;
 
     box-shadow: 5px 7px #c8ae66;
 
@@ -565,6 +773,67 @@ strong {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* *********************** MEDIA QUERIES PHONE */
 
 @media only screen and (max-width: 600px) {
@@ -576,6 +845,30 @@ strong {
         display: none;
     }
 
+
+    body {
+        height: 140vh; 
+    }
+
+    .content {
+        animation: none;
+    }
+    .presentationParagraph {
+        animation: none;
+    }
+    .youWantMePng {
+        top: 45px;
+        animation: fadeInYouWantMe 0.5s 0s ease forwards;
+    }
+
+    .testYeu1 {
+        display: none;
+        animation: none;
+    }
+    .testYeu2 {
+        display: none;
+        animation: none;
+    }
 
 
     .wrapper {
@@ -590,10 +883,24 @@ strong {
         transform: translateX(-50%);
         height: 18%;
         /* padding: 100px 0px; */
-        margin: 35px 0px 35px 0px;
+        /* margin: 35px 0px 35px 0px; */
+        margin: 73px 0px 18px 0px;
         display: inline-flex;
         align-items: baseline;
 
+
+        animation: filterLogo 5s 2s ease infinite;
+    }
+    @keyframes filterLogo {
+        0% {
+            filter: saturate(1);
+        }
+        50% {
+            filter: saturate(0.2);
+        }
+        100% {
+            filter: saturate(1);
+        }
     }
 
 
