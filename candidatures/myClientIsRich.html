@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../css/styleCandidature2.css" />
+        <link rel="icon" type="image/x-icon" href="/img/bonjourFavicon2.jpg">
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/698848973e.js" crossorigin="anonymous"></script>
+        <link rel="icon" type="image/x-icon" href=".\favicons\favicon.ico">
+
+        <link rel="preload" as="image" href="https://bk-dev.fr/candidatures/youWantMe-min.png" />
+        <link rel="preload" as="font" type="font/woff2" href="https://bk-dev.fr/candidatures/GothamCond-Bold.ttf" crossorigin="anonymous" />
+        <title>MY EMPLOYER IS RICH</title>
+    </head>
+
+    <body>
+
+        <!-- <img src="youWantMe-min.png" class="youWantMePng" /> -->
+        <img src="youWantMeTxt-min.png" class="youWantMePng" />
+
+
+        <div>
+
+
+            <section class="wrapper">
+
+
+                <div class="logoContainer">
+                    <div class="trait trait1"></div>
+                    <div class="trait trait2"></div>
+                    <div class="trait trait3"></div>
+                </div>
+
+
+            </section>
+
+
+            <section class="sectionPresentation">
+
+                <div class="bandeauParagraphe"></div>
+
+                <p class="presentationParagraph">
+
+                    
+
+                    <span class="bonjourWord">Bonjour,</span>
+                    <br>
+                    <span style="margin-left: 25px;">Je</span> m'appelle 
+                    <span class="wrapperName">
+                        <svg class="basileSvgContainer isMobile">
+                            <g class="basileSvg">
+                                <path 
+                                    class="basileSvgPath"
+                                    d="M 5.95 10.15 C 12.25 10.15 12.25 1.05 5.95 1.05 C 3.15 1.05 1.05 3.15 1.05 5.25 L 1.12 16.52 L 9.8 16.52 C 14.35 16.45 16.52 14.84 16.45 11.55 C 16.45 8.75 14.28 7 12.74 7"
+                                />
+                            </g>
+                        </svg>
+                        <svg class="basileSvgContainer isDesktop">
+                            <g class="basileSvg">
+                                <path 
+                                    class="basileSvgPath"
+                                    d="M 5.95 10.15 C 12.25 10.15 12.25 1.05 5.95 1.05 C 3.15 1.05 1.05 3.15 1.05 5.25 L 1.12 16.52 L 9.8 16.52 C 14.35 16.45 16.52 14.84 16.45 11.55 C 16.45 8.75 14.28 7 12.74 7"
+                                />
+                            </g>
+                        </svg>
+                        asile Kuntz
+                    </span> et je suis à la recherche d'une opportunité pour une alternance "<strong>Concepteur Développeur d'Applications</strong>" chez Élan Formation à Strasbourg.
+                    <br><br>
+                    Parce que le développement d'applications est ma passion et que j'aime ajouter une touche de Fun à chaque ligne de code, je vous adresse ma candidature pour le poste en alternance au sein de votre entreprise créative et dynamique.
+                    <br>Je suis convaincu que l'apprentissage peut être à la fois enrichissant et amusant, et c'est précisément ce que je recherche chez Bonjour.fun. Mon parcours en développement, combiné à ma soif d'apprendre et mon esprit joueur, font de moi un candidat idéal pour contribuer à vos projets innovants.
+                    <br><br>
+                    Je possède de bonnes bases en <strong>Symfony</strong> et <strong>Javacript</strong>, et j'ai commencé un cours en <strong>React</strong>.
+                    <br><br>
+                    J'apprécie également beaucoup le <strong>front-end</strong>, le <strong>CSS</strong>, et le Responsiv Design.
+                </p>
+
+                <div class="socialsWrapper">
+                    <a href="../index.html" class="portfolioLink"><i class="fa-solid fa-address-book" style="margin-right:5px;"></i> Visitez mon Porfolio</a>
+
+                    <div class="socialsDiv">
+                        <a href="https://www.linkedin.com/in/basile-kuntz-719278267" class="socialBtn" target="_blank">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.github.com/baku67" class="socialBtn" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </section>
+
+        </div>
+       
+
+
+        <!-- <span>test scrool X</span> -->
+
+
+
+        <script type="text/javascript">
+
+            var bonjourPathes = document.querySelectorAll('.bonjourSvg path');
+
+            bonjourPathes.forEach(element => {
+
+                var lengthRec = element.getTotalLength();
+                element.style.transition = element.style.WebkitTransition = 'none';
+                element.style.strokeDasharray = lengthRec + ' ' + lengthRec;
+                element.style.strokeDashoffset = lengthRec;
+                element.getBoundingClientRect();
+                element.style.transition = element.style.WebkitTransition =
+                'stroke-dashoffset 2.2s 0.5s ease';
+                element.style.strokeDashoffset = '0';   
+
+            });
+
+        </script>
+
+
+
+    </body>
+
+</html>
