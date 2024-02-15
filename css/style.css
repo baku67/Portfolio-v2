@@ -1081,6 +1081,8 @@ footer {
     font-size: 0.9em;
     text-align: center;
 
+    color: #aaaaaa;
+
 
     /* position: relative; */
     /* bottom: 0%; */
@@ -1114,7 +1116,6 @@ footer.footerProjets {
 .footerLoisir {
     z-index: -100;
     background-color: rgba(22, 26, 36, 0.2);
-    color: #a1a4c0;
     /* position: relative !important; */
     /* bottom: 0%; */
 }
@@ -1735,7 +1736,8 @@ ul {
       padding: 50px;
       border-radius: 3px;
       /* background-color: #ef3a2daf; */
-      background-color: #9b3c34;
+      /* background-color: #9b3c34; */
+      background-color: #762e33;
       color: #E7E8F2;
       border: 1px solid var(--secondaryColorVeryMat);
 
@@ -1746,8 +1748,9 @@ ul {
   }
   .textCompetences {
       /* color: #a8a8a8; */
+      font-size: 1.5em;
       color: var(--secondaryColor);
-      font-size: large;
+      /* font-size: large; */
       font-weight: bold;
       text-shadow: 1px 1px black;
   }

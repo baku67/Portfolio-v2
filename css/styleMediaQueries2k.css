@@ -17,6 +17,10 @@
         bottom: 100px;
     }
 
+    .textCompetences {
+        font-size: 1.5em;
+    }
+
     #dlCv {
         font-size: 0.62em;
         background-color: var(--secondaryColorMat);
