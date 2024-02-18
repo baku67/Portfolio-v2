@@ -838,6 +838,18 @@ strong {
         border-radius: 10px;
 
         border-bottom: 5px solid #ffc862;
+
+    }
+    .presentationParagraphShrinkMobile {
+        animation: presentationParagraphShrinkMobile 5.5s 0s ease forwards;
+    }
+    @keyframes presentationParagraphShrinkMobile {
+        from {
+            font-size: 90%;
+        }
+        to {
+            font-size: 70%;
+        }
     }
 
 
