@@ -167,7 +167,7 @@ a {
         width: 65%;
     }
     to {
-        width: 85%;
+        width: 92%;
     }
 }
 
@@ -1008,9 +1008,11 @@ strong {
         padding-top: 0;
     }
     .youWantMePng {
-        /* top: 45px; */
-        transform: translateY(-90px);
-        animation: fadeInYouWantMe 0.5s 0s ease forwards;
+        height: auto;
+        /* Equivalent header  */
+        top: 190px;
+
+        animation: fadeInYouWantMe 0.8s 0.1s ease forwards;
     }
 
     .testYeu1 {
@@ -1173,10 +1175,53 @@ strong {
 
 
 /* 2K FHD */
-@media only screen and (min-width: 1300px) {
+@media only screen and (min-width: 2000px) {
 
     .presentationParagraph {
         width: 65%;
+        font-size: 1.5em;
     }
 
+    .portfolioLink {
+        font-size: 2.4em;
+    }
+
+    .youWantMeTxtDesktop {
+        font-size: 8.3em;
+        bottom: -100px;
+    }
+
+    .socialsDiv {
+        gap: 100px;
+        font-size: 3.5em;
+    }
+    .socialsWrapper {
+        transform: translateY(25px);
+    }
+
+    .wrapper {
+        margin: 130px 0px 67px 0px;
+    }
+
+    .logoContainer {
+        transform: translateY(-50%) rotate(333deg) scale(1.42);
+    }
+    @keyframes shrinkLogo {
+        0% {
+            transform: translateY(-50%) rotate(333deg) scale(1.42);
+        }
+        100% {
+            transform: translateY(-50%) rotate(333deg) scale(1.28);
+        }
+    }
+
+
+    @keyframes paddingShrink {
+        from {
+            width: 65%;
+        }
+        to {
+            width: 80%;
+        }
+    }
 }

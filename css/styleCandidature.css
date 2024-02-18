@@ -81,6 +81,7 @@ body {
 
 
 .hotAirBallonImg {
+    cursor: pointer;
     position: absolute;
     height: 100px;
 
@@ -126,7 +127,7 @@ body {
     }
     80% {
         opacity: 0.8;
-        right: 80px;
+        right: 95px;
     }
     90% {
         opacity: 1;
@@ -143,18 +144,17 @@ body {
     0% {
         right: 110px;
         bottom: 700px;
-    }
-    25% {
-        
+
+        z-index: 99999;
     }
     50% {
         bottom: 680px;
-    }
-    75% {
+        z-index: 99999;
     }
     100% {
         right: 110px;
         bottom: 700px;
+        z-index: 99999;
     }
 }
 
@@ -198,7 +198,7 @@ body {
     left: 0;
     
     opacity: 0;
-    animation: fadeInForest 1.5s 1.4s ease forwards;
+    animation: fadeInForest 1.5s 1.2s ease forwards;
 }
 @keyframes fadeInForest {
     from {
@@ -233,12 +233,40 @@ a {
     left: 50%;
     transform: translateX(-50%);
 
-    margin: 50px 0px 30px 0px;
-
+    margin: 40px 0px 140px 0px;
 
     display: inline-flex;
     align-items: baseline;
+
+    /* transition: all 3s; */
+
+    animation: marginAnimWrapper 3s 0.5s ease;
 }
+@keyframes marginAnimWrapper {
+    from {
+        margin: 50px 0px 0px 0px;
+
+    }
+    to {
+        margin: 40px 0px 140px 0px;
+
+    }
+}
+
+.animScrollBackBg {
+    animation: animScrollBackBg 3s 0s ease forwards;
+}
+@keyframes animScrollBackBg {
+    from {
+        margin: 40px 0px 140px 0px;
+    }
+    to {
+        margin: 40px 0px -25px 0px;
+    }
+}
+
+
+
 
 .disclaimer {
     position: relative;
@@ -274,7 +302,7 @@ a {
     margin: 0 auto;
 
     opacity: 0;
-    animation: fadeInSectionPresentation 1s 2.6s ease forwards;
+    animation: fadeInSectionPresentation 1.6s 2.8s ease forwards;
 }
 @keyframes fadeInSectionPresentation {
     from {
@@ -282,6 +310,7 @@ a {
     }
     to {
         opacity: 1;
+        transform: translateY(-90px);
     }
 }
 
@@ -327,6 +356,7 @@ a {
 
     animation: logoColorSwitch 1.5s 1.7s ease forwards;
 }
+
 
 
 
@@ -442,10 +472,11 @@ a {
 .hideBtn {
     position: absolute;
     cursor: pointer;
-    right: 7px;
-    top: -19px;
+    right: 15px;
+    top: -14px;
     background-color: #ffc863;
-    padding: 0px 4px;
+    padding: 0px 10px;
+    line-height: 0;
     font-size: 1.3em;
     color: #005598c9;
     box-shadow: 2px 2px #00559899;
@@ -453,8 +484,8 @@ a {
     transition: all 0.3s;
 }
 .hideBtn:hover {
-    opacity: 0.8;
-    transform: scale(1.1);
+    /* opacity: 0.8; */
+    transform: scale(1.15);
 }
 
 .presentationParagraphHide {
@@ -498,6 +529,19 @@ strong {
 
 
 
+#ctaPortfolio::after {
+    content: ")";
+    font-size: 1.5em;
+    transform: rotate(90deg);
+    font-weight: 100;
+    color: #235585;
+    position: absolute;
+    right: 25px;
+    bottom: -2px;
+    opacity: 1;
+
+    transition: all 0.3s;
+}
 
 
 
@@ -524,6 +568,24 @@ strong {
     box-shadow: 5px 5px #ffc862;
 }
 
+.portfolioLink:hover #ctaPortfolio::after {
+    content: "D";
+    color: #ffc862;
+    bottom: -9px;
+    right: 21px;
+    transform: rotate(90deg) rotateY(58deg);
+    font-size: 2em;
+}
+
+.eyes {
+    font-size: 0.9em;
+    transition: all 0.2s;
+}
+.portfolioLink:hover .eyes {
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
 
 .socialBtn {
     color: #3671aa;
@@ -535,9 +597,6 @@ strong {
     color: #ffc862;
     transform: scale(1.3);
 }
-
-
-
 
 
 
@@ -588,8 +647,62 @@ strong {
         filter: saturate(1.5);
 
         animation: fadeInBgImg 0.8s 0.5s ease forwards;
-
     }
+
+    .hideBtn {
+        right: 12px;
+        font-size: 1.6em;
+        padding: 1px 8px;
+        top: -10px;
+        line-height: 0;
+        height: 16px;
+        border-radius: 4px;
+    }
+
+    .animScrollBackBg { 
+        animation: none;
+    }
+
+
+    .socialIcon {
+        text-shadow: 0px 0px 10px black;
+    }
+    
+
+    @keyframes marginAnimWrapper {
+        from {
+            margin: 10px 0px 5px 0px;
+    
+        }
+        to {
+            margin: 10px 0px 5px 0px;
+    
+        }
+    }
+    @keyframes fadeInSectionPresentation {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+
+
+    #ctaPortfolio::after {
+        content: ")";
+        font-size: 1.5em;
+        transform: rotate(89deg);
+        font-weight: 100;
+        color: #235585;
+        position: absolute;
+        right: 24px;
+        bottom: -2px;
+
+        font-weight: bold;
+    }
+    
 
     .extensionFunTitle {
         color: #ffcb6c;
@@ -706,7 +819,7 @@ strong {
     .presentationParagraph {
         font-family: Open Sans,sans-serif;
         color: var(--white);
-        width: 80%;
+        width: 82%;
         font-size: 0.9em;
         margin: 0 auto;
         text-align: justify;
@@ -721,8 +834,10 @@ strong {
 
         box-shadow: 0px 0px 0px 0px #deb873;
         width: 80%;
-        padding: 28px 30px;
+        padding: 15px 20px;
         border-radius: 10px;
+
+        border-bottom: 5px solid #ffc862;
     }
 
 
@@ -740,7 +855,7 @@ strong {
 
 
     .frstStrong {
-        color: #a1d5ff;
+        color: #c5e4ff;
         text-shadow: 0 0 #67676700;
     }
 
@@ -755,7 +870,7 @@ strong {
         top: 250px;
         opacity: 0;
     
-        animation: hotAirBallonAnim 30s 3s ease forwards 1, fixedBallon 5.5s 33s ease-in-out infinite;
+        animation: hotAirBallonAnim 30s 3s ease forwards 1, fixedBallon 4.5s 33s ease-in-out infinite;
     }
     @keyframes hotAirBallonAnim {
         0% {
@@ -794,11 +909,11 @@ strong {
         }
         80% {
             opacity: 0.8;
-            right: 30px;
+            right: 40px;
         }
         90% {
             opacity: 1;
-            right: 50px;
+            right: 35px;
         }
         100% {
             opacity: 0.95;
@@ -810,12 +925,15 @@ strong {
     @keyframes fixedBallon {
         0% {
             top: 30px;
+            z-index: 999999;
         }
         50% {
             top: 40px;
+            z-index: 999999;
         }
         100% {
             top: 30px;
+            z-index: 999999;
         }
     }
     

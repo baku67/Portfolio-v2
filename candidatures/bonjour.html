@@ -27,7 +27,7 @@
 
         <img src="bonjour-min.jpg" class="bonjourBackgroundImg" />
 
-        <img src="bonjour_mongollefiere3.png" class="hotAirBallonImg" />
+        <img id="hotAirBallonImg" src="bonjour_mongollefiere3.png" class="hotAirBallonImg" />
 
         <!-- Pollution bouhhh pas bien: -->
         <!-- <img src="bonjour_plane.png" class="planeImg" /> -->
@@ -72,7 +72,7 @@
             <p id="presentationParagraph" class="presentationParagraph">
 
                 <!-- Btn hide -->
-                <span id="hideBtn" class="hideBtn"><i class="fa-regular fa-rectangle-xmark"></i></span>
+                <span id="hideBtn" class="hideBtn"><i class="fa-solid fa-minus"></i></i></span>
 
                 <span style="margin-left: 25px;">Je</span> m'appelle 
                 <span class="wrapperName">
@@ -107,14 +107,20 @@
 
             </p>
 
-            <a href="../index.html" class="portfolioLink"><i class="fa-solid fa-address-book" style="margin-right:5px;"></i> Visitez mon Porfolio</a>
+            <a href="../index.html" class="portfolioLink">
+                <i class="fa-solid fa-address-book" style="margin-right:5px;"></i>
+                <span id="ctaPortfolio">
+                    Visitez mon Porf<span class="eyes">◕</span>li<span class="eyes">◕</span>
+                </span>
+            </a>
+
 
             <div class="socialsDiv">
                 <a href="https://www.linkedin.com/in/basile-kuntz-719278267" class="socialBtn" target="_blank">
-                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="socialIcon fa-brands fa-linkedin"></i>
                 </a>
                 <a href="https://www.github.com/baku67" class="socialBtn" target="_blank">
-                    <i class="fa-brands fa-github"></i>
+                    <i class="socialIcon fa-brands fa-square-github"></i>
                 </a>
             </div>
 
@@ -150,6 +156,11 @@
             // Hide Presentation Btn
             document.getElementById('hideBtn').addEventListener('click', function() {
                 document.getElementById('presentationParagraph').style.opacity = '0';
+                document.getElementsByClassName('wrapper')[0].classList.add('animScrollBackBg');
+            })
+            document.getElementById('hotAirBallonImg').addEventListener('click', function() {
+                document.getElementById('presentationParagraph').style.opacity = '0';
+                document.getElementsByClassName('wrapper')[0].classList.add('animScrollBackBg');
             })
 
         </script>
