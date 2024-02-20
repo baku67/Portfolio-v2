@@ -107,12 +107,27 @@
 
             </p>
 
-            <a href="../index.html" class="portfolioLink">
+            <a href="../index.html" id="portfolioLink" class="portfolioLink">
                 <i class="fa-solid fa-address-book" style="margin-right:5px;"></i>
+                <!-- <span id="ctaPortfolio">
+                    Visitez mon Porf<span class="eyes">◕</span>li<span class="eyes">◕</span><span id="smileSpan" class="smileSpan">)</span>
+                </span> -->
                 <span id="ctaPortfolio">
-                    Visitez mon Porf<span class="eyes">◕</span>li<span class="eyes">◕</span>
+                    Visitez mon Portf<span class="eyes">o</span>li<span class="eyes">o</span><span id="smileSpan" class="smileSpan">)</span>
                 </span>
             </a>
+
+            <script>
+                window.onload = function() {
+                    console.log('hey');
+                    document.getElementById('portfolioLink').addEventListener('mouseover', function() {
+                        document.getElementById('smileSpan').innerText = "D";
+                    })
+                    document.getElementById('portfolioLink').addEventListener('mouseout', function() {
+                        document.getElementById('smileSpan').innerText = ")";
+                    })
+                }
+            </script>
 
 
             <div class="socialsDiv">

@@ -135,7 +135,7 @@ body {
     }
     100% {
         opacity: 0.95;
-        bottom: 700px;
+        bottom: 730px;
 
         right: 110px;
     }
@@ -143,18 +143,18 @@ body {
 @keyframes fixedBallon {
     0% {
         right: 110px;
-        bottom: 700px;
+        bottom: 750px;
 
-        z-index: 99999;
+        /* z-index: 99999; */
     }
     50% {
-        bottom: 680px;
-        z-index: 99999;
+        bottom: 740px;
+        /* z-index: 99999; */
     }
     100% {
         right: 110px;
-        bottom: 700px;
-        z-index: 99999;
+        bottom: 750px;
+        /* z-index: 99999; */
     }
 }
 
@@ -529,7 +529,7 @@ strong {
 
 
 
-#ctaPortfolio::after {
+/* #ctaPortfolio::after {
     content: ")";
     font-size: 1.5em;
     transform: rotate(90deg);
@@ -539,6 +539,20 @@ strong {
     right: 25px;
     bottom: -2px;
     opacity: 1;
+
+    transition: all 0.3s;
+} */
+.smileSpan {
+    position: absolute;
+    font-size: 1.5em;
+    transform: rotate(89deg);
+    font-weight: 100;
+    color: #235585;
+    position: absolute;
+    right: 22px;
+    bottom: -2px;
+
+    font-weight: bold;
 
     transition: all 0.3s;
 }
@@ -568,8 +582,16 @@ strong {
     box-shadow: 5px 5px #ffc862;
 }
 
-.portfolioLink:hover #ctaPortfolio::after {
+/* .portfolioLink:hover #ctaPortfolio::after {
     content: "D";
+    color: #ffc862;
+    bottom: -9px;
+    right: 21px;
+    transform: rotate(90deg) rotateY(58deg);
+    font-size: 2em;
+} */
+
+.portfolioLink:hover .smileSpan {
     color: #ffc862;
     bottom: -9px;
     right: 21px;
@@ -578,12 +600,12 @@ strong {
 }
 
 .eyes {
-    font-size: 0.9em;
-    transition: all 0.2s;
+    /* font-size: 0.9em; */
+    /* transition: all 0.2s; */
 }
 .portfolioLink:hover .eyes {
-    font-size: 0.8em;
-    font-weight: bold;
+    /* font-size: 0.8em; */
+    /* font-weight: bold; */
 }
 
 
@@ -614,7 +636,13 @@ strong {
 
 
 
+/* *********************** MEDIA QUERY tablet */
+@media only screen and (min-width: 600px) and (max-width: 1000px) {
 
+    .presentationParagraph {
+        width: 73%;
+    }
+}
 
 
 
@@ -690,7 +718,7 @@ strong {
     }
 
 
-    #ctaPortfolio::after {
+    /* #ctaPortfolio::after {
         content: ")";
         font-size: 1.5em;
         transform: rotate(89deg);
@@ -701,6 +729,20 @@ strong {
         bottom: -2px;
 
         font-weight: bold;
+    } */
+
+    .smileSpan {
+        position: absolute;
+        font-size: 1.5em;
+        transform: rotate(89deg);
+        font-weight: 100;
+        color: #235585;
+        position: absolute;
+        right: 22px;
+        bottom: -2px;
+
+        font-weight: bold;
+
     }
     
 
@@ -937,7 +979,6 @@ strong {
     @keyframes fixedBallon {
         0% {
             top: 30px;
-            z-index: 999999;
         }
         50% {
             top: 40px;

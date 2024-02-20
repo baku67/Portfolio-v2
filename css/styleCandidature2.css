@@ -970,7 +970,7 @@ strong {
 
 
 
-/* *********************** MEDIA QUERIES PHONE */
+/* *********************** MEDIA QUERY phone */
 
 @media only screen and (max-width: 600px) {
 
@@ -1013,6 +1013,14 @@ strong {
         top: 190px;
 
         animation: fadeInYouWantMe 0.8s 0.1s ease forwards;
+    }
+    @keyframes fadeInYouWantMe {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 0.2;
+        }
     }
 
     .testYeu1 {

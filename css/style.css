@@ -1670,7 +1670,7 @@ ul {
 
     background-color: #00000000;
     /* box-shadow: 0px 0 25px -6px #00ffff24; */
-    padding: 10px 20px 2px 11px;
+    padding: 10px 20px 2px 19px;
     border-radius: 12px;
 
     /* box-shadow: 6px 6px 25px 0px #00ffff24;
@@ -4186,13 +4186,15 @@ ul {
 
 @keyframes imgAccueilFadeIn {
     from {
-        border-radius: 50px;
+        /* border-radius: 50px; */
+        border-radius: 100px;
         opacity: 0;
         filter: blur(5px) grayscale(1);
         border: 2px solid rgba(255, 255, 255);
     }
     to {
-        border-radius: 100px;
+        /* border-radius: 100px; */
+        border-radius: 25px;
         opacity: 1;
         filter: blur(0px) grayscale(0);
         /* border: 2px solid white; */
@@ -5161,7 +5163,7 @@ li.veilleLigneAjout::before {
 
   /* Raie Accueil */
   #raieAccueil1 {
-    filter: blur(2px);
+    filter: blur(1px);
     /* https://yqnn.github.io/svg-path-editor/ */
     /* offset-path: path("M 135 -145 C -63 446 460 690 1062 864"); */
     offset-path: path("M 135 -145 C 108.781 388.732 1171.381 539.914 2501.792 384.412");
