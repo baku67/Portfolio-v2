@@ -126,7 +126,7 @@
             </script>
 
 
-            <div class="socialsDiv">
+            <div id="socialsDiv" class="socialsDiv">
                 <a href="https://www.linkedin.com/in/basile-kuntz-719278267" class="socialBtn" target="_blank">
                     <i class="socialIcon fa-brands fa-linkedin"></i>
                 </a>
@@ -162,15 +162,44 @@
                 element.style.strokeDashoffset = '0';   
             });
 
+            // Détection mobile
+            var mobileDetection;
+            if (navigator.userAgent.match(/Android/i)
+            || navigator.userAgent.match(/webOS/i)
+            || navigator.userAgent.match(/iPhone/i)
+            || navigator.userAgent.match(/iPad/i)
+            || navigator.userAgent.match(/iPod/i)
+            || navigator.userAgent.match(/BlackBerry/i)
+            || navigator.userAgent.match(/Windows Phone/i)) {
+                mobileDetection = true ;
+            } else {
+                mobileDetection = false ;
+            }
+            console.log("mobile: " + mobileDetection);
+
 
             // Hide Presentation Btn
             document.getElementById('hideBtn').addEventListener('click', function() {
+
                 document.getElementById('presentationParagraph').style.opacity = '0';
                 document.getElementsByClassName('wrapper')[0].classList.add('animScrollBackBg');
-            })
-            document.getElementById('hotAirBallonImg').addEventListener('click', function() {
-                document.getElementById('presentationParagraph').style.opacity = '0';
-                document.getElementsByClassName('wrapper')[0].classList.add('animScrollBackBg');
+
+                if(mobileDetection) {
+                    document.getElementById('presentationParagraph').classList.add('presentation-AnimHeight-Shrink');
+                    document.getElementById('portfolioLink').classList.add('portfolioLinkAnim');
+                    document.getElementById('socialsDiv').classList.add('socialsDivAnim');
+
+                    // setTimeout(() => {
+                    //     document.getElementById('presentationParagraph').style.fontSize = "50%";
+                    // }, 3000)
+                }
+                else {
+                    // document.getElementById('presentationParagraph').classList.add('presentation-AnimHeight-Shrink');
+                    document.getElementById('portfolioLink').classList.add('portfolioLinkAnim');
+                    document.getElementById('socialsDiv').classList.add('socialsDivAnim');
+
+                }
+
             })
 
         </script>

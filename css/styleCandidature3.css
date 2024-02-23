@@ -414,7 +414,7 @@ a {
 
     transition: animation 0.8s ease;
 
-    transform: translate(-26px, 17px);
+    transform: translate(-27px, 19px);
     animation: logoColorSwitch 1.5s 1.7s ease forwards, papillonAnimCorp 4s 3.7s ease forwards infinite;
 }
 
@@ -576,7 +576,20 @@ a {
     border-radius: 12px;
     box-shadow: 1px 5px 1px 1px #cc2865;
 
+    max-height: 850px;
+
     transition: all 1.2s;
+}
+.presentation-AnimHeight-Shrink {
+    animation: testHeightShrink 2.5s 0.3s ease forwards;
+}
+@keyframes testHeightShrink {
+    from {
+        max-height: 850px;
+    }
+    to {
+        max-height: 460px;
+    }
 }
 
 
@@ -637,6 +650,17 @@ strong {
     font-size: 2em;
     margin-bottom: 50px;
 }
+.socialsDivAnim {
+    animation: socialsDivAnim 3s 0.7s ease forwards;
+}
+@keyframes socialsDivAnim {
+    from {
+        transform: translateY(-0vh);
+    }
+    to {
+        transform: translateY(-43vh);
+    }
+}
 
 
 
@@ -692,6 +716,17 @@ strong {
 
     box-shadow: 5px 5px #235585;
 }
+.portfolioLinkAnim {
+    animation: portfolioLinkAnim 3s 0.3s ease forwards;
+}
+@keyframes portfolioLinkAnim {
+    from {
+        transform: translateY(-0vh);
+    }
+    to {
+        transform: translateY(-45vh);
+    }
+}
 
 /* .portfolioLink:hover #ctaPortfolio::after {
     content: "D";
@@ -721,13 +756,13 @@ strong {
 
 
 .socialBtn {
-    color: #3671aa;
+    color: #cc2865;
     transform: scale(1.1);
 
     transition: all 0.3s;
 }
 .socialBtn:hover {
-    color: #ffc862;
+    color: #ec3a93;
     transform: scale(1.3);
 }
 
@@ -851,7 +886,7 @@ strong {
 
 
     .socialIcon {
-        text-shadow: 0px 0px 10px black;
+        /* text-shadow: 0px 0px 10px black; */
     }
     
 
@@ -934,14 +969,14 @@ strong {
 
 
     .socialBtn {
-        color: #ffc862;
+        color: #cc2865;
         transform: scale(1.1);
     
     
         transition: all 0.3s;
     }
     .socialBtn:hover {
-        color: #3671aa;
+        color: #ec3a93;
         transform: scale(1.3);
     }
 
