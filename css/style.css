@@ -549,6 +549,12 @@ swiper-slide {
 }
 
 
+.cvUnorderedList {
+    position: relative;
+    z-index: 99999999;
+}
+
+
 .trainingSvgContainer {
     /* Maj test gradient circular: */
     width: 100px;
