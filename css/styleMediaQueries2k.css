@@ -272,6 +272,13 @@
         width: 69px !important;
     }
 
+    .projectSlideLogo4 {
+        transform: scale(5.5);
+        position: relative;
+        left: 125px !important;
+        width: 69px !important;
+    }
+
     #underlineCV {
         font-size: 2em;
     }

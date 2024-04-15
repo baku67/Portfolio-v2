@@ -3169,6 +3169,14 @@ ul {
     width: 47px !important;
 }
 
+.projectSlideLogo4 {
+    padding-right: 7px; 
+    width: 47px !important;
+
+    left: 97px;
+    top: 26px;
+}
+
 
 /* Effet arriere plan */
 .projectSlideLogo {

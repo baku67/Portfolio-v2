@@ -1168,6 +1168,12 @@
         width: 65px !important;
     }
 
+    .projectSlideLogo4 {
+        width: 65px !important;
+
+        top: 0px;
+    }
+
     .projectTitleTerrine  {
         position: relative;
         top: 4px;
