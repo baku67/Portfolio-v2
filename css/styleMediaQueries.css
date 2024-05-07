@@ -2441,19 +2441,24 @@
     }
 
 
+    .githubProjectLink {
+        padding: 8px 10px;
+        font-size: 1.45em;
+    }
+
 
     body {
         font-size: 100%;
     }
 
     .isDesktop {
-        display: none;
+        display: none !important;
       }
       .isDesktopInline {
-        display: none;
+        display: none !important;
       }
       .isMobile {
-        display: inline-flex;
+        display: inline-flex !important;
       }
 
 

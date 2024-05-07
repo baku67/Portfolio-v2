@@ -1765,13 +1765,13 @@ ul {
 
 
   .isDesktop {
-    display: block;
+    display: block !important;
   }
   .isDesktopInline {
-    display: inline;
+    display: inline !important;
   }
   .isMobile {
-    display: none;
+    display: none !important;
   }
 
 
@@ -7160,10 +7160,19 @@ li.veilleLigneAjout::before {
     transition: 0.4s ease;
 }
 
+.projectLinksDiv-desktop {
+    position: absolute !important;
+    display: inline-flex !important;
+    flex-direction: column !important;
+    right: -75px !important;
+    top: 10px !important;
+}
+
 .githubProjectLink {
     border: 2px solid var(--secondaryColorVeryMat);
-    padding: 2px 10px;
-    font-size: 0.95em;
+    padding: 9px 10px;
+    /* font-size: 0.95em; */
+    font-size: 1.25em;
     border-radius: 4px;
     position: relative;
     top: 5px;
