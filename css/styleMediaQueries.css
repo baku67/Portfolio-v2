@@ -2403,7 +2403,7 @@
       }
     .carreCompetences {
         /* background-color: #8c322c; */
-        background-color: #762e33;
+        background-color: #9f353d;
         /* width: 150px;
         height: 150px;
         padding: 15px; */
@@ -2611,9 +2611,12 @@
         left: 1px;
 
         /* background-color: #ef3b2d24; */
-        background-color: #d1594f59;
+        /* background-color: #d1594f59; */
         /* background-color: #2defc024;
         border: 1px solid #ffffff12; */
+
+        background: linear-gradient(10deg, rgba(239,59,45,1) 0%, rgba(239,75,45,1) 21%, rgba(12,237,200,0.9) 100%);
+        border: 1px solid white;
     }
 
 
