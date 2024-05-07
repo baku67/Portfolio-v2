@@ -1177,6 +1177,11 @@
     .projectTitleTerrine  {
         position: relative;
         top: 4px;
+        transform: translateX(0px);
+    }
+
+    .projectTitleLes100ciels {
+        transform: translateX(-8px);
     }
 
     .splide__arrow svg {
