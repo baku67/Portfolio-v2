@@ -176,7 +176,7 @@
         margin-right: 55px;
 
         /* bottom: 50px; */
-        bottom: 20px;
+        bottom: -13px; 
         /* Marche: (sans le rotate 3D) */
     
         transform: perspective(1220px) rotateY(83deg) translateX(35px) scale(0.8);

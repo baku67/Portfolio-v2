@@ -314,6 +314,8 @@ main {
 
     border-top-left-radius: 34px;
     border-bottom-right-radius: 34px;
+
+    overflow: visible;
 }
 
 :root {
@@ -325,7 +327,8 @@ swiper-container {
     height: 100%;
 }
 swiper-slide {
-    overflow: hidden;
+    /* overflow: hidden; */
+    overflow: visible;
 
     text-align: center;
     color: white;
@@ -7162,6 +7165,9 @@ li.veilleLigneAjout::before {
 }
 
 
+
+
+
 .testezLe-div {
     position: absolute;
     bottom: 100%;
@@ -7185,6 +7191,34 @@ li.veilleLigneAjout::before {
         transform: rotateZ(352deg) scale(1);
     }
 }
+
+
+
+.arrow-testezLe {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    transform: translateX(158px) rotate(350deg);
+}
+.atl1 path {
+    fill: #ffa012;
+}
+.atl2 path {
+    fill: #ef3b2d;
+}
+.atl3 path {
+    fill: #6d7cfd;
+}
+.atl4 path {
+    fill: #e8ca7d;
+}
+
+
+
+
+
+
+
 
 .fa-file-arrow-down {
     margin-right: 5px;
