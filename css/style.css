@@ -1446,6 +1446,22 @@ ul {
     margin-left:-1em;
 }
 
+.projetSlideTitleTerrine {
+    color: #6d7cfd !important;
+}
+
+.projetFuncList-squadforge li::before {
+    color: #ffa012;
+}
+
+.projetFuncList-100ciels li::before {
+    color: #e8ca7d;
+}
+
+.projetFuncList-terrine li::before {
+    color: #6d7cfd;
+}
+
 .cvFormationsList li::before {
     content: "•";
     color: #ef3b2d;
@@ -2440,6 +2456,14 @@ ul {
 
 
 
+.githubLinkIcon-squadforge {
+    color: #ffa012 !important;
+}
+
+.githubLinkIcon-les100ciels {
+    color: #e8ca7d !important;
+}
+
 
 #traitHeader {
     display: none;
@@ -2574,11 +2598,11 @@ ul {
     top: 300px;
     margin: 0 auto; 
 } */
-.boutonMockup3:hover {
+/* .boutonMockup3:hover {
     animation-name: boutonMockup;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
-}
+} */
 @keyframes boutonMockup {
     from {
         opacity: 0.8;
@@ -2808,12 +2832,24 @@ ul {
 
 .iframeElem-100ciels {
     border-color: #e8ca7d;
+
+    box-shadow: 0 0 35px 5px #e8ca7d !important;
+}
+
+
+.iframeElem-squadforge {
+    border-color: #ffa012;
 }
 
 
 .boutonIframe-100ciels {
-    background-color: #e8ca7d;
+    background-color: #e8ca7d75;
     border-color: #e8ca7d;
+}
+
+.boutonIframe-squadforge {
+    background-color: #ffa01275;
+    border-color: #ffa012;
 }
 
 #lineBreakMobile {
@@ -7122,6 +7158,31 @@ li.veilleLigneAjout::before {
     } 
     to {
         transform: rotate(360deg);
+    }
+}
+
+
+.testezLe-div {
+    position: absolute;
+    bottom: 100%;
+    right: 100%;
+    width: max-content;
+    transform: rotateZ(352deg);
+    font-size: 1.15em;
+
+    opacity: 0;
+    animation: fadeIn 0.7s 4s ease forwards, growTestezLe 3s 4.7s ease infinite;
+}
+
+@keyframes growTestezLe {
+    0% {
+        transform: rotateZ(352deg) scale(1);
+    }
+    50% {
+        transform: rotateZ(352deg) scale(1.1);
+    }
+    100% {
+        transform: rotateZ(352deg) scale(1);
     }
 }
 

@@ -807,7 +807,7 @@
         background: -webkit-linear-gradient(180deg, rgba(23,27,37,0.2) 0%, rgba(255,255,255,0) 100%);
         background: linear-gradient(180deg, rgba(23,27,37,0.2) 0%, rgba(255,255,255,0) 100%);
 
-        padding: 6px 0px 6px 0px;
+        padding: 6px 0px 0px 0px;
         margin-bottom: 14px;
 
         backdrop-filter: blur(3px);
@@ -893,7 +893,7 @@
             opacity: 0;
         }
         to {
-            opacity: 1;
+            opacity: 0.2;
         }
     }
     @keyframes fadeInBgProject-bottom-right {
@@ -1042,7 +1042,11 @@
         box-shadow: 0 -40px 12px 1px var(--secondaryColor);
     }
     .pdh3 {
-        box-shadow: 0 -40px 12px 1px #cbdaff;
+        /* box-shadow: 0 -40px 12px 1px #cbdaff; */
+        box-shadow: 0 -40px 12px 1px #7a85e3;
+    }
+    .pdh4 {
+        box-shadow: 0 -40px 12px 1px #e8ca7d;
     }
 
 
@@ -1148,7 +1152,8 @@
         margin-block-end: 0;
 
         border-radius: 11px;
-        margin-left: 8px;
+        /* margin-left: 8px; */
+        margin-left: 0px;
         margin-right: 8px;
 
         width: 100%;
@@ -1225,6 +1230,11 @@
         flex-direction: row;
         float: none;
         right: 0px;
+
+        /* Maj center */
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 30px;
     }
 
     .headerProjets {
@@ -2443,7 +2453,33 @@
 
     .githubProjectLink {
         padding: 8px 10px;
-        font-size: 1.45em;
+        /* font-size: 1.45em; */
+        font-size: 2.5em;
+    }
+
+
+    .testezLe-div {
+        position: absolute;
+        bottom: 100%;
+        right: 100%;
+        width: max-content;
+        transform: rotateZ(352deg) translateX(100%);
+        font-size: 1.25em;
+    }
+    .testezLe-div p {
+        margin-block-end: 0em;
+    }
+
+    @keyframes growTestezLe {
+        0% {
+            transform: rotateZ(352deg) translateX(100%) scale(1);
+        }
+        50% {
+            transform: rotateZ(352deg) translateX(100%) scale(1.1);
+        }
+        100% {
+            transform: rotateZ(352deg) translateX(100%) scale(1);
+        }
     }
 
 

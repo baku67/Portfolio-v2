@@ -244,16 +244,14 @@
 
                             <div class="desktopSlideMargin">
 
-                                <!-- Shape absolute (haut gauche) DESKTOP :-->
-                                <!-- <img src="../img/projects/bgShapes2-min.png" class="projectShapeBgAnim1 projectShapesDiv-top-left isDesktop" /> -->
-                                <!-- V2 : -->
-                                <img src="../img/projects/bgShapes1_bjj.png" class="projectShapeBgAnim1 projectShapesDiv-top-left projet1_topleftShape_desktop isDesktop" >
-
+                                <!-- Shape absolute (haut-gauche) (DESKTOP: couleur projet) -->
+                                <!-- <img src="../img/projects/bgShapes1_bjj.png" class="projectShapeBgAnim1 projectShapesDiv-top-left projet1_topleftShape_desktop isDesktop" > -->
 
                                 <!-- Shape absolute (bas-droite) (MOBILE: couleur inversé) -->
                                 <img src="../img/projects/bgShapes1_bjj.png" class="projectShapeBgAnim2 projectShapesDiv-bottom-right isMobile" />
+
                                 <!-- Shape absolute (bas-droite) (DESKTOP: couleur projet) -->
-                                <img src="../img/projects/bgShapes1_squadforge2-min.png" class="projectShapeBgAnim2 projectShapesDiv-bottom-right isDesktop" />
+                                <!-- <img src="../img/projects/bgShapes1_squadforge2-min.png" class="projectShapeBgAnim2 projectShapesDiv-bottom-right isDesktop" /> -->
 
 
                                 <div id="projectContainer1" class="projectContainer">
@@ -264,7 +262,7 @@
                                         <div id="iframe1" class="iframe">
 
                                             <!-- Shape absolute (haut gauche) Mobile -->
-                                            <img src="../img/projects/bgShapes2-min.png" class="projectShapeBgAnim1-mobile projectShapesDiv-top-left isMobile" />
+                                            <!-- <img src="../img/projects/bgShapes2-min.png" class="projectShapeBgAnim1-mobile projectShapesDiv-top-left isMobile" /> -->
 
                                             <!-- WIP Fleche SVG pc -->
                                             <!-- <svg class="arrowSvgContainer" style="position:absolute;">
@@ -279,26 +277,41 @@
                                             <!-- Reflet -->
                                             <div class="iframeReflet"></div>
 
-                                            <div class="boutonMockup"></div>
-                                            <div class="boutonMockup2"></div>
-                                            <div class="bouton3Container"><div class="boutonMockup3"></div></div>
-                                            <div class="boutonMockup4"></div>
-                                            <div class="boutonMockup5"></div>
+                                            <div class="testezLe-div">
+                                                <p>Testez-le !</p>
+                                            </div>
+
+                                            <div class="boutonMockup boutonIframe-squadforge"></div>
+                                            <div class="boutonMockup2 boutonIframe-squadforge"></div>
+                                            <div class="bouton3Container"><div class="boutonMockup3 boutonIframe-squadforge"></div></div>
+                                            <div class="boutonMockup4 boutonIframe-squadforge"></div>
+                                            <div class="boutonMockup5 boutonIframe-squadforge"></div>
 
                                             <div class="projectLinksDiv projectLinksDiv-desktop isDesktop">
                                                 <a href="https://github.com/baku67/ELAN_Projet_SquadForge" target="_blank" class="githubProjectLink linkGithub">
-                                                    <i class="fa-brands fa-github githubLinkIcon"></i>
+                                                    <i class="fa-brands fa-github githubLinkIcon githubLinkIcon-squadforge"></i>
                                                 </a>
 
                                                 <a href="https://squadforge.ovh" target="_blank" class="githubProjectLink linkWebsite" >
-                                                    <i class="fa-solid fa-globe githubLinkIcon"></i>
+                                                    <i class="fa-solid fa-globe githubLinkIcon githubLinkIcon-squadforge"></i>
                                                 </a>
                                             </div>
                                         
                                             <!-- Src ajouté JS après load de la page (pour fix BJJ HS sur mobile) -->
-                                            <iframe src="" id="iframeElem1" class="iframeElem"></iframe>
+                                            <iframe src="" id="iframeElem1" class="iframeElem iframeElem-squadforge"></iframe>
 
-                                            <p class="lienBJJ"><a target="_blank" href="https://squadforge.ovh">www.squadforge.ovh<img src="../img/redirectionOrange.png" class="redirectionPng"></a></p>
+                                            <!-- <p class="lienBJJ"><a target="_blank" href="https://squadforge.ovh">www.squadforge.ovh<img src="../img/redirectionOrange.png" class="redirectionPng"></a></p> -->
+
+                                            <div class="projectLinksDiv isMobile">
+                                                <a href="https://github.com/baku67/ELAN_Projet_SquadForge" target="_blank" class="githubProjectLink linkGithub">
+                                                    <i class="fa-brands fa-github githubLinkIcon githubLinkIcon-squadforge"></i>
+                                                </a>
+
+                                                <a href="https://squadforge.ovh" target="_blank" class="githubProjectLink linkWebsite" >
+                                                    <i class="fa-solid fa-globe githubLinkIcon githubLinkIcon-squadforge"></i>
+                                                </a>
+                                            </div>
+
                                         </div>
 
 
@@ -332,7 +345,7 @@
                                                     <li>Twig</li>
                                                 </ul>
 
-                                                <ul class="projetFuncList">
+                                                <ul class="projetFuncList projetFuncList-squadforge">
                                                     <li>Autentification et rôles</li>
                                                     <li>Système de modération (validation des publications, censure, signalements, sanctions)</li>
                                                     <li>Signalements à la modération</li>
@@ -344,16 +357,6 @@
                                                     <li>Page de jeux personalisées</li>
                                                 </ul>
 
-                                            </div>
-
-                                            <div class="projectLinksDiv isMobile">
-                                                <a href="https://github.com/baku67/ELAN_Projet_SquadForge" target="_blank" class="githubProjectLink linkGithub">
-                                                    <i class="fa-brands fa-github githubLinkIcon"></i>
-                                                </a>
-
-                                                <a href="https://squadforge.ovh" target="_blank" class="githubProjectLink linkWebsite" >
-                                                    <i class="fa-solid fa-globe githubLinkIcon"></i>
-                                                </a>
                                             </div>
 
                                             <!-- <video autoplay class="demoVideo">
@@ -390,7 +393,7 @@
                                                 </div>
 
                                                 <div class="splide__progress">
-                                                    <div class="splide__progress__bar">
+                                                    <div class="splide__progress__bar" style="background:#ffa012;">
                                                     </div>
                                                 </div>
 
@@ -447,15 +450,13 @@
                             
 
                                 <!-- Shape absolute (haut gauche) PC -->
-                                <!-- <img src="../img/projects/bgShapes2-min.png" class="projectShapeBgAnim1 projectShapesDiv-top-left isDesktop" /> -->
-                                <!-- V2 : -->
-                                <img src="../img/projects/bgShapes1_bjj2-min.png" class="projectShapeBgAnim1 projectShapesDiv-top-left projet1_topleftShape_desktop2 isDesktop"> 
+                                <!-- <img src="../img/projects/bgShapes1_bjj2-min.png" class="projectShapeBgAnim1 projectShapesDiv-top-left projet1_topleftShape_desktop2 isDesktop">  -->
                                 
 
                                 <!-- Shape absolute (bas-droite) (MOBILE: couleur inversé) -->
                                 <img src="../img/projects/mobile/bgShapes1_squadforge2-min_mobile.png" class="projectShapeBgAnim2 projectShapesDiv-bottom-right isMobile" />
                                 <!-- Shape absolute (bas-droite) (DESKTOP: couleur projet) -->
-                                <img src="../img/projects/bgShapes1_bjj.png" class="projectShapeBgAnim2 projectShapesDiv-bottom-right isDesktop" />
+                                <!-- <img src="../img/projects/bgShapes1_bjj.png" class="projectShapeBgAnim2 projectShapesDiv-bottom-right isDesktop" /> -->
 
 
                                 <div id="projectContainer2" class="projectContainer">
@@ -463,6 +464,11 @@
                                     <div class="gridProjetHeaderContainer description2boxShadow">
 
                                         <div id="iframe2" class="iframe">
+
+                                            <div class="testezLe-div">
+                                                <p>Testez-le !</p>
+                                            </div>
+
                                             <div class="boutonMockup"></div>
                                             <div class="boutonMockup2"></div>
                                             <div class="bouton3Container"><div class="boutonMockup3"></div></div>
@@ -482,7 +488,16 @@
                                             <!-- Src ajouté JS après load de la page (pour fix BJJ HS sur mobile) -->
                                             <iframe src="" id="iframeElem2" class="iframeElem"></iframe>
 
-                                            <p class="lienBJJ"><a target="_blank" href="https://www.blackjackjo.com">www.blackjackjo.com<img src="../img/redirectionOrange.png" class="redirectionPng"></a></p>
+                                            <!-- <p class="lienBJJ"><a target="_blank" href="https://www.blackjackjo.com">www.blackjackjo.com<img src="../img/redirectionOrange.png" class="redirectionPng"></a></p> -->
+                                            <div class="projectLinksDiv isMobile">
+                                                <a href="https://github.com/baku67/BLACKJACKJO-projet" target="_blank" class="githubProjectLink linkGithub">
+                                                    <i class="fa-brands fa-github githubLinkIcon"></i>
+                                                </a>
+
+                                                <a href="https://www.blackjackjo.com" target="_blank" class="githubProjectLink linkWebsite" >
+                                                    <i class="fa-solid fa-globe githubLinkIcon"></i>
+                                                </a>
+                                            </div>
 
                                         </div>
 
@@ -534,17 +549,6 @@
 
                                                 </div>
 
-                                                <div class="projectLinksDiv isMobile">
-                                                    <a href="https://github.com/baku67/BLACKJACKJO-projet" target="_blank" class="githubProjectLink linkGithub">
-                                                        <i class="fa-brands fa-github githubLinkIcon"></i>
-                                                        <span>Projet</span>
-                                                    </a>
-
-                                                    <a href="https://www.blackjackjo.com" target="_blank" class="githubProjectLink linkWebsite" >
-                                                        <i class="fa-solid fa-globe githubLinkIcon"></i>
-                                                        <span>Site</span>
-                                                    </a>
-                                                </div>
 
                                                 <div id="splideBlackjackjo" class="splide" role="group" aria-label="Splide Basic HTML Example">
 
@@ -654,6 +658,11 @@
                                     <div class="gridProjetHeaderContainer description3boxShadow">
 
                                         <div id="iframe3" class="iframe">
+
+                                            <div class="testezLe-div">
+                                                <p>Testez-le !</p>
+                                            </div>
+
                                             <div class="boutonMockup"></div>
                                             <div class="boutonMockup2"></div>
                                             <div class="bouton3Container"><div class="boutonMockup3"></div></div>
@@ -672,7 +681,18 @@
                                         
                                             <iframe src="https://www.eneffet.basilek.ovh/index.php" class="iframeElem"></iframe>
 
-                                            <p class="lienBJJ"><a target="_blank" href="https://www.eneffet.basilek.ovh/index.php">Voir le site<img src="../img/redirectionOrange.png" class="redirectionPng"></a></p>
+                                            <!-- <p class="lienBJJ"><a target="_blank" href="https://www.eneffet.basilek.ovh/index.php">Voir le site<img src="../img/redirectionOrange.png" class="redirectionPng"></a></p> -->
+
+                                            <div class="projectLinksDiv isMobile">
+                                                <a href="https://github.com/baku67/ELAN_MVC_cinema" target="_blank" class="githubProjectLink linkGithub">
+                                                    <i class="fa-brands fa-github githubLinkIcon"></i>
+                                                </a>
+
+                                                <a href="https://eneffet.basilek.ovh" target="_blank" class="githubProjectLink linkWebsite" >
+                                                    <i class="fa-solid fa-globe githubLinkIcon"></i>
+                                                </a>
+                                            </div>
+
                                         </div>
 
                                         <div class="description">
@@ -707,7 +727,7 @@
                                                     <li>MVC</li>
                                                 </ul>
 
-                                                <ul class="projetFuncList">
+                                                <ul class="projetFuncList projetFuncList-terrine">
                                                     <li>Pages de listing</li>
                                                     <li>Pages détaillées et liens/relations</li>
                                                     <li>Formulaires d'ajouts d'éléments</li>
@@ -716,17 +736,6 @@
 
                                             </div>
 
-                                            <div class="projectLinksDiv isMobile">
-                                                <a href="https://github.com/baku67/ELAN_MVC_cinema" target="_blank" class="githubProjectLink linkGithub">
-                                                    <i class="fa-brands fa-github githubLinkIcon"></i>
-                                                    <span>Projet</span>
-                                                </a>
-
-                                                <a href="https://eneffet.basilek.ovh" target="_blank" class="githubProjectLink linkWebsite" >
-                                                    <i class="fa-solid fa-globe githubLinkIcon"></i>
-                                                    <span>Site</span>
-                                                </a>
-                                            </div>
 
                                             <div id="splideTerrine" class="splide" role="group" aria-label="Splide Basic HTML Example">
 
@@ -758,7 +767,7 @@
                                             </div>
 
                                             <div class="splide__progress">
-                                                    <div class="splide__progress__bar">
+                                                    <div class="splide__progress__bar" style="background:#6d7cfd;">
                                                     </div>
                                             </div>
 
@@ -823,6 +832,11 @@
                                 <div class="gridProjetHeaderContainer description3boxShadow">
 
                                     <div id="iframe4" class="iframe">
+
+                                        <div class="testezLe-div">
+                                            <p>Testez-le !</p>
+                                        </div>
+
                                         <div class="boutonMockup boutonIframe-100ciels"></div>
                                         <div class="boutonMockup2 boutonIframe-100ciels"></div>
                                         <div class="bouton3Container"><div class="boutonMockup3 boutonIframe-100ciels"></div></div>
@@ -831,17 +845,28 @@
 
                                         <div class="projectLinksDiv projectLinksDiv-desktop isDesktop">
                                             <a href="https://github.com/baku67" target="_blank" class="githubProjectLink linkGithub">
-                                                <i class="fa-brands fa-github githubLinkIcon"></i>
+                                                <i class="fa-brands fa-github githubLinkIcon githubLinkIcon-les100ciels"></i>
                                             </a>
 
                                             <a href="https://les100ciels.art" target="_blank" class="githubProjectLink linkWebsite" >
-                                                <i class="fa-solid fa-globe githubLinkIcon"></i>
+                                                <i class="fa-solid fa-globe githubLinkIcon githubLinkIcon-les100ciels"></i>
                                             </a>
                                         </div>
                                     
                                         <iframe src="https://les100ciels.art" class="iframeElem iframeElem-100ciels"></iframe>
 
-                                        <p class="lienBJJ"><a target="_blank" href="https://les100ciels.art">Voir le site<img src="../img/redirectionOrange.png" class="redirectionPng"></a></p>
+                                        <!-- <p class="lienBJJ"><a target="_blank" href="https://les100ciels.art">Voir le site<img src="../img/redirectionOrange.png" class="redirectionPng"></a></p> -->
+
+                                        <div class="projectLinksDiv isMobile">
+                                            <a href="https://github.com/baku67" target="_blank" class="githubProjectLink linkGithub">
+                                                <i class="fa-brands fa-github githubLinkIcon githubLinkIcon-les100ciels"></i>
+                                            </a>
+
+                                            <a href="https://les100ciels.art" target="_blank" class="githubProjectLink linkWebsite" >
+                                                <i class="fa-solid fa-globe githubLinkIcon githubLinkIcon-les100ciels"></i>
+                                            </a>
+                                        </div>
+
                                     </div>
 
                                     <div class="description">
@@ -852,7 +877,7 @@
                                             <img src="../img/projects/mobile/bgShapes1_terrine-min_mobile.png" class="projectShapeBgAnim1-mobile topLeftBgMobile projectShapesDiv-top-left isMobile" />
 
 
-                                            <div class="projectDescriptionHeader pdh3">
+                                            <div class="projectDescriptionHeader pdh4">
 
                                                 <h3 class="projetNbr">Projet 4</h3>
 
@@ -874,7 +899,7 @@
                                                 <li class="mainSkill">PHP</li>
                                             </ul>
 
-                                            <ul class="projetFuncList">
+                                            <ul class="projetFuncList projetFuncList-100ciels">
                                                 <li>Galleries</li>
                                                 <li>Animations CSS</li>
                                                 <li>Responsiv Design</li>
@@ -883,17 +908,6 @@
 
                                         </div>
 
-                                        <div class="projectLinksDiv isMobile">
-                                            <a href="https://github.com/baku67" target="_blank" class="githubProjectLink linkGithub">
-                                                <i class="fa-brands fa-github githubLinkIcon"></i>
-                                                <span>Projet</span>
-                                            </a>
-
-                                            <a href="https://les100ciels.art" target="_blank" class="githubProjectLink linkWebsite" >
-                                                <i class="fa-solid fa-globe githubLinkIcon"></i>
-                                                <span>Site</span>
-                                            </a>
-                                        </div>
 
                                         <div id="splideLes100ciels" class="splide" role="group" aria-label="Splide Basic HTML Example">
 
@@ -929,7 +943,7 @@
                                         </div>
 
                                         <div class="splide__progress">
-                                                <div class="splide__progress__bar">
+                                                <div class="splide__progress__bar" style="background:#e8ca7d;">
                                                 </div>
                                         </div>
 
