@@ -555,9 +555,13 @@ window.onload = function() {
 
           modalImg.src = "../img/galerie/" + this.getAttribute('alt') + (mobileAttribute) + ".jpg";
 
+          // display none du titre "Photographie"
+          document.getElementById("photographieTitle").style.display = "none";
+
           modalImageGallerie.style.display = "block";
           arrowNext.style.display = "block";
           arrowPrevious.style.display = "block";
+
 
           // captionText.innerHTML = this.getAttribute('def');
 
@@ -598,9 +602,14 @@ window.onload = function() {
         var span = document.getElementsByClassName("closeModal")[0];
 
         span.onclick = function() {
+
           modalImageGallerie.style.display = "none";
           arrowNext.style.display = "none";
           arrowPrevious.style.display = "none";
+
+          // display block du titre "Photographie" (réaffichage)
+          document.getElementById("photographieTitle").style.display = "block";
+
         }
 
 

@@ -4713,13 +4713,24 @@ ul {
 }
 
 
+#photoBar {
+    background-color: #e9e3e2 !important;
+}
+#flashRectangle {
+    border-color: #e9e3e2 !important;
+}
 
 
 #photographieTitle {
     /* Clickable pour opacity 0/1 des images (voir l'aquarium) temporaire: deplacer dans un vrai bouton */
     /* cursor: pointer; */
 
-    color: #ef3b2d;
+    z-index: 9999999999999999999999;
+    position: relative;
+
+    /* color: #ef3b2d; */
+    color: #e9e3e2;
+
     text-align: center;
     font-size: 3em;
 
@@ -7259,8 +7270,8 @@ li.veilleLigneAjout::before {
     position: absolute !important;
     display: inline-flex !important;
     flex-direction: column !important;
-    right: -75px !important;
-    top: 10px !important;
+    right: -90px !important;
+    top: 18px !important;
 }
 
 .githubProjectLink {
