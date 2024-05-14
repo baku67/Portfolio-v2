@@ -1,6 +1,10 @@
 @media only screen and (max-width: 600px) {
 
 
+    body,html {
+        scrollbar-width: none;
+    }
+
 
     .containerToggleLight {
         left: 18px;
@@ -725,7 +729,7 @@
     }
 
     #sideNavDesktop {
-        display: none;
+        display: none !important;
     }
 
 
