@@ -1449,6 +1449,10 @@ ul {
     margin-left:-1em;
 }
 
+.projetSlideTitleReact {
+    color: #00ffff !important;
+}
+
 .projetSlideTitleTerrine {
     color: #6d7cfd !important;
 }

@@ -83,6 +83,38 @@ window.onload = function() {
         observerSlide2.observe(document.querySelector('#projectContainer2'));
 
 
+
+        // Observer Slide5 (Portfolio React):
+        const observerSlide5 = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+
+                    document.getElementById('projectContainer5').classList.add('fadeInSlide');
+
+                    // document.getElementById('iframe2').classList.add('iframeRotate');
+
+                    setTimeout(function() {
+                        document.getElementById("projectContainer5").style.opacity = "1";
+                        document.getElementById("projectContainer5").classList.remove("fadeInSlide");
+
+                        // document.getElementById('iframe2').style.opacity = "1";
+                        // document.getElementById('iframe1').style.transform = "perspective(1220px) rotateY(0deg) translateX(35px) scale(0.65);";
+                        // document.getElementById('iframe2').classList.remove('iframeRotate');
+                    }, 1001)
+
+                }
+                else {
+
+                    document.getElementById('iframe5').style.opacity = "0";
+                    document.getElementById('projectContainer5').style.opacity = "0";
+
+                }
+            })
+        })
+        observerSlide2.observe(document.querySelector('#projectContainer5'));
+        
+
+
     }
 
 
