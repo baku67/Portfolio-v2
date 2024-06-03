@@ -369,6 +369,61 @@ a {
     animation: logoColorSwitch 1.5s 1.7s ease forwards, papillonAnimCorp 1.7s 0s linear forwards infinite;
 } */
 
+
+.background-round {
+    position: absolute;
+    width: 182px;
+    height: 182px;
+    background-color: #fbfdfd;
+    z-index: -9999;
+    border-radius: 50%;
+    bottom: 113px;
+    right: 7px;
+
+    animation: background-roundAnim 1s 2.7s ease forwards;
+}
+@keyframes background-roundAnim {
+    from {
+        background-color: #fbfdfd;
+    }
+    to {
+        background-color: #f06f70;
+    }
+}
+
+.alsacewebSvgContainer {
+    z-index: 9999;
+    width: 196px;
+    height: 250px; 
+
+    overflow: visible;
+
+    border-bottom-left-radius: 34px;
+}
+
+.alsacewebSvgPath {
+    opacity: 1;
+
+    fill: none; 
+    stroke: #f06f70; 
+    stroke-width: 10; 
+    stroke-linecap: round; 
+    stroke-linejoin:  miter; 
+    stroke-miterlimit: 4;
+    transition: stroke 0.8s ease;
+
+    transition: animation 0.8s ease;
+    animation: logoColorSwitch-aslaceWeb 1s 2.7s ease forwards;
+}
+@keyframes logoColorSwitch-aslaceWeb {
+    from {
+        stroke: #f06f70;
+    }
+    to {
+        stroke: #fbfdfd;
+    }
+}
+
 .bonjourSvgPath {
     opacity: 1;
 

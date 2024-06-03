@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../css/styleCandidature3.css" />
+        <link rel="icon" type="image/x-icon" href="../candidatures/krysali-favicon.png">
+
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/698848973e.js" crossorigin="anonymous"></script>
+
+        <!-- Preload imgs -->
+        <link rel="preload" as="image" href="https://bk-dev.fr/candidatures/bonjour-min.jpg" />
+
+        <title>Candidature spontannée</title>
+    </head>
+
+
+    <body>
+
+        <!-- <img src="bonjour-min.jpg" class="bonjourBackgroundImg" /> -->
+
+        <!-- <img src="../img/projects/bgShapes1_bjj.png" class="candidatureShapes" /> -->
+
+
+        <section class="wrapper" style="top:52px">
+
+            <div class="background-round"></div>
+
+            <svg class="alsacewebSvgContainer">
+                <g class="bonjourSvg">
+                    <path 
+                        class="alsacewebSvgPath"
+                        d="M 14 99 L 62 11 L 111 99 L 137 46 C 139 42 137 35 129 35 C 121 35 119 42 121 46 L 154 99 L 186 32 M 31 68 L 93 68"
+                    />
+                </g>
+            </svg>
+
+
+        </section>
+
+
+
+
+        <script>
+
+            // <!-- Script dessin SVG logo -->
+            var bonjourPathes = document.querySelectorAll('.bonjourSvg path');
+
+            bonjourPathes.forEach(element => {
+                var lengthRec = element.getTotalLength();
+                element.style.transition = element.style.WebkitTransition = 'none';
+                element.style.strokeDasharray = lengthRec + ' ' + lengthRec;
+                element.style.strokeDashoffset = lengthRec;
+                element.getBoundingClientRect();
+                element.style.transition = element.style.WebkitTransition =
+                'stroke-dashoffset 1.7s 1s ease-in-out';
+                element.style.strokeDashoffset = '0';   
+            });
+
+            // Détection mobile
+            var mobileDetection;
+            if (navigator.userAgent.match(/Android/i)
+            || navigator.userAgent.match(/webOS/i)
+            || navigator.userAgent.match(/iPhone/i)
+            || navigator.userAgent.match(/iPad/i)
+            || navigator.userAgent.match(/iPod/i)
+            || navigator.userAgent.match(/BlackBerry/i)
+            || navigator.userAgent.match(/Windows Phone/i)) {
+                mobileDetection = true ;
+            } else {
+                mobileDetection = false ;
+            }
+
+
+        </script>
+
+
+
+    </body>
+
+</html>
