@@ -370,23 +370,78 @@ a {
 } */
 
 
+.alsace-web-newCandidatureBtn {
+    background-color: #f06f70;
+    color: #fbfdfd;
+    border-radius: 5px;
+    padding: 12px 23px 12px 70px;
+    margin: 0px auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;    
+    justify-content: space-evenly;
+
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    font: 14px 'Open Sans', Arial, sans-serif;
+
+    opacity: 0;
+    bottom: -50px;
+    transform: translateX(-50%) scale(0.5);
+    animation: alsace-web-newCandidatureBtn  1s 3s ease forwards;
+}
+@keyframes alsace-web-newCandidatureBtn {
+    from {
+        opacity: 0;
+        bottom: -50px;
+        transform: translateX(-50%) scale(0.5);
+    }
+    to {
+        opacity: 1;
+        bottom: 0px;
+        transform: translateX(-50%) scale(1);
+    }
+}
+
+.alsace-web-candiIcon {
+    padding: 5px;
+    color: #f06f70;
+    background-color: white;
+    font-size: 2.5em;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 13px;
+    left: 11px;
+    border: #f06f70;
+    transform: rotate(353deg);
+}
+
+
 .background-round {
     position: absolute;
-    width: 182px;
-    height: 182px;
+    width: 0px;
+    height: 0px;
     background-color: #fbfdfd;
     z-index: -9999;
     border-radius: 50%;
-    bottom: 113px;
-    right: 7px;
+    /* bottom: 113px;
+    right: 8px; */
+    top: 26%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
-    animation: background-roundAnim 1s 2.7s ease forwards;
+    animation: background-roundAnim 1s 2.2s ease forwards;
 }
 @keyframes background-roundAnim {
     from {
+        width: 0px;
+        height: 0px;
         background-color: #fbfdfd;
     }
     to {
+        width: 180px;
+        height: 180px;
         background-color: #f06f70;
     }
 }
@@ -406,14 +461,14 @@ a {
 
     fill: none; 
     stroke: #f06f70; 
-    stroke-width: 10; 
+    stroke-width: 8; 
     stroke-linecap: round; 
     stroke-linejoin:  miter; 
     stroke-miterlimit: 4;
     transition: stroke 0.8s ease;
 
     transition: animation 0.8s ease;
-    animation: logoColorSwitch-aslaceWeb 1s 2.7s ease forwards;
+    animation: logoColorSwitch-aslaceWeb 1s 2.2s ease forwards;
 }
 @keyframes logoColorSwitch-aslaceWeb {
     from {
