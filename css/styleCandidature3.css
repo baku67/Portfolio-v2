@@ -384,18 +384,19 @@ a {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    font: 14px 'Open Sans', Arial, sans-serif;
+    font: 15px 'Open Sans', Arial, sans-serif;
+    font-weight: bold;
 
     opacity: 0;
     bottom: -50px;
-    transform: translateX(-50%) scale(0.5);
-    animation: alsace-web-newCandidatureBtn  1s 3s ease forwards;
+    transform: translateX(-50%) scale(0.8);
+    animation: alsace-web-newCandidatureBtn  1.2s 3s ease forwards;
 }
 @keyframes alsace-web-newCandidatureBtn {
     from {
         opacity: 0;
         bottom: -50px;
-        transform: translateX(-50%) scale(0.5);
+        transform: translateX(-50%) scale(0.8);
     }
     to {
         opacity: 1;

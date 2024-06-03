@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../css/styleCandidature2.css" />
+        <link rel="icon" type="image/x-icon" href="/img/bonjourFavicon2.jpg">
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/698848973e.js" crossorigin="anonymous"></script>
+        <link rel="icon" type="image/x-icon" href=".\favicons\favicon.ico">
+
+        <link rel="preload" as="image" href="https://bk-dev.fr/candidatures/youWantMe-min.png" />
+        <link rel="preload" as="image" href="https://bk-dev.fr/candidatures/youWantMeTxt-min.png" />
+        <link rel="preload" as="font" type="font/woff2" href="https://bk-dev.fr/candidatures/GothamCond-Bold.ttf" crossorigin="anonymous" />
+        <title>MY BOSS IS RICH &#x1F4B0;</title>
+
+
+        <style>
+            .myClientIsRich-newCandidatureBtn {
+                font-family: GothamCondensed;
+                position: relative;
+                width: fit-content;
+                margin: 0 auto;
+                padding: 12px 18px 12px 102px;
+                background-color: #cec08e;
+
+                opacity: 0;
+                right: 131px;
+                animation: myClientIsRich-newCandidatureBtn 0.8s 1.5s ease forwards;
+            }
+            @keyframes myClientIsRich-newCandidatureBtn {
+                from {
+                    opacity: 0;
+                    right: 131px;
+                }
+                to {
+                    opacity: 1;
+                    right: 0;
+                }
+            }
+            .myClientIsRich-candiIcon {
+                padding: 14px;
+                color: #cec08e;
+                background-color: #0d1d32;
+                font-size: 2.5em;
+                border-radius: 50%;
+                position: absolute;
+                bottom: -9px;
+                left: 3px;
+                border: #cec08e;
+                border: 1px solid #cec08e;
+
+                transform: rotate(353deg) scale(0.5);
+                opacity: 0;
+                animation: myClientIsRich-candiIcon 1s 1.5s ease forwards;
+            }
+            .myClientIsRich-candiIconImage {
+                padding: 5px;
+                color: #cec08e;
+                background-color: #0d1d32;
+                font-size: 2.5em;
+                width: 65px;
+                height: 65px;
+                border-radius: 50%;
+                position: absolute;
+                bottom: -14px;
+                left: 10px;
+                border: #cec08e;
+                border: 1px solid #cec08e;
+
+                transform: rotate(353deg) scale(0.5);
+                opacity: 0;
+                animation: myClientIsRich-candiIcon 1s 1.7s ease forwards, myClientIsRich-candiIcon2 2.2s 2.7s ease-in-out infinite;
+            }
+            .myClientIsRich-candiIconImage img {
+                width: 65px;
+                height: 65px;
+            }
+            @keyframes myClientIsRich-candiIcon {
+                from {
+                    transform: rotate(353deg) scale(0.5);
+                    opacity: 0;
+                }
+                to {
+                    transform: rotate(350deg) scale(1.06);
+                    opacity: 1;
+                }
+            }
+            @keyframes myClientIsRich-candiIcon2 {
+                0% {
+                    transform: rotate(350deg) scale(1.06);
+                }
+                50% {
+                    transform: rotate(353deg) scale(1);
+                }
+                100% {
+                    transform: rotate(350deg) scale(1.06);
+                }
+            }
+
+
+            .myClientIsRich-candiIconImage::after {
+                content: "YOU WANT ME";
+                color: gold;
+                font-size: 0.4em;
+                display: block;
+                position: relative;
+                bottom: 27px;
+                right: 5px;
+                background-color: #0b1b32;
+                padding: 2px 5px;
+                width: 65px;
+            }
+
+            .myClientIsRich-candiIcon::before {
+                
+            }
+
+            .myClientIsRich-newCandidatureBtn span {
+                font-size: 1.3em;
+            }
+        </style>
+    </head>
+
+    <body style="background: rgba(11, 27, 50, 1);">
+
+
+        <div class="content" style="height:100vh;">
+
+
+            <section class="wrapper" style="margin:50px 0px 18px 0px;">
+
+                <div class="logoContainer" style="filter: drop-shadow(2px 4px 6px black);">
+                    <div class="trait trait1"></div>
+                    <div class="trait trait2"></div>
+                    <div class="trait trait3"></div>
+                </div>
+
+            </section>
+
+            <div style="width: 100%; margin-top: 45px;">
+
+                
+                <div class="myClientIsRich-newCandidatureBtn" style="filter: drop-shadow(2px 4px 6px black);">
+                   
+                    <!-- <img class="myClientIsRich-candiIconImage" src="..\candidatures\youWantMeTxt-min.png" /> -->
+                    <div class="myClientIsRich-candiIconImage">
+                        <img  src="..\candidatures\youWantMe-min.png" />
+                    </div>
+                    
+                    <span>Suivi de candidature !</span>
+
+                </div>
+            </div>
+
+        </div>
+
+
+       
+
+
+        <!-- <span>test scrool X</span> -->
+
+
+
+        <script>
+
+            var bonjourPathes = document.querySelectorAll('.bonjourSvg path');
+
+            bonjourPathes.forEach(element => {
+
+                var lengthRec = element.getTotalLength();
+                element.style.transition = element.style.WebkitTransition = 'none';
+                element.style.strokeDasharray = lengthRec + ' ' + lengthRec;
+                element.style.strokeDashoffset = lengthRec;
+                element.getBoundingClientRect();
+                element.style.transition = element.style.WebkitTransition =
+                'stroke-dashoffset 2.2s 0.5s ease';
+                element.style.strokeDashoffset = '0';   
+
+            });
+
+        </script>
+
+
+
+    </body>
+
+</html>
